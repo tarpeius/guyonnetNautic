@@ -169,12 +169,6 @@
                 </div>
             </div>
         </div>
-
-        <p>code de quentin</p>
-
-        coucou j'ai fait le login
-        <p>coucou cest lde code de bertrand</p>
-
     </div>
 </div>
 

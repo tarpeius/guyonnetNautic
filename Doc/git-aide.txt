@@ -43,7 +43,7 @@ git pull
 // voir les différence sur un fichier donnée 
 git diff nomfichier
 
-// voir les fichier sur le depot
+// voir les fichier dans un dossier
 ll
 
 // autocomplétion 
