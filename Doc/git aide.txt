@@ -1,0 +1,51 @@
+// verifie les fichier 
+git status 
+
+// ajoute un dossier / fichier
+git add nomfichier 
+
+//ajoute tout
+git add .
+
+// save les fichier ( a faire apres le add)
+git commit -m "descriptionAecrire"
+
+// permet de savoir ce qu'on a fait Historique des commit
+git log --oneline
+
+// revenir a un commit 
+git checkout "nom de la save vu dans git log"
+
+// enleve un fichier 
+rm "nom du fichier"
+
+// changer de branche 
+git checkout "nom branche"
+
+// ajoute une branche 
+git checkout -b "nom branche"
+
+// ajout la branche sur le depot 
+git push origin nombranche
+
+// supprime les modif 
+git checkout -- nom du fichier
+
+// fusionne les branche avec le master
+git merge --no-ff nom de la branche a fusionner
+
+// puis pour quitter  
+:wq
+
+// recupere les fichiers du depot
+git pull 
+
+// voir les différence sur un fichier donnée 
+git diff nomfichier
+
+// voir les fichier sur le depot
+ll
+
+// autocomplétion 
+touche Tab
+
