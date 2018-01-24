@@ -9,7 +9,7 @@
     <!-- Bootstrap -->
     <link href="../ressource/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- styles -->
-    <link href="../ressource/css/styles.css" rel="stylesheet">./ressource/
+    <link href="../ressource/css/styles.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -102,7 +102,7 @@
                 <div class="panel-heading">
                     <div class="panel-title">Clients</div>
                 </div>
-        ../ressource/<!--        Tableau liste client -->
+                <!--        Tableau liste client -->
                 <div class="panel-body">
                     <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
                         <thead>
