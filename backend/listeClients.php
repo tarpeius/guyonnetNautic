@@ -7,9 +7,9 @@
     <link href="https://code.jquery.com/ui/1.10.3/themes/redmond/jquery-ui.css" rel="stylesheet" media="screen">
 
     <!-- Bootstrap -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../ressource/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- styles -->
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="../ressource/css/styles.css" rel="stylesheet">./ressource/
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -102,7 +102,7 @@
                 <div class="panel-heading">
                     <div class="panel-title">Clients</div>
                 </div>
-        <!--        Tableau liste client -->
+        ../ressource/<!--        Tableau liste client -->
                 <div class="panel-body">
                     <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
                         <thead>
@@ -170,20 +170,20 @@
     </div>
 </footer>
 
-<link href="vendors/datatables/dataTables.bootstrap.css" rel="stylesheet" media="screen">
+<link href="../ressource/vendors/datatables/dataTables.bootstrap.css" rel="stylesheet" media="screen">
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://code.jquery.com/jquery.js"></script>
 <!-- jQuery UI -->
 <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="../ressource/bootstrap/js/bootstrap.min.js"></script>
 
-<script src="vendors/datatables/js/jquery.dataTables.min.js"></script>
+<script src="../ressource/vendors/datatables/js/jquery.dataTables.min.js"></script>
 
-<script src="vendors/datatables/dataTables.bootstrap.js"></script>
+<script src="../ressource/vendors/datatables/dataTables.bootstrap.js"></script>
 
-<script src="js/custom.js"></script>
-<script src="js/tables.js"></script>
+<script src="../ressource/js/custom.js"></script>
+<script src="../ressource/js/tables.js"></script>
 </body>
 </html>
