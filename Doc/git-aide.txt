@@ -49,3 +49,11 @@ ll
 // autocomplétion 
 touche Tab
 
+//liste les branches
+git branch
+
+// supprimer une branch
+git branch -d
+
+// supprimer une branche distante / sur le depot
+git push origin :nomBranche
