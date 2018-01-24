@@ -41,7 +41,7 @@
             </div>
 
             <div class="item">
-                <img src="../ressource/img/pasbo.jpg" alt="Chicago" style="width:100%;">
+                <img src="../ressource/img/res.jpg" alt="Chicago" style="width:100%;">
             </div>
 
         </div>
