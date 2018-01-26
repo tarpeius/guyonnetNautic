@@ -373,9 +373,7 @@
 
     <script src="../ressource/vendors/ckeditor/ckeditor.js"></script>
     <script src="../ressource/vendors/ckeditor/adapters/jquery.js"></script>
-
-    <script type="text/javascript" src="../ressource/vendors/tinymce/js/tinymce/tinymce.min.js"></script>
-
+    
     <script src="../ressource/vendors/form-helpers/js/bootstrap-formhelpers.min.js"></script>
 
     <script src="../ressource/vendors/select/bootstrap-select.min.js"></script>
