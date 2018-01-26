@@ -180,7 +180,7 @@
                                             <div class="col-sm-10">
                                                 <div class="content-box-large">
                                                     <div class="panel-body">
-                                                        <textarea id="tinymce_basic"></textarea>
+                                                        <textarea class="form-control" rows="5" id="comment"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -191,7 +191,7 @@
                                             <div class="col-sm-10">
                                                 <div class="content-box-large">
                                                     <div class="panel-body">
-                                                        <textarea id="tinymce_full"></textarea>
+                                                        <textarea class="form-control" rows="5" id="comment"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
