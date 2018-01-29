@@ -155,7 +155,7 @@
                                         </div>
         <!--        Tva produit -->
                                         <div class="form-group">
-                                            <div class="col-sm-offset-2 col-sm-1">
+                                            <div class="col-sm-offset-2 col-sm-2">
                                                 <div>
                                                     <label class="col-sm-1 control-label">Tva</label>
                                                     <div class="bfh-selectbox" data-name="selectbox3" data-value="12" data-filter="false">
