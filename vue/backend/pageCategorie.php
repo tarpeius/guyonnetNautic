@@ -17,10 +17,11 @@
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+    <!--[if lt IE 9]-->
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
+    <script src="../../ressource/js/fonctions.js"></script>
+    <!--[endif]-->
 </head>
 <body>
 <div class="header">
@@ -107,21 +108,18 @@
                             <label>Statut </label>
                             <input type="radio" name="active" value="male"> <span class="glyphicon glyphicon-ok"></span>
                             <input type="radio" name="active" value="female"> <span class="glyphicon glyphicon-remove"></span>
-                        <div class="panel-options">
-                            <button class="btn btn-success"><i class="glyphicon glyphicon-ok"></i> Enregistrer</button>
-                            <button class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i> Supprimer</button>
-                        </div>
+
                     </div>
                 </div>
 <!--                Contenu page -->
                 <div class="content-box-large">
                     <div class="panel-body">
-                        <form class="form-horizontal" role="form">
+                        <form class="form-horizontal" role="form" method="POST" action="../../controleur/c_pageCategorie.php">
             <!--                 Nom categorie  -->
                             <div class="form-group">
-                                <label for="inputEmail3" class="col-sm-2 control-label">Nom</label>
+                                <label for="nomCateg" class="col-sm-2 control-label">Nom</label>
                                 <div class="col-sm-5">
-                                    <input type="email" class="form-control" id="inputEmail3">
+                                    <input type="text" class="form-control" name="nomCateg">
                                 </div>
                             </div>
             <!--                 Categorie parente  -->
@@ -151,17 +149,20 @@
                             <div class="form-group">
                                 <label for="description" class="col-sm-2 control-label">Description</label>
                                 <div class="col-sm-7">
-                                    <textarea name="description" rows="5" cols="100">
-
-                                    </textarea>
+                                    <textarea name="description" rows="5" cols="100"></textarea>
                                 </div>
                             </div>
             <!--                 Photo categorie  -->
                             <div class="form-group">
                                 <label class="col-md-2 control-label">Photo</label>
                                 <div class="col-md-10">
-                                    <input type="file" class="btn btn-default" id="exampleInputFile1">
+                                    <input type="file" class="btn btn-default" name="photo">
                                 </div>
+                            </div>
+
+                            <div class="panel-options">
+                                <input type="submit" class="btn btn-success" value="Enregistrer"></input>
+                                <button class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i> Supprimer</button>
                             </div>
                         </form>
                     </div>

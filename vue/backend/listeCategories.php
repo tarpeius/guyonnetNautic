@@ -1,3 +1,7 @@
+<?php
+//include ('../../controleur/c_pageCategorie.php');
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -124,26 +128,24 @@
                     <div class="panel-title">Liste Catégories</div>
                 </div>
                 <div class="panel-body">
-                    <ul>
-                        <li>Bateau</li>
+                    <?php
+                    //include('../../controleur/c_pageCategorie.php');
+                    include('../../modele/PDO.php');
+                    include('../../modele/requetesSQL.php');
+                    $allCateg = afficherCategorie($bdd);
+                    foreach ($allCateg as $categorie){ ?>
                         <ul>
-                            <li>Semi-rigide</li>
-                            <li>Pneumatique</li>
+                            <li> <?php echo $categorie['nom_categorie']?></li>
                         </ul>
-                        <li>Jet-ski</li>
-                        <ul>
-                            <li>Location</li>
-                            <li>Neuf</li>
-                        </ul>
-                        <li>Permis-bateau</li>
-                        <ul>
-                            <li>Côtier</li>
-                            <li>Fluvial</li>
-                            <li>Hauturier</li>
-                        </ul>
-                    </ul>
+                        <?php } ?>
                 </div>
             </div>
+            <div>
+
+
+
+            </div>
+
         </div>
     <!--        Contenu page DROITE -->
         <div class="col-md-5">
@@ -153,43 +155,36 @@
                     <div class="panel-title">Modification</div>
                 </div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form">
+                    <form class="form-horizontal" role="form" name="nomCategorie" method="POST" action="../../controleur/c_pageCategorie.php">
                         <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label">Selectionner</label>
+                            <label for="nomCategorie" class="col-sm-2 control-label">Selectionner</label>
                             <div class="col-sm-10">
                                 <select class="selectpicker">
-                                    <option data-icon="glyphicon-chevron-right">Bateau</option>
-                                    <option>Semi-Rigide</option>
-                                    <option>Pneumatique</option>
+                                    <?php
+                                    foreach ($allCateg as $categorie){ ?>
 
-                                    <option data-divider="true"></option>
+                                        <option> <?php echo $categorie['nom_categorie']; ?></option>
 
-                                    <option data-icon="glyphicon-chevron-right">Jet-ski</option>
-                                    <option>Location</option>
+                                    <?php } ?>
 
-                                    <option data-divider="true"></option>
-
-                                    <option data-icon="glyphicon-chevron-right">Permis-bateau</option>
-                                    <option>Cotier</option>
-                                    <option>Fluvial</option>
-                                    <option>Hauturier</option>
                                 </select>
                             </div>
                         </div>
                 <!--        Catégorie choisie -->
                         <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label">Modifier</label>
+                            <label for="modifCategorie" class="col-sm-2 control-label">Modifier</label>
                             <div class="col-sm-6">
-                                <input type="email" class="form-control" id="inputEmail3" placeholder="Categorie choisie">
+                                <input type="text" class="form-control" name="modifCategorie" placeholder="Categorie choisie">
                             </div>
                         </div>
                 <!--        Bouton validation -->
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-primary">Modifier</button>
+                                <input type="submit" class="btn btn-primary" value="Modifier">
                             </div>
                         </div>
                     </form>
+
                 </div>
             </div>
         </div>
