@@ -75,7 +75,7 @@
                         <ul>
                             <li><a href="listeProduits.php">Produits</a></li>
                             <li><a href="listeCategories.php">Catégories</a></li>
-                            <li><a href="listeFournisseurs.php">Fournisseurs/Marques</a></li>
+                            <li><a href="listeFournisseurs.php">Marques</a></li>
                         </ul>
                     </li>
                     <li><a href="listeCommande.php"><i class="glyphicon glyphicon-calendar"></i> Commandes</a></li>
@@ -100,16 +100,16 @@
         <div class="col-md-9">
             <div class="content-box-large">
                 <div class="panel-heading">
-                        <div class="panel-title">Fournisseurs</div>
+                        <div class="panel-title">Marques</div>
                         <label></label>
-        <!--        Bouton créer fournisseur -->
+        <!--        Bouton créer Marque -->
                     <div class="panel-options">
-                        <a href="pageFournisseur.php"><button class="btn btn-success"><i class="glyphicon glyphicon-ok"></i> Créer fournisseur</button></a>
+                        <a href="pageFournisseur.php"><button class="btn btn-success"><i class="glyphicon glyphicon-ok"></i> Créer Marque</button></a>
                     </div>
                 </div>
             </div>
 <!--                Contenu page -->
-        <!--            Tableau liste fournisseurs(Id, logo, nom, nb produit, affichée, actions -->
+        <!--            Tableau liste Marque(Id, logo, nom, nb produit, affichée, actions -->
             <div class="content-box-large">
                 <div class="panel-body">
                     <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">

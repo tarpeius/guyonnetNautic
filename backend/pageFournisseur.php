@@ -70,7 +70,7 @@
                         <ul>
                             <li><a href="listeProduits.php">Produits</a></li>
                             <li><a href="listeCategories.php">Catégories</a></li>
-                            <li><a href="listeFournisseurs.php">Fournisseurs/Marques</a></li>
+                            <li><a href="listeFournisseurs.php">Marques</a></li>
                         </ul>
                     </li>
                     <li><a href="listeCommande.php"><i class="glyphicon glyphicon-calendar"></i> Commandes</a></li>
@@ -95,7 +95,7 @@
         <div class="col-md-9">
             <div class="content-box-large">
                 <div class="panel-heading">
-                    <div class="panel-title">Page fournisseur</div>
+                    <div class="panel-title">Page marque</div>
                     <label></label>
                     <div class="panel-options">
                         <button class="btn btn-success"><i class="glyphicon glyphicon-ok"></i> Enregistrer</button>
@@ -103,7 +103,7 @@
                     </div>
                 </div>
             </div>
-<!--            Formulaire création fournisseur -->
+<!--            Formulaire création marque -->
             <div class="content-box-large">
                 <div class="panel-body">
                     <form class="form-horizontal" role="form">
