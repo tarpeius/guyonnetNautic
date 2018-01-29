@@ -149,9 +149,9 @@
                             </div>
             <!--                 Description categorie  -->
                             <div class="form-group">
-                                <label for="inputPassword3" class="col-sm-2 control-label">Description</label>
+                                <label for="description" class="col-sm-2 control-label">Description</label>
                                 <div class="col-sm-7">
-                                    <textarea rows="5" cols="100">
+                                    <textarea name="description" rows="5" cols="100">
 
                                     </textarea>
                                 </div>
