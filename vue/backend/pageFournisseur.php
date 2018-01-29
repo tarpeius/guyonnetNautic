@@ -4,13 +4,13 @@
     <title>Projet Guyonnet Nautic</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link href="../ressource/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../ressource/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- styles -->
-    <link href="../ressource/css/styles.css" rel="stylesheet">
+    <link href="../../ressource/css/styles.css" rel="stylesheet">
 
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
-    <link href="../ressource/css/forms.css" rel="stylesheet">
+    <link href="../../ressource/css/forms.css" rel="stylesheet">
 
 </head>
 <body>
@@ -183,7 +183,7 @@
 <!-- jQuery UI -->
 <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="../ressource/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../ressource/bootstrap/js/bootstrap.min.js"></script>
 
 
 </body>
