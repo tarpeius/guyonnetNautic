@@ -201,18 +201,6 @@
 <!--        2eme page sous-titre -->
                                     <div class="tab-pane active" id="tab2">
                                         <form class="form-horizontal" role="form">
-        <!--        Taille -->
-                                            <div class="form-group">
-                                                <div class="col-sm-offset-2 col-sm-1">
-                                                    <label class="control-label col-md-2" >Taille</label>
-                                                    <div class="bfh-selectbox" data-name="selectbox3" data-filter="false">
-                                                        <div data-value="1">S</div>
-                                                        <div data-value="2">M</div>
-                                                        <div data-value="3">L</div>
-                                                        <div data-value="4">XL</div>
-                                                    </div>
-                                                </div>
-                                            </div>
         <!--        Quantité -->
                                             <div class="form-group">
                                                 <label class="control-label col-md-2" for="appendprepend">Quantité</label>
@@ -227,17 +215,8 @@
                                                 <label class="control-label col-md-2" for="appendprepend">Couleur</label>
                                                 <div class="col-sm-2">
                                                     <div class="input-group">
-                                                        <p>Valeur 1</p>
                                                         <input class="form-control" id="appendprepend" type="text">
                                                     </div>
-                                                    <p>Couleur 1</p>
-                                                    <div class="bfh-colorpicker" data-name="colorpicker1"></div>
-                                                    <div class="input-group">
-                                                        <p>Valeur 2</p>
-                                                        <input class="form-control" id="appendprepend" type="text">
-                                                    </div>
-                                                    <p>Couleur 2</p>
-                                                    <div class="bfh-colorpicker" data-name="colorpicker1"></div>
                                                 </div>
                                             </div>
         <!--        Poids -->
@@ -276,8 +255,18 @@
                                                     </div>
                                                 </div>
                                             </div>
+        <!--        Hauteur -->
+                                            <div class="form-group">
+                                                <label class="control-label col-md-2" for="appendprepend">Hauteur (m)</label>
+                                                <div class="col-sm-2">
+                                                    <div class="input-group">
+                                                        <input class="form-control" id="appendprepend" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </form>
                                     </div>
+
 
 <!--        3eme page sous-titre -->
                                     <div class="tab-pane" id="tab3">
@@ -373,7 +362,7 @@
 
     <script src="../ressource/vendors/ckeditor/ckeditor.js"></script>
     <script src="../ressource/vendors/ckeditor/adapters/jquery.js"></script>
-    
+
     <script src="../ressource/vendors/form-helpers/js/bootstrap-formhelpers.min.js"></script>
 
     <script src="../ressource/vendors/select/bootstrap-select.min.js"></script>
