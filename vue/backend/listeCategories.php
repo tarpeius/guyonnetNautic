@@ -6,16 +6,16 @@
     <!-- jQuery UI -->
     <link href="https://code.jquery.com/ui/1.10.3/themes/redmond/jquery-ui.css" rel="stylesheet" media="screen">
     <!-- Bootstrap -->
-    <link href="../ressource/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../ressource/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- styles -->
-    <link href="../ressource/css/styles.css" rel="stylesheet">
+    <link href="../../ressource/css/styles.css" rel="stylesheet">
 
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <link href="../ressource/vendors/form-helpers/css/bootstrap-formhelpers.min.css" rel="stylesheet">
-    <link href="../ressource/vendors/select/bootstrap-select.min.css" rel="stylesheet">
-    <link href="../ressource/vendors/tags/css/bootstrap-tags.css" rel="stylesheet">
+    <link href="../../ressource/vendors/form-helpers/css/bootstrap-formhelpers.min.css" rel="stylesheet">
+    <link href="../../ressource/vendors/select/bootstrap-select.min.css" rel="stylesheet">
+    <link href="../../ressource/vendors/tags/css/bootstrap-tags.css" rel="stylesheet">
 
-    <link href="../ressource/css/forms.css" rel="stylesheet">
+    <link href="../../ressource/css/forms.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -211,32 +211,32 @@
 <!-- jQuery UI -->
 <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="../ressource/bootstrap/js/bootstrap.min.js"></script>
-<script src="../ressource/vendors/datatables/js/jquery.dataTables.min.js"></script>
+<script src="../../ressource/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../ressource/vendors/datatables/js/jquery.dataTables.min.js"></script>
 
-<script src="../ressource/vendors/datatables/dataTables.bootstrap.js"></script>
+<script src="../../ressource/vendors/datatables/dataTables.bootstrap.js"></script>
 
-<script src="../ressource/vendors/form-helpers/js/bootstrap-formhelpers.min.js"></script>
+<script src="../../ressource/vendors/form-helpers/js/bootstrap-formhelpers.min.js"></script>
 
-<script src="../ressource/vendors/select/bootstrap-select.min.js"></script>
+<script src="../../ressource/vendors/select/bootstrap-select.min.js"></script>
 
-<script src="../ressource/vendors/tags/js/bootstrap-tags.min.js"></script>
+<script src="../../ressource/vendors/tags/js/bootstrap-tags.min.js"></script>
 
-<script src="../ressource/vendors/mask/jquery.maskedinput.min.js"></script>
+<script src="../../ressource/vendors/mask/jquery.maskedinput.min.js"></script>
 
-<script src="../ressource/vendors/moment/moment.min.js"></script>
+<script src="../../ressource/vendors/moment/moment.min.js"></script>
 
-<script src="../ressource/vendors/wizard/jquery.bootstrap.wizard.min.js"></script>
+<script src="../../ressource/vendors/wizard/jquery.bootstrap.wizard.min.js"></script>
 
 <!-- bootstrap-datetimepicker -->
-<link href="../ressource/vendors/bootstrap-datetimepicker/datetimepicker.css" rel="stylesheet">
-<script src="../ressource/vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script>
+<link href="../../ressource/vendors/bootstrap-datetimepicker/datetimepicker.css" rel="stylesheet">
+<script src="../../ressource/vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script>
 
 
 <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
 <script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
 
-<script src="../ressource/js/custom.js"></script>
-<script src="../ressource/js/forms.js"></script>
+<script src="../../ressource/js/custom.js"></script>
+<script src="../../ressource/js/forms.js"></script>
 </body>
 </html>
