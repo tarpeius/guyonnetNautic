@@ -38,26 +38,27 @@
                     <div class="panel-title">Modification</div>
                 </div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" name="nomCategorie" method="POST" action="pageCategorie">
+                    <form class="form-horizontal" role="form" name="nomCategorie" method="POST" action="index.php?c=listeCategorie&a=update">
                         <div class="form-group">
                             <label for="nomCategorie" class="col-sm-2 control-label">Selectionner</label>
                             <div class="col-sm-10">
-                                <select class="selectpicker">
+                                <select class="selectpicker" id="selectCateg">
+                                    <option value ='0'>Categories</option>
                                     <?php
                                     foreach ($allCateg as $categorie){ ?>
 
-                                        <option> <?php echo $categorie['nom_categorie']; ?></option>
+                                        <option value="<?php echo $categorie['id_categorie']?>"> <?php echo $categorie['nom_categorie']; ?></option>
 
                                     <?php } ?>
-
                                 </select>
                             </div>
                         </div>
                 <!--        Catégorie choisie -->
-                        <div class="form-group">
+                        <div class="form-group" ">
                             <label for="modifCategorie" class="col-sm-2 control-label">Modifier</label>
                             <div class="col-sm-6">
-                                <input type="text" class="form-control" name="modifCategorie" placeholder="Categorie choisie">
+                                <input type="text" id="modifCategorie" class="form-control" name="modifCategorie" placeholder="Categorie choisie">
+                                <input type="hidden" id="idCategHidden" name="idCateg">
                             </div>
                         </div>
                 <!--        Bouton validation -->

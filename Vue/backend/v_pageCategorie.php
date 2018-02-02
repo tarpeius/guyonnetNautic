@@ -50,13 +50,6 @@
                                     <textarea name="description" rows="5" cols="100"></textarea>
                                 </div>
                             </div>
-            <!--                 Photo categorie  -->
-                            <div class="form-group">
-                                <label class="col-md-2 control-label">Photo</label>
-                                <div class="col-md-10">
-                                    <input type="file" class="btn btn-default" name="photo">
-                                </div>
-                            </div>
                             <div class="panel-options">
                                 <input type="submit" class="btn btn-success" value="Enregistrer">
                                 <button class="btn btn-danger"><i class="glyphicon glyphicon-remove"></i> Supprimer</button>

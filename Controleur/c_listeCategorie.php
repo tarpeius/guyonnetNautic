@@ -5,7 +5,12 @@
  * Date: 31/01/2018
  * Time: 11:35
  */
-$action=$_REQUEST['a'];
+
+
+$action = "";
+if(!empty($_REQUEST['a'])){
+    $action = $_REQUEST['a'];
+}
 if (isset($action)){
     switch ($action){
         case "afficher":{
@@ -34,6 +39,24 @@ if (isset($action)){
             }
             include ('Vue/backend/v_pageCategorie.php');
             break;
+        }
+        case "modifier":{
+            include ('../Modele/m_connexion.php');
+            include ('../Modele/m_selections.php');
+            include ('../Modele/m_modifications.php');
+            $idCateg = $_POST['idCateg'];
+            //var_dump($idCateg);
+            $nomCateg = recupNomParId($idCateg);
+            //var_dump($nomCateg);
+            echo json_encode($nomCateg);
+        }
+        case "update":{
+            if (!empty($_POST['modifCategorie'])){
+                modifierCategorie($_POST['modifCategorie'],$_POST['idCateg']);
+                header('Location: index.php?c=accueil&a=listeCategorie');
+            }
+
+
         }
     }
 }

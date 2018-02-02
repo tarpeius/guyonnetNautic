@@ -20,9 +20,4 @@
       <link href="https://code.jquery.com/ui/1.10.3/themes/redmond/jquery-ui.css" rel="stylesheet" media="screen">
 
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <link href="../../Util/vendors/form-helpers/css/bootstrap-formhelpers.min.css" rel="stylesheet">
-    <link href="../../Util/vendors/select/bootstrap-select.min.css" rel="stylesheet">
-    <link href="../../Util/vendors/tags/css/bootstrap-tags.css" rel="stylesheet">
-
-    <link href="../../Util/css/forms.css" rel="stylesheet"
 <body>

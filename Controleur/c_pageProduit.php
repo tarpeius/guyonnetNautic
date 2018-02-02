@@ -29,5 +29,3 @@ catch(PDOException $e) {
 }
 
 $db = null;
-
-?>
