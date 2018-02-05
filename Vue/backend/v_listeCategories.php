@@ -20,7 +20,8 @@
                 </div>
                 <div class="panel-body">
                     <?php
-                    $allCateg = afficherCategorie($bdd);
+                    $allCateg = recupSousCategorieParCategorie();
+                    var_dump($allCateg);
                     foreach ($allCateg as $categorie){ ?>
                         <ul>
                             <li> <?php echo $categorie['nom_categorie']?></li>

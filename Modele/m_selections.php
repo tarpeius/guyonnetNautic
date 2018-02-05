@@ -32,3 +32,25 @@ function recupNomParId($id){
     return $result;
 
 }
+
+function recupIdParNom($nom){
+    global $bdd;
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $query = "SELECT id_categorie FROM categorie WHERE nom_categorie = :nom";
+    $req=$bdd->prepare($query);
+    $req->bindParam(':nom', $nom);
+    $req->execute();
+    $result = $req->fetch(PDO::FETCH_ASSOC);
+    return $result;
+}
+
+function recupSousCategorieParCategorie(){
+    global $bdd;
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $query = "SELECT * FROM categorie, hierarchiser WHERE categorie.id_categorie=hierarchiser.id_categorie  GROUP BY hierarchiser.id_categorie_1";
+    $req=$bdd->prepare($query);
+    //$req->bindParam(':idCateg', $idCateg);
+    $req->execute();
+    $result = $req->fetchAll();
+    return $result;
+}

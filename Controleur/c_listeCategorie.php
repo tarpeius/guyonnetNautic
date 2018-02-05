@@ -26,9 +26,15 @@ if (isset($action)){
                 // On supprime les espaces pour verifier que le nom ne contient pas que des espaces
                 $categorieChain = str_replace(' ','',$categorieChain);
                     if ($categorieChain != ''){
-                        nouveauCategorie($bdd,$_POST['nomCateg'], $_POST['description']);
-                        $validation = "La categorie a bien été ajouté";
-                        var_dump($validation);
+                        nouveauCategorie($_POST['nomCateg'], $_POST['description']);
+                        var_dump($_POST);
+                        if ($_POST['categPere'] !=0){
+                            $idSousCateg = recupIdParNom($_POST['nomCateg'] );
+                            var_dump($idSousCateg['id_categorie']);
+                            nouveauSousCategorie($_POST['categPere'],$idSousCateg['id_categorie']);
+                            $validation = "La categorie a bien été ajouté";
+                            var_dump($validation);
+                        }
                     }else{
                         $erreur = "Le nom du categorie ne peut être vide";
                     }

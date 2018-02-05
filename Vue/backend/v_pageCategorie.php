@@ -21,24 +21,17 @@
                             </div>
             <!--                 Categorie parente  -->
                             <div class="form-group">
-                                <label for="inputPassword3" class="col-sm-2 control-label">Catégorie parente</label>
+                                <label for="categPere" class="col-sm-2 control-label">Catégorie parente</label>
                                 <div class="col-sm-5">
-                                    <select class="selectpicker">
-                                        <option data-icon="glyphicon-chevron-right">Bateau</option>
-                                        <option>Semi-Rigide</option>
-                                        <option>Pneumatique</option>
+                                    <select class="selectpicker" name="categPere">
+                                        <option value ='0'>Categories</option>
+                                        <?php
+                                        $allCateg = afficherCategorie($bdd);
+                                        foreach ($allCateg as $categorie){ ?>
 
-                                        <option data-divider="true"></option>
+                                            <option value="<?php echo $categorie['id_categorie']?>"> <?php echo $categorie['nom_categorie']; ?></option>
 
-                                        <option data-icon="glyphicon-chevron-right">Jet-ski</option>
-                                        <option>Location</option>
-
-                                        <option data-divider="true"></option>
-
-                                        <option data-icon="glyphicon-chevron-right">Permis-bateau</option>
-                                        <option>Cotier</option>
-                                        <option>Fluvial</option>
-                                        <option>Hauturier</option>
+                                        <?php } ?>
                                     </select>
                                 </div>
                             </div>
