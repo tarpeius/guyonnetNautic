@@ -7,7 +7,6 @@
             <!--        Bouton ajout catégorie + rafraichir -->
                     <div class="panel-options">
                         <a href="index.php?c=listeCategorie&a=nouveau"><button class="btn btn-success"><i class="glyphicon glyphicon-plus"></i> Ajouter catégorie</button></a>
-                        <a href="listeCategories.php"><button class="btn btn-info"><i class="glyphicon glyphicon-refresh"></i> Rafraîchir</button></a>
                     </div>
                 </div>
             </div>
@@ -54,7 +53,7 @@
                             </div>
                         </div>
                 <!--        Catégorie choisie -->
-                        <div class="form-group" ">
+                        <div class="form-group" >
                             <label for="modifCategorie" class="col-sm-2 control-label">Modifier</label>
                             <div class="col-sm-6">
                                 <input type="text" id="modifCategorie" class="form-control" name="modifCategorie" placeholder="Categorie choisie">
@@ -64,11 +63,11 @@
                 <!--        Bouton validation -->
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                <input type="submit" class="btn btn-primary" value="Modifier">
+                                <input type="submit" class="btn btn-primary" name="modifCateg" value="Modifier">
+                                <input type="submit" class="btn btn-danger" name="modifCateg" value="Supprimer">
                             </div>
                         </div>
                     </form>
-
                 </div>
             </div>
         </div>

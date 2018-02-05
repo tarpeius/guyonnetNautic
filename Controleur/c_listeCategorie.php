@@ -6,7 +6,6 @@
  * Time: 11:35
  */
 
-
 $action = "";
 if(!empty($_REQUEST['a'])){
     $action = $_REQUEST['a'];
@@ -22,7 +21,6 @@ if (isset($action)){
             break;
         }
         case "ajout":{
-            var_dump($_REQUEST);
             if(!empty($_POST['nomCateg'])){
                 $categorieChain = $_POST['nomCateg'];
                 // On supprime les espaces pour verifier que le nom ne contient pas que des espaces
@@ -45,18 +43,25 @@ if (isset($action)){
             include ('../Modele/m_selections.php');
             include ('../Modele/m_modifications.php');
             $idCateg = $_POST['idCateg'];
-            //var_dump($idCateg);
             $nomCateg = recupNomParId($idCateg);
-            //var_dump($nomCateg);
             echo json_encode($nomCateg);
         }
         case "update":{
             if (!empty($_POST['modifCategorie'])){
-                modifierCategorie($_POST['modifCategorie'],$_POST['idCateg']);
-                header('Location: index.php?c=accueil&a=listeCategorie');
-            }
-
-
+                if ($_POST['modifCateg'] == "Modifier"){
+                    modifierCategorie($_POST['modifCategorie'],$_POST['idCateg']);
+                    header('Location: index.php?c=accueil&a=listeCategorie');
+                }else{
+                    supprimerCategorie($_POST['idCateg']);
+                    header('Location: index.php?c=accueil&a=listeCategorie');
+                }
+             }
+            break;
+        }
+        case "supprimer":{
+            //supprimerCategorie();
+            include ('Vue/backend/v_pageCategorie.php');
+        break;
         }
     }
 }

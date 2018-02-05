@@ -1,4 +1,3 @@
-<?php var_dump($_REQUEST);?>
 <!--                Titre page -->
         <div class="col-md-9">
                 <div class="content-box-large">
