@@ -54,3 +54,22 @@ function recupSousCategorieParCategorie(){
     $result = $req->fetchAll();
     return $result;
 }
+
+function afficherToutClient(){
+    global $bdd;
+    $query = "SELECT * FROM `client`";
+    $req=$bdd->prepare($query);
+    $req->execute();
+    $result = $req->fetchAll();
+    return $result;
+}
+
+function afficherUnClient($id){
+    global $bdd;
+    $query = "SELECT * FROM `client` WHERE id_client=:id";
+    $req=$bdd->prepare($query);
+    $req->bindParam(':id', $id);
+    $req->execute();
+    $result = $req->fetchAll();
+    return $result;
+}

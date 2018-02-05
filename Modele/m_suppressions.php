@@ -8,3 +8,12 @@ function supprimerCategorie($id){
     $req->bindParam(':id', $id);
     $req->execute();
 }
+
+function supprimerClient($id){
+    global $bdd;
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $query="DELETE FROM `client` WHERE id_client=:id";
+    $req=$bdd->prepare($query);
+    $req->bindParam(':id', $id);
+    $req->execute();
+}
