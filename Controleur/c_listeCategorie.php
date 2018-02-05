@@ -35,5 +35,20 @@ if (isset($action)){
             include ('Vue/backend/v_pageCategorie.php');
             break;
         }
+        case "modifier":{
+            include ("../Modele/m_connexion.php");
+            include ("../Modele/m_selections.php");
+            include ("../Modele/m_modifications.php");
+            $idCateg = $_POST['idCateg'];
+            $nomCateg = recupNomParId($idCateg);
+            echo json_encode($nomCateg);
+            break;
+        }
+        case "update":{
+            if (!empty($_POST['modifCategorie'])){
+                modifierCategorie($_POST['modifCategorie'],$_POST['idCateg']);
+                header('Location: index.php?c=accueil&a=listeCategorie');
+            }
+        }
     }
 }

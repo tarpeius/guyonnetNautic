@@ -6,7 +6,7 @@
 				<div class="form-group">
 					<label for="inputEmail3" class="col-sm-2 control-label">Nom</label>
 					<div class="col-sm-7">
-						<input type="email" class="form-control" id="inputEmail3">
+						<input type="text" class="form-control" id="inputEmail3" name="nomMarque" required>
 					</div>
 				</div>
 	<!--        Logo input -->

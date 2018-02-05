@@ -6,7 +6,7 @@
                         <label></label>
         <!--        Bouton créer Marque -->
                     <div class="panel-options">
-                        <a href="index.php?c=listeFournisseurs&a=afficher"><button class="btn btn-success"><i class="glyphicon glyphicon-ok"></i> Créer Marque</button></a>
+                        <a href="index.php?c=listeFournisseurs&a=nouveau"><button class="btn btn-success"><i class="glyphicon glyphicon-ok"></i> Créer Marque</button></a>
                     </div>
                 </div>
             </div>

@@ -4,10 +4,9 @@
                 <div class="panel-heading">
                     <div class="panel-title">Catégories</div>
                     <label></label>
-            <!--        Bouton ajout catégorie + rafraichir -->
+            <!--        Bouton ajout catégorie -->
                     <div class="panel-options">
                         <a href="index.php?c=listeCategorie&a=nouveau"><button class="btn btn-success"><i class="glyphicon glyphicon-plus"></i> Ajouter catégorie</button></a>
-                        <a href="listeCategories.php"><button class="btn btn-info"><i class="glyphicon glyphicon-refresh"></i> Rafraîchir</button></a>
                     </div>
                 </div>
             </div>
@@ -21,7 +20,7 @@
                 </div>
                 <div class="panel-body">
                     <?php
-                    $allCateg = afficherCategorie($bdd);
+                    $allCateg = afficherCategorie();
                     foreach ($allCateg as $categorie){ ?>
                         <ul>
                             <li> <?php echo $categorie['nom_categorie']?></li>
@@ -38,11 +37,11 @@
                     <div class="panel-title">Modification</div>
                 </div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" name="nomCategorie" method="POST" action="pageCategorie">
+                    <form class="form-horizontal" role="form" name="nomCategorie" method="POST" action="index.php?c=listeCategorie&a=update">
                         <div class="form-group">
                             <label for="nomCategorie" class="col-sm-2 control-label">Selectionner</label>
                             <div class="col-sm-10">
-                                <select class="selectpicker">
+                                <select id="selectCateg" /*class="selectpicker"*/>
                                     <?php
                                     foreach ($allCateg as $categorie){ ?>
 
@@ -54,12 +53,13 @@
                             </div>
                         </div>
                 <!--        Catégorie choisie -->
-                        <div class="form-group">
-                            <label for="modifCategorie" class="col-sm-2 control-label">Modifier</label>
-                            <div class="col-sm-6">
-                                <input type="text" class="form-control" name="modifCategorie" placeholder="Categorie choisie">
-                            </div>
+                    <div class="form-group" ">
+                        <label for="modifCategorie" class="col-sm-2 control-label">Modifier</label>
+                        <div class="col-sm-6">
+                            <input type="text" id="modifCategorie" class="form-control" name="modifCategorie" placeholder="Categorie choisie">
+                            <input type="hidden" id="idCategHidden" name="idCateg">
                         </div>
+                    </div>
                 <!--        Bouton validation -->
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
@@ -70,6 +70,3 @@
 
                 </div>
             </div>
-        </div>
-    </div>
-</div>

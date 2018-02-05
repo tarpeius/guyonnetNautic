@@ -6,7 +6,7 @@
                     <label></label>
         <!--        Bouton créer produit -->
                     <div class="panel-options">
-                        <a href="pageProduit.php"><button class="btn btn-success"><i class="glyphicon glyphicon-ok"></i> Créer produit</button></a>
+                        <a href="index.php?c=listeProduits&a=nouveau"><button class="btn btn-success"><i class="glyphicon glyphicon-ok"></i> Créer produit</button></a>
                     </div>
                 </div>
             </div>
