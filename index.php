@@ -39,7 +39,7 @@
         include("Controleur/c_listeCommande.php");
         break;
     case 'listeClient':
-        include("Controleur/c_listeClients.php");
+        include("Controleur/c_listeClient.php");
         break;
 	default:
 	   include("Vue/Structure/v_nopage.php");
@@ -47,4 +47,3 @@
 	 }
 	//ob_end_flush();
     include("Vue/Structure/v_footer.php") ;
-?>
