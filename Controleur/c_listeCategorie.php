@@ -13,7 +13,7 @@ if(!empty($_REQUEST['a'])){
 if (isset($action)){
     switch ($action){
         case "afficher":{
-            include('Vue/backend/v_listeCategorie.php');
+            include('Vue/backend/v_listeCategories.php');
             break;
         }
         case "nouveau":{
@@ -62,6 +62,19 @@ if (isset($action)){
                     header('Location: index.php?c=accueil&a=listeCategorie');
                 }
              }
+            break;
+        }
+        case "modifierParent":{
+
+            if ($_POST['modifCategModif'] == $_POST['modifCategParent']){
+                echo "La categorie parente ne peux pas etre la même que la categorie séléctionné";
+            }else{
+                modifierCategParente($_POST['modifCategModif'],$_POST['modifCategParent']);
+                echo "done";
+                var_dump($_POST);
+            }
+
+            include ('Vue/backend/v_listeCategories.php');
             break;
         }
         case "supprimer":{

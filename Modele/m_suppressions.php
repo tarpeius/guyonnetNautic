@@ -17,3 +17,12 @@ function supprimerClient($id){
     $req->bindParam(':id', $id);
     $req->execute();
 }
+
+function supprimerCommande($id){
+    global $bdd;
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $query="DELETE FROM commande WHERE id_commande=:id";
+    $req=$bdd->prepare($query);
+    $req->bindParam(':id', $id);
+    $req->execute();
+}
