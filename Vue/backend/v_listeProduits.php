@@ -27,172 +27,44 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr class="odd gradeX">
-                            <td>1</td>
-                            <td><img src="https://www.tuxboard.com/photos/2012/04/bateau-flottant-12.jpg" width="150px" height="90px"></td>
-                            <td>seadoo 3000</td>
-                            <td class="center">jet-ski</td>
-                            <td>
-                         
-                            </td>
-                            <td>
-                                <span class="glyphicon glyphicon-ok"></span>
-                            </td>
-                            <td>
-                                <a href="pageProduit.php"><span class="glyphicon glyphicon-edit"></span></a>
-                            </td>
-                        </tr>
-                        <tr class="even gradeC">
-                            <td>2</td>
-                            <td><img src="images"></td>
-                            <td>seadoo 3000</td>
-                            <td class="center">jet-ski</td>
-                            <td>1</td>
-                            <td>
-                                <span class="glyphicon glyphicon-ok"></span>
-                            </td>
-                            <td>
-                                <a href="pageProduit.php"><span class="glyphicon glyphicon-edit"></span></a>
-                            </td>
-                        </tr>
-                        <tr class="odd gradeA">
-                            <td>3</td>
-                            <td><img src="images"></td>
-                            <td>seadoo 3000</td>
-                            <td class="center">jet-ski</td>
-                            <td>1</td>
-                            <td>
-                                <span class="glyphicon glyphicon-ok"></span>
-                            </td>
-                            <td>
-                                <a href="pageProduit.php"><span class="glyphicon glyphicon-edit"></span></a>
-                            </td>
-                        </tr>
-                        <tr class="even gradeA">
-                            <td>4</td>
-                            <td><img src="images"></td>
-                            <td>seadoo 3000</td>
-                            <td class="center">jet-ski</td>
-                            <td>1</td>
-                            <td>
-                                <span class="glyphicon glyphicon-ok"></span>
-                            </td>
-                            <td>
-                                <a href="pageProduit.php"><span class="glyphicon glyphicon-edit"></span></a>
-                            </td>
-                        </tr>
-                        <tr class="odd gradeA">
-                            <td>5</td>
-                            <td><img src="images"></td>
-                            <td>seadoo 3000</td>
-                            <td class="center">jet-ski</td>
-                            <td>1</td>
-                            <td>
-                                <span class="glyphicon glyphicon-ok"></span>
-                            </td>
-                            <td>
-                                <a href="pageProduit.php"><span class="glyphicon glyphicon-edit"></span></a>
-                            </td>
-                        </tr>
-                        <tr class="even gradeA">
-                            <td>6</td>
-                            <td><img src="images"></td>
-                            <td>seadoo 3000</td>
-                            <td class="center">jet-ski</td>
-                            <td>1</td>
-                            <td>
-                                <span class="glyphicon glyphicon-ok"></span>
-                            </td>
-                            <td>
-                                <a href="pageProduit.php"><span class="glyphicon glyphicon-edit"></span></a>
-                            </td>
-                        </tr>
-                        <tr class="gradeA">
-                            <td>7</td>
-                            <td><img src="images"></td>
-                            <td>seadoo 3000</td>
-                            <td class="center">jet-ski</td>
-                            <td>1</td>
-                            <td>
-                                <span class="glyphicon glyphicon-ok"></span>
-                            </td>
-                            <td>
-                                <a href="pageProduit.php"><span class="glyphicon glyphicon-edit"></span></a>
-                            </td>
-                        </tr>
-                        <tr class="gradeA">
-                            <td>8</td>
-                            <td><img src="images"></td>
-                            <td>seadoo 3000</td>
-                            <td class="center">jet-ski</td>
-                            <td>1</td>
-                            <td>
-                                <span class="glyphicon glyphicon-ok"></span>
-                            </td>
-                            <td>
-                                <a href="pageProduit.php"><span class="glyphicon glyphicon-edit"></span></a>
-                            </td>
-                        </tr>
-                        <tr class="gradeA">
-                            <td>9</td>
-                            <td><img src="images"></td>
-                            <td>seadoo 3000</td>
-                            <td class="center">jet-ski</td>
-                            <td>1</td>
-                            <td>
-                                <span class="glyphicon glyphicon-ok"></span>
-                            </td>
-                            <td>
-                                <span class="glyphicon glyphicon-edit"></span>
-                                <span class="glyphicon glyphicon-file"></span>
-                                <span class="glyphicon glyphicon-trash"></span>
-                            </td>
-                        </tr>
-                        <tr class="gradeA">
-                            <td>10</td>
-                            <td><img src="images"></td>
-                            <td>seadoo 3000</td>
-                            <td class="center">jet-ski</td>
-                            <td>1</td>
-                            <td>
-                                <span class="glyphicon glyphicon-ok"></span>
-                            </td>
-                            <td>
-                                <span class="glyphicon glyphicon-edit"></span>
-                                <span class="glyphicon glyphicon-file"></span>
-                                <span class="glyphicon glyphicon-trash"></span>
-                            </td>
-                        </tr>
-                        <tr class="gradeA">
-                            <td>11</td>
-                            <td><img src="images"></td>
-                            <td>seadoo 3000</td>
-                            <td class="center">jet-ski</td>
-                            <td>1</td>
-                            <td>
-                                <span class="glyphicon glyphicon-ok"></span>
-                            </td>
-                            <td>
-                                <span class="glyphicon glyphicon-edit"></span>
-                                <span class="glyphicon glyphicon-file"></span>
-                                <span class="glyphicon glyphicon-trash"></span>
-                            </td>
-                        </tr>
-                        <tr class="gradeA">
-                            <td>12</td>
-                            <td><img src="images"></td>
-                            <td>seadoo 3000</td>
-                            <td class="center">jet-ski</td>
-                            <td>1</td>
-                            <td>
-                                <span class="glyphicon glyphicon-ok"></span>
-                            </td>
-                            <td>
-                                <span class="glyphicon glyphicon-edit"></span>
-                                <span class="glyphicon glyphicon-file"></span>
-                                <span class="glyphicon glyphicon-trash"></span>
-                            </td>
-                        </tr>
+                        <?php
+                            $allArticle = afficherArticleCategorie();
+                            foreach ($allArticle as $article) {
+                        ?>
+                                <tr class="odd gradeX">
+                                    <td>
+                                        <?php
+                                            echo $article['reference'];
+                                        ?>
+                                    </td>
+                                    <td>
+                                        <img src="Util/img/<?php echo $article['photo_article']; ?>" width="150px" height="90px">
+                                    </td>
+                                    <td>
+                                        <?php
+                                            echo $article['nom_article'];
+                                        ?>
+                                    </td>
+                                    <td class="center">
+                                        <?php
+                                            echo $article['nom_categorie'];
+                                        ?>
+                                    </td>
+                                    <td>
+                                        <?php
+                                            echo $article['qte_article'];
+                                        ?>
+                                    </td>
+                                    <td>
+                                        <span class="glyphicon glyphicon-ok"></span>
+                                    </td>
+                                    <td>
+                                        <a href="index.php?"><span class="glyphicon glyphicon-edit"></span></a>
+                                    </td>
+                                </tr>
+                        <?php
+                            }
+                        ?>
                         </tbody>
                     </table>
                 </div>

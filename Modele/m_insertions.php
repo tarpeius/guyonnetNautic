@@ -47,3 +47,14 @@ function nouveauArticle($bdd,$ref,$nom,$prix,$resume,$descr,$qte,$poids,$motor,$
 
     $stmt->execute($params);
 }
+function nouveauCategoriser($bdd,$id,$ref){
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $stmt = $bdd->prepare("INSERT INTO categoriser(categoriser.id_categorie,categoriser.reference) VALUES (:id,:ref)");
+
+    $params = array (
+        ':id' => $id,
+        ':ref' => $ref,
+    );
+
+    $stmt->execute($params);
+}

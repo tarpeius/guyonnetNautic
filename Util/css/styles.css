@@ -386,6 +386,12 @@ body {
   background-color: #eff0f3;
 }
 
+/** Photo **/
+.imageLogo {
+    width: auto ;
+    height: 110px;
+}
+
 /** Login & Signup **/
 
 .login-wrapper {
@@ -650,5 +656,5 @@ body {
       border-bottom:0px;
       box-shadow:0px 0px 1px #0fa6bc;
       border-radius:10px;
-   }  
+   }
 }
