@@ -22,8 +22,15 @@ if (isset($action)){
            include('Vue/backend/v_listeClients.php');
            break;
         }
-
         case "modifier":{
+            if (isset($_GET['id'])){
+                $id_Client = $_GET['id'];
+            }
+
+            include("Vue/backend/v_listeClients.php");
+            break;
+        }
+        case "ajout":{
             if ($_POST['mdp'] == ''){
                 $_POST['mdp'] = NULL;
             }

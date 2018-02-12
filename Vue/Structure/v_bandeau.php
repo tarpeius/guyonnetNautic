@@ -4,7 +4,7 @@
             <div class="col-md-5">
                 <!--        Logo -->
                 <div class="logo">
-                    <h1><a href="index.php?c=accueil">Guyonnet Nautic</a></h1>
+                    <h1><a href="index.php?c=acceuil">Guyonnet Nautic</a></h1>
                 </div>
             </div>
             <div class="col-md-5">
@@ -29,7 +29,7 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mon compte <b class="caret"></b></a>
                                 <ul class="dropdown-menu animated fadeInUp">
                                     <li><a href="profile.html">Profil</a></li>
-                                    <li><a href="index.php?c=accueil&a=deconnexion">Déconnexion</a></li>
+                                    <li><a href="login.html">Déconnexion</a></li>
                                 </ul>
                             </li>
                         </ul>
