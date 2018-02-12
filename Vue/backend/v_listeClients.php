@@ -37,7 +37,7 @@
                                 <td> <?php echo $client['adresse_client']; ?></td>
                                 <td> <?php echo $client['cp_client']; ?></td>
                                 <td> <?php echo $client['date_inscription']; ?></td>
-                                <td><button id="<?php echo $client['id_client'];?>" onclick="tarace(this);" class="btn btn-info" data-toggle="modal" data-target="#myModal-<?php echo $client['id_client'];?>" ><i class="glyphicon glyphicon-pencil"></i></button> <a href="index.php?c=listeClient&a=supprimer&id=<?php echo $client['id_client'];?>"><i class="glyphicon glyphicon-remove"></i></a></td>
+                                <td><button class="btn btn-info" data-toggle="modal" data-target="#myModal-<?php echo $client['id_client'];?>" ><i class="glyphicon glyphicon-pencil"></i></button> <a href="index.php?c=listeClient&a=supprimer&id=<?php echo $client['id_client'];?>"><i class="glyphicon glyphicon-remove"></i></a></td>
                             </tr>
 
                 <div id="myModal-<?php echo $client['id_client'];?>" class="modal fade" role="dialog">
@@ -50,14 +50,7 @@
                                 <h4 class="modal-title">Modal Header</h4>
                             </div>
                             <div class="modal-body">
-
-<!--                                --><?php
-//                                global $id_Client;
-//                                var_dump($id_Client);
-//                                $unClient = afficherUnClient($id_Client);
-//                                ?>
-
-                                <form method="POST" action="index.php?c=listeClient&a=ajout">
+                                <form method="POST" action="index.php?c=listeClient&a=modifier">
                                     <div class="form-group">
                                         <label for="nomClient">Nom</label>
                                         <input class="form-control" type="text" name="nomClient" value="<?php echo $client['nom_client']; ?>">
@@ -104,11 +97,3 @@
 </div>
 </div>
 </div>
-<script>
-     function tarace(that) {
-         id_client = (that.id);
-         $.post('index.php?c=accueil&a=listeClients', {variable: id_client});
-         console.log(id_client);
-     }
-</script>
-<!-- Modal -->
