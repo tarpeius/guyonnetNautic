@@ -65,24 +65,22 @@ if (isset($action)){
             break;
         }
         case "modifierParent":{
-            if ($_POST['destination'] == $_POST['aDeplacer']){
+
+            if ($_POST['modifCategModif'] == $_POST['modifCategParent']){
                 echo "La categorie parente ne peux pas etre la même que la categorie séléctionné";
             }else{
-                $ifExist = existHierarchiser($_POST['aDeplacer']);
-                if (empty($ifExist)){
-                    modifierCategParente($_POST['destination'],$_POST['aDeplacer']);
-                    echo "update";
-                }else{
-                    nouveauSousCategorie($_POST['destination'],$_POST['aDeplacer']);
-                    echo "insert";
-                }
+                modifierCategParente($_POST['modifCategModif'],$_POST['modifCategParent']);
+                echo "done";
+                var_dump($_POST);
             }
+
             include ('Vue/backend/v_listeCategories.php');
             break;
         }
-        default:{
-                include ('Vue/backend/v_pageCategorie.php');
-                break;
+        case "supprimer":{
+            //supprimerCategorie();
+            include ('Vue/backend/v_pageCategorie.php');
+        break;
         }
     }
 }

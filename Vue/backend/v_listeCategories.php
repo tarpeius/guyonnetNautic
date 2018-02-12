@@ -118,9 +118,9 @@
 
                 <div class="panel-body">
                     <div class="form-group" >
-                        <div class="col-md-5">
-                         <label  class="col-md-12 control-label">Destination </label>
-                            <select class="selectpicker" name="destination">
+                        <div class="col-md-2">
+                         <!--   <label  class="col-sm-2 control-label">Actuel </label> -->
+                            <select class="selectpicker" name="modifCategModif">
                                 <?php
                                 $aModif = afficherToutesCategories();
                                     foreach ($aModif as $cat){
@@ -131,9 +131,9 @@
                                 ?>
                             </select>
                         </div>
-                        <div class="col-md-5">
-                           <label  class="col-md-12 control-label">A déplacer</label>
-                            <select class="selectpicker" name="aDeplacer">
+                        <div class="col-md-2">
+                           <!-- <label  class="col-sm-2 control-label">A modifier</label> -->
+                            <select class="selectpicker" name="modifCategParent">
                                 <?php
                                 $catCible = afficherToutesCategories();
                                 foreach ($catCible as $cat){
@@ -148,6 +148,10 @@
                             <input type="submit" class="btn btn-primary" name="modifParent" value="Modifier">
                         </div>
                     </div>
+                    <?php
+                    $aketout = afficherToutSousCategorie();
+                    var_dump($aketout);
+                    ?>
                 </div>
             </div>
         </div>

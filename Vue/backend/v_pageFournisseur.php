@@ -4,9 +4,9 @@
 			<form class="form-horizontal" role="form" method="post" action="index.php?c=listeFournisseurs&a=ajout">
 	<!--        Nom input -->
 				<div class="form-group">
-					<label for="inputEmail3" class="col-sm-2 control-label">Nom</label>
+					<label for="nomMarque" class="col-sm-2 control-label">Nom</label>
 					<div class="col-sm-7">
-						<input type="text" class="form-control" id="inputEmail3" name="nomMarque" required>
+						<input type="text" class="form-control" id="nomMarque">
 					</div>
 				</div>
 	<!--        Logo input -->

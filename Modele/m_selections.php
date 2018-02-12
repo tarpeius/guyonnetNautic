@@ -114,24 +114,3 @@ function afficherToutesCommande(){
     $result = $req->fetchAll(PDO::FETCH_ASSOC);
     return $result;
 }
-
-function existHierarchiser($id){
-    global $bdd;
-    $query = "SELECT * FROM hierarchiser WHERE EXISTS ( SELECT id_categorie FROM categorie WHERE id_categorie= :id)";
-    $req=$bdd->prepare($query);
-    $req->bindParam(':id', $id);
-    $req->execute();
-    $result = $req->fetchAll(PDO::FETCH_ASSOC);
-    return $result;
-}
-
-function isAdmin($pseudo, $mdp){
-    global $bdd;
-    $query = "SELECT COUNT(pseudo_admin) FROM administrateur WHERE pseudo_admin=:pseudo AND pass_admin=:mdp";
-    $req=$bdd->prepare($query);
-    $req->bindParam(':pseudo', $pseudo);
-    $req->bindParam(':mdp', $mdp);
-    $req->execute();
-    $result = $req->fetch();
-    return $result[0];
-}
