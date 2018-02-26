@@ -47,12 +47,9 @@ switch($action)
         break;
     case "supprimer":
         var_dump($_GET);
-        if (!empty($_GET['reference']) && !empty($_GET['tva'])){
-            $ref = $_GET['reference'];
-            $idTva = $_GET['tva'];
-            supprimerCategoriserMarqueOuArticle($ref);
-            /*supprimerTvaArticle($idTva);*/
-            supprimerArticle($ref);
+        if (!empty($_GET)){
+            $id = $_GET['idArticle'];
+            supprimerArticle($id);
             $validation = "L'article a bien été supprimé";
             var_dump($validation);
         }else{
@@ -75,15 +72,15 @@ switch($action)
             $dimension = $_POST['longueurArticle'];
             $photo = $_POST['photoArticle'];
             if (!empty($nom) && isset($_POST['submit'])){
-                modifierNomMarque($reference,$nom);
+                modifierNomMarque($id,$nom);
                 $validation = "Le nom de l'article a bien été modifié";
                 var_dump($validation);
             }elseif (!empty($_POST['logoMarque']) && isset($_POST['submit'])){
-                modifierLogoMarque($reference,$photo);
+                modifierLogoMarque($id,$logo);
                 $validation = "Le logo de l'article a bien été modifié";
                 var_dump($validation);
             }elseif (!empty($_POST['nomMarque']) && !empty($_POST['logoMarque']) && isset($_POST['submit'])) {
-                modifierMarque($reference,$nom,$photo);
+                modifierMarque($id,$nom,$logo);
                 $validation = "L'article a bien été modifié";
                 var_dump($validation);
             }else{

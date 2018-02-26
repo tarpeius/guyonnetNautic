@@ -181,7 +181,7 @@ function isAdmin($pseudo, $mdp){
     {
         global $bdd;
         $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $query = "SELECT article.nom_article, article.reference, article.photo_article, article.qte_article, categorie.nom_categorie, article.id_tva 
+        $query = "SELECT article.nom_article, article.reference, article.photo_article, article.qte_article, categorie.nom_categorie 
                   FROM article, categoriser, categorie 
                   WHERE article.reference=categoriser.reference AND categoriser.id_categorie=categorie.id_categorie";
         $req=$bdd->prepare($query);
@@ -196,6 +196,6 @@ function isAdmin($pseudo, $mdp){
         $req=$bdd->prepare($query);
         $req->bindParam(':id', $id);
         $req->execute();
-        $result= $req->fetchAll(PDO::FETCH_ASSOC);
+        $result= $req->fetchAll();
         return $result;
     }
