@@ -23,7 +23,6 @@ function nouveauArticle($ref,$nom,$prix,$resume,$descr,$qte,$poids,$motor,$dimen
     global $bdd;
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $stmt = $bdd->prepare("INSERT INTO article (reference,nom_article,prix_article,qte_article,resume_article,desc_article,poids_article,motorisation_article,dimensions_article,photo_article,id_marque,id_tva) VALUES (:ref,:nom,:prix,:qte,:resume,:descr,:poids,:motor,:dimension,:photo,:marque,:tva)");
-
     $params = array (
         ':ref' => $ref,
         ':nom' => $nom,
@@ -37,6 +36,17 @@ function nouveauArticle($ref,$nom,$prix,$resume,$descr,$qte,$poids,$motor,$dimen
         ':photo' => $photo,
         ':marque' => $marque,
         ':tva' => $tva,
+    );
+    $stmt->execute($params);
+}
+function nouveauCategoriser($id,$ref){
+    global $bdd;
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $stmt = $bdd->prepare("INSERT INTO categoriser(categoriser.id_categorie,categoriser.reference) VALUES (:id,:ref)");
+
+    $params = array (
+        ':id' => $id,
+        ':ref' => $ref,
     );
 
     $stmt->execute($params);
