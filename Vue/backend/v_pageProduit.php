@@ -37,7 +37,7 @@
                                 $allTva = afficherTva();
                                 foreach ($allTva as $tva) {
                                     ?>
-                                    <option value="<?php echo $tva['type_tva']?>">
+                                    <option value="<?php echo $tva['id_tva']?>">
                                         <?php
                                         echo $tva['type_tva'];
                                         ?>

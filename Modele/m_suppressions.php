@@ -53,7 +53,7 @@ function supprimerArticleMarque($id){
 function supprimerArticle($id){
     global $bdd;
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $stmt = $bdd->prepare("DELETE FROM article WHERE id_article =:id");
+    $stmt = $bdd->prepare("DELETE FROM article WHERE reference=:id");
 
     $params = array (
         ':id' => $id,
@@ -71,5 +71,13 @@ function supprimerCategoriserMarque($ref){
     );
 
     $stmt->execute($params);
+}
+function supprimerCommandeClient($id){
+    global $bdd;
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $query="DELETE FROM `commande` WHERE id_client=:id";
+    $req=$bdd->prepare($query);
+    $req->bindParam(':id', $id);
+    $req->execute();
 }
 
