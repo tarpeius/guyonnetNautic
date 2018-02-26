@@ -59,6 +59,43 @@
                                 <a href="index.php?c=listeFournisseurs&a=modifier&idMarque=<?php echo $marque['id_marque'] ;?>&nomMarque=<?php echo $marque['nom_marque'] ;?>&logoMarque=<?php echo $marque['logo_marque']?>"></a>
                                 <a href="index.php?c=listeFournisseurs&a=supprimer&idMarque=<?php echo $marque['id_marque'] ;?>"><span class="glyphicon glyphicon-trash"></span></a>
                             </td>
+
+                </div>
+                <h2>Modal Example</h2>
+
+                <!-- Modal -->
+                <!-- Modal -->
+                <div id="myModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Modal Header</h4>
+                            </div>
+                            <div class="modal-body">
+                                <script>
+                                    //                    function getId(monId) {
+                                    //                        alert(monId);
+                                    //                    }
+                                    function mafonction() {
+                                        var x = document.getElementById("myBtn");
+
+                                    }
+                                </script>
+                                <?php
+                                $uneMarque = afficherToutesMarques();
+                                var_dump($uneMarque);
+                                var_dump($_GET);
+                                ?>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                             <?php
                             }
                             ?>
@@ -69,40 +106,3 @@
             </div>
         </div>
     </div>
-
-</div>
-<h2>Modal Example</h2>
-
-<!-- Modal -->
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Modal Header</h4>
-            </div>
-            <div class="modal-body">
-                <script>
-//                    function getId(monId) {
-//                        alert(monId);
-//                    }
-                    function mafonction() {
-                        var x = document.getElementById("myBtn");
-
-                    }
-                </script>
-                <?php
-                    $uneMarque = afficherToutesMarques();
-                    var_dump($uneMarque);
-                    var_dump($_GET);
-                ?>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
