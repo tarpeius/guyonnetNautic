@@ -63,7 +63,6 @@
                         </td>
                     </tr>
                     <?php
-                    var_dump($article);
                 }
                 ?>
                 </tbody>
