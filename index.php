@@ -5,7 +5,7 @@
 	ini_set('display_errors', 1);
 	// k�c�c� ? 
 	//ob_start();
-	//session_start();
+	session_start();
 	date_default_timezone_set('Europe/Paris');
 
 	include("Modele/m_connexion.php");
@@ -20,6 +20,7 @@
     if (!empty($_SESSION['isActive'])){
         include("Vue/Structure/v_bandeau.php");
     }
+
 
         if ((!isset($_REQUEST['c'])) || (!isset($_REQUEST['a']))) {
             // controleur -- action
