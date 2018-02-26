@@ -18,6 +18,18 @@ function nouveauSousCategorie($categParent, $categEnfant ){
     $stmt->execute();
 }
 
+function nouvelleMarque($bdd,$nom,$logo){
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $stmt = $bdd->prepare("INSERT INTO marque (nom_marque,logo_marque) VALUES (:nom,:logo)");
+
+    $params = array (
+        ':nom' => $nom,
+        ':logo' => $logo,
+    );
+
+    $stmt->execute($params);
+}
+
 function nouveauArticle($ref,$nom,$prix,$resume,$descr,$qte,$poids,$motor,$dimension,$photo,$marque,$tva)
 {
     global $bdd;

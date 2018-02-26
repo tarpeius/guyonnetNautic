@@ -37,7 +37,7 @@ switch($action)
             $ref = afficherRefSuppMarque($id);
             var_dump($ref);
             for ($i=0;$i<count($ref);$i++) {
-                supprimerCategoriserMarqueOuArticle($ref[$i]['reference']);
+                supprimerCategoriserMarque($ref[$i]['reference']);
             }
             supprimerArticleMarque($id);
             supprimerMarque($id);

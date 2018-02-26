@@ -71,10 +71,8 @@ if (isset($action)){
                 $ifExist = existHierarchiser($_POST['aDeplacer']);
                 if (empty($ifExist)){
                     modifierCategParente($_POST['destination'],$_POST['aDeplacer']);
-                    echo "update";
                 }else{
                     nouveauSousCategorie($_POST['destination'],$_POST['aDeplacer']);
-                    echo "insert";
                 }
             }
             include ('Vue/backend/v_listeCategories.php');

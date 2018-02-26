@@ -18,6 +18,7 @@ if (isset($action)){
             break;
         }
         case "supprimer":{
+           supprimerCommandeClient($_GET['id']);
            supprimerClient($_GET['id']);
            include('Vue/backend/v_listeClients.php');
            break;
