@@ -59,7 +59,7 @@
                                         <span class="glyphicon glyphicon-ok"></span>
                                     </td>
                                     <td>
-                                        <a href="index.php?"><span class="glyphicon glyphicon-edit"></span></a>
+                                        <a href="index.php?c=listeProduits&a=supprimer&reference=<?php echo $article['reference']?>&tva=<?php echo $article['id_tva']?>"><span class="glyphicon glyphicon-trash"></span></a>
                                     </td>
                                 </tr>
                         <?php

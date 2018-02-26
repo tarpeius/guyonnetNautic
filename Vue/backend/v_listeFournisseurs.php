@@ -28,77 +28,78 @@
                         <tbody>
                         <?php
                             $allMarque = afficherToutesMarques();
-                            foreach ($allMarque as $marque){
-                        ?>
-                        <tr class="odd gradeX">
-                            <td>
-                                <?php
-                                echo $marque['id_marque'];
+                            foreach ($allMarque as $marque) {
                                 ?>
-                            </td>
-                            <td>
-                                <img class="imageLogo" src="Util/img/<?php echo $marque['logo_marque']?>">
-                            </td>
-                            <td>
-                                <?php
-                                echo $marque['nom_marque'];
-                                ?>
-                            </td>
-                            <td>
-                                <?php
-                                echo $marque['qte_prod_marque'];
-                                ?>
-                            </td>
-                            <td>
-                                <span class="glyphicon glyphicon-ok"></span>
-                            </td>
-                            <td>
-                                <button type="button" id="<?php echo $marque['id_marque'];?>" onclick="mafonction()" class="btn btn-info btn-lg"  data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-edit"></span></button>
-                                <a href="index.php?c=listeFournisseurs&a=modifier&idMarque=<?php echo $marque['id_marque'] ;?>&nomMarque=<?php echo $marque['nom_marque'] ;?>&logoMarque=<?php echo $marque['logo_marque']?>"></a>
-                                <a href="index.php?c=listeFournisseurs&a=supprimer&idMarque=<?php echo $marque['id_marque'] ;?>"><span class="glyphicon glyphicon-trash"></span></a>
-                            </td>
-                            <?php
+                                <tr class="odd gradeX">
+                                    <td>
+                                        <?php
+                                        echo $marque['id_marque'];
+                                        ?>
+                                    </td>
+                                    <td>
+                                        <img class="imageLogo" src="Util/img/<?php echo $marque['logo_marque'] ?>">
+                                    </td>
+                                    <td>
+                                        <?php
+                                        echo $marque['nom_marque'];
+                                        ?>
+                                    </td>
+                                    <td>
+                                        <?php
+                                        echo $marque['qte_prod_marque'];
+                                        ?>
+                                    </td>
+                                    <td>
+                                        <span class="glyphicon glyphicon-ok"></span>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal-<?php echo $marque['id_marque']; ?>"><span class="glyphicon glyphicon-edit"></span></button>
+                                        <a href="index.php?c=listeFournisseurs&a=modifier&idMarque=<?php echo $marque['id_marque']; ?>&nomMarque=<?php echo $marque['nom_marque']; ?>&logoMarque=<?php echo $marque['logo_marque'] ?>"></a>
+                                        <a href="index.php?c=listeFournisseurs&a=supprimer&idMarque=<?php echo $marque['id_marque']; ?>"><span
+                                                    class="glyphicon glyphicon-trash"></span></a>
+                                    </td>
+                                </tr>
+
+                                <div id="myModal-<?php echo $marque['id_marque']; ?>" class="modal fade" role="dialog">
+                                    <div class="modal-dialog">
+
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;
+                                                </button>
+                                                <h4 class="modal-title">Modifier Marque</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form method="POST" action="index.php?c=listeFournisseurs&a=modifier" enctype="multipart/form-data">
+                                                    <div class="form-group">
+                                                        <label for="nomMarque">Nom</label>
+                                                        <input class="form-control" type="hidden" name="idMarque" value="<?php echo $marque['id_marque']?>">
+                                                        <input class="form-control" type="text" name="nomMarque" value="<?php echo $marque['nom_marque']; ?>">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="imageLogo">Logo</label>
+                                                        <img class="imageLogo" src="Util/img/<?php echo $marque['logo_marque'] ?>">
+                                                    </div>
+                                                    <input type="file" class="btn btn-default" name="logoMarque">
+                                                    <input type="submit" class="btn btn-success" value="Modifier">
+                                                </form>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        <?php
                             }
-                            ?>
-                        </tr>
+                        ?>
                         </tbody>
                     </table>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-<h2>Modal Example</h2>
-
-<!-- Modal -->
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Modal Header</h4>
-            </div>
-            <div class="modal-body">
-                <script>
-//                    function getId(monId) {
-//                        alert(monId);
-//                    }
-                    function mafonction() {
-                        var x = document.getElementById("myBtn");
-
-                    }
-                </script>
-                <?php
-                    $uneMarque = afficherToutesMarques();
-                    var_dump($uneMarque);
-                    var_dump($_GET);
-                ?>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
