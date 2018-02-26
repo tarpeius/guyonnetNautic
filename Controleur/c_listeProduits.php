@@ -32,8 +32,8 @@ switch($action)
             $marque = $_POST['marqueArticle'];
            if ($nom != ''){
               uploadImg($_FILES['photoArticle']);
-              nouveauArticle($bdd,$reference,$nom,$prix,$resume,$descr,$qte,$poids,$motor,$dimension,$_FILES['photoArticle']['name'],$marque,$tva);
-              nouveauCategoriser($bdd,$categorie,$reference);
+              nouveauArticle($reference,$nom,$prix,$resume,$descr,$qte,$poids,$motor,$dimension,$_FILES['photoArticle']['name'],$marque,$tva);
+              nouveauCategoriser($categorie,$reference);
               $validation = "L'article a bien été ajouté";
               var_dump($validation);
            }else{
