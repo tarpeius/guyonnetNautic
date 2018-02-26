@@ -13,36 +13,29 @@
                             <th>Client</th>
                             <th>Total</th>
                             <th>Paiement</th>
-                            <th>Statut</th>
                             <th>Date</th>
                             <th>Actions</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr class="odd gradeX">
-                            <td>1</td>
-                            <td>Dupont</td>
-                            <td>30€</td>
-                            <td>Paypal</td>
-                            <td>Paiement accepté</td>
-                            <td>01/01/2000</td>
+                            <?php
+                            $allCommande= afficherToutesCommande();
+                            var_dump($allCommande);
+                                foreach ($allCommande as $uneCommande) {
+                                    ?>
+                                    <td> <?php echo $uneCommande['id_commande'] ?></td>
+                                    <td> <?php echo $uneCommande['id_client'] ?></td>
+                                    <td> <?php echo $uneCommande['valeur_commande'] ?></td>
+                                    <td> <?php echo $uneCommande['type_mdpaiement'] ?></td>
+                                    <td> <?php echo $uneCommande['date_commande'] ?></td>
                             <td>
-                                <span class="glyphicon glyphicon-edit"></span>
-                                <span class="glyphicon glyphicon-trash"></span>
+                                <a href="index.php?c=listeCommande&a=supprimer&id=<?php echo $uneCommande['id_commande'] ?>"><button class="btn btn-success"><i class="glyphicon glyphicon-trash"></i></button></a>
                             </td>
                         </tr>
-                        <tr class="even gradeC">
-                            <td>2</td>
-                            <td>Durand</td>
-                            <td>1000€</td>
-                            <td>CB</td>
-                            <td>En attente</td>
-                            <td>01/06/2006</td>
-                            <td>
-                                <span class="glyphicon glyphicon-edit"></span>
-                                <span class="glyphicon glyphicon-trash"></span>
-                            </td>
-                        </tr>
+                        <?php
+                        }
+                        ?>
                         </tbody>
                     </table>
                 </div>
