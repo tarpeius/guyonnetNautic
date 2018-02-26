@@ -50,13 +50,6 @@
                                 <h4 class="modal-title">Modal Header</h4>
                             </div>
                             <div class="modal-body">
-
-<!--                                --><?php
-//                                global $id_Client;
-//                                var_dump($id_Client);
-//                                $unClient = afficherUnClient($id_Client);
-//                                ?>
-
                                 <form method="POST" action="index.php?c=listeClient&a=ajout">
                                     <div class="form-group">
                                         <label for="nomClient">Nom</label>

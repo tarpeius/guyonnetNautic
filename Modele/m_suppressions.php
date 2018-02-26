@@ -9,6 +9,24 @@ function supprimerCategorie($id){
     $req->execute();
 }
 
+function supprimerCategorieHierarchiser($id){
+    global $bdd;
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $query="DELETE FROM `hierarchiser` WHERE id_categorie_1=:id";
+    $req=$bdd->prepare($query);
+    $req->bindParam(':id', $id);
+    $req->execute();
+}
+
+function supprimerCategorieCatgoriser($id){
+    global $bdd;
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $query="DELETE FROM `categoriser` WHERE id_categorie=:id";
+    $req=$bdd->prepare($query);
+    $req->bindParam(':id', $id);
+    $req->execute();
+}
+
 function supprimerClient($id){
     global $bdd;
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
