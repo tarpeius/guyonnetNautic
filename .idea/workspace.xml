@@ -3,6 +3,25 @@
   <component name="ChangeListManager">
     <list default="true" id="698327c5-50d3-4538-af53-8c0b608635f2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controleur/c_listeCategorie.php" afterPath="$PROJECT_DIR$/Controleur/c_listeCategorie.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controleur/c_listeClient.php" afterPath="$PROJECT_DIR$/Controleur/c_listeClient.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controleur/c_listeCommande.php" afterPath="$PROJECT_DIR$/Controleur/c_listeCommande.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controleur/c_listeFournisseurs.php" afterPath="$PROJECT_DIR$/Controleur/c_listeFournisseurs.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controleur/c_listeProduits.php" afterPath="$PROJECT_DIR$/Controleur/c_listeProduits.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Modele/m_insertions.php" afterPath="$PROJECT_DIR$/Modele/m_insertions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Modele/m_modifications.php" afterPath="$PROJECT_DIR$/Modele/m_modifications.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Modele/m_selections.php" afterPath="$PROJECT_DIR$/Modele/m_selections.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Modele/m_suppressions.php" afterPath="$PROJECT_DIR$/Modele/m_suppressions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Util/fonctions.php" afterPath="$PROJECT_DIR$/Util/fonctions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/Structure/v_footer.php" afterPath="$PROJECT_DIR$/Vue/Structure/v_footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/Structure/v_header.php" afterPath="$PROJECT_DIR$/Vue/Structure/v_header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/backend/v_listeCategories.php" afterPath="$PROJECT_DIR$/Vue/backend/v_listeCategories.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/backend/v_listeClients.php" afterPath="$PROJECT_DIR$/Vue/backend/v_listeClients.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/backend/v_listeCommande.php" afterPath="$PROJECT_DIR$/Vue/backend/v_listeCommande.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/backend/v_listeFournisseurs.php" afterPath="$PROJECT_DIR$/Vue/backend/v_listeFournisseurs.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/backend/v_listeProduits.php" afterPath="$PROJECT_DIR$/Vue/backend/v_listeProduits.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vue/backend/v_pageCategorie.php" afterPath="$PROJECT_DIR$/Vue/backend/v_pageCategorie.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,14 +46,13 @@
       <file leaf-file-name="c_listeFournisseurs.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controleur/c_listeFournisseurs.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
+            <state relative-caret-position="238">
               <caret line="31" column="18" lean-forward="false" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
               <folding>
-                <marker date="1519634356001" expanded="true" signature="116:1146" ph="{...}" />
-                <marker date="1519634356001" expanded="true" signature="376:464" ph="..." />
-                <marker date="1519634356001" expanded="true" signature="376:1054" ph="..." />
-                <marker date="1519634356001" expanded="true" signature="1028:1054" ph="..." />
-                <marker date="1519634356001" expanded="true" signature="1071:1140" ph="..." />
+                <marker date="1519636319636" expanded="true" signature="977:1054" ph="..." />
+                <marker date="1519636319636" expanded="true" signature="977:1146" ph="{...}" />
+                <marker date="1519636319636" expanded="true" signature="1028:1054" ph="..." />
+                <marker date="1519636319636" expanded="true" signature="1071:1140" ph="..." />
               </folding>
             </state>
           </provider>
@@ -103,8 +121,7 @@
             <state relative-caret-position="136">
               <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
               <folding>
-                <marker date="1519634356012" expanded="true" signature="45:129" ph="..." />
-                <marker date="1519634356012" expanded="true" signature="90:129" ph="UPDATE categ... " />
+                <marker date="1519636319648" expanded="true" signature="45:68" ph="..." />
               </folding>
             </state>
           </provider>
@@ -474,7 +491,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="176364000" />
+    <option name="totallyTimeSpent" value="176352000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -695,8 +712,7 @@
         <state relative-caret-position="136">
           <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding>
-            <marker date="1519634356012" expanded="true" signature="45:129" ph="..." />
-            <marker date="1519634356012" expanded="true" signature="90:129" ph="UPDATE categ... " />
+            <marker date="1519636319648" expanded="true" signature="45:68" ph="..." />
           </folding>
         </state>
       </provider>
@@ -784,14 +800,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Controleur/c_listeFournisseurs.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
+        <state relative-caret-position="238">
           <caret line="31" column="18" lean-forward="false" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
           <folding>
-            <marker date="1519634356001" expanded="true" signature="116:1146" ph="{...}" />
-            <marker date="1519634356001" expanded="true" signature="376:464" ph="..." />
-            <marker date="1519634356001" expanded="true" signature="376:1054" ph="..." />
-            <marker date="1519634356001" expanded="true" signature="1028:1054" ph="..." />
-            <marker date="1519634356001" expanded="true" signature="1071:1140" ph="..." />
+            <marker date="1519636319636" expanded="true" signature="977:1054" ph="..." />
+            <marker date="1519636319636" expanded="true" signature="977:1146" ph="{...}" />
+            <marker date="1519636319636" expanded="true" signature="1028:1054" ph="..." />
+            <marker date="1519636319636" expanded="true" signature="1071:1140" ph="..." />
           </folding>
         </state>
       </provider>
