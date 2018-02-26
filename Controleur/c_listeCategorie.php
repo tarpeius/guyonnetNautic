@@ -58,8 +58,21 @@ if (isset($action)){
                     modifierCategorie($_POST['modifCategorie'],$_POST['idCateg']);
                     header('Location: index.php?c=accueil&a=listeCategorie');
                 }else{
-                    supprimerCategorie($_POST['idCateg']);
-                    header('Location: index.php?c=accueil&a=listeCategorie');
+                    $ifExist = existHierarchiser($_POST['idCateg']);
+                    $arrayHierarchie = array();
+                    foreach ($ifExist as $value => $key) {
+                        array_push($arrayHierarchie, $key['id_categorie'], $key['id_categorie_1']);
+                    }
+                    if (in_array($_POST['idCateg'], $arrayHierarchie)){
+                        supprimerCategorieCatgoriser($_POST['idCateg']);
+                        supprimerCategorieHierarchiser($_POST['idCateg']);
+                        supprimerCategorie($_POST['idCateg']);
+                    }else{
+                        supprimerCategorieCatgoriser($_POST['idCateg']);
+                        supprimerCategorieHierarchiser($_POST['idCateg']);
+                        supprimerCategorie($_POST['idCateg']);
+                    }
+                   header('Location: index.php?c=accueil&a=listeCategorie');
                 }
              }
             break;
@@ -69,10 +82,20 @@ if (isset($action)){
                 echo "La categorie parente ne peux pas etre la même que la categorie séléctionné";
             }else{
                 $ifExist = existHierarchiser($_POST['aDeplacer']);
-                if (empty($ifExist)){
+                $arrayHierarchie = array();
+                foreach ($ifExist as $value => $key) {
+                    array_push($arrayHierarchie, $key['id_categorie'], $key['id_categorie_1']);
+                }
+                var_dump($arrayHierarchie);
+                var_dump($ifExist);
+                var_dump($_POST);
+                if (in_array($_POST['aDeplacer'], $arrayHierarchie)){
+                    echo '1';
                     modifierCategParente($_POST['destination'],$_POST['aDeplacer']);
                 }else{
+                    echo '2';
                     nouveauSousCategorie($_POST['destination'],$_POST['aDeplacer']);
+
                 }
             }
             include ('Vue/backend/v_listeCategories.php');

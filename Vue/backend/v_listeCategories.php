@@ -109,14 +109,14 @@
             </div>
         </div>
     <form method="POST" action="index.php?c=listeCategorie&a=modifierParent" >
-        <div class="col-md-5">
-            <div class="content-box-large">
+        <div class="col-md-5  col-md-offset-6">
+            <div class="content-box-large ">
                 <!--        Liste categorie -->
                 <div class="panel-heading">
                     <div class="panel-title">Modifier Catégorie Parente</div>
                 </div>
 
-                <div class="panel-body">
+                <div class="panel-body ">
                     <div class="form-group" >
                         <div class="col-md-5">
                          <label  class="col-md-12 control-label">Destination </label>
