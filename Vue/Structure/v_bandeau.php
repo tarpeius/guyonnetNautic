@@ -29,7 +29,9 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mon compte <b class="caret"></b></a>
                                 <ul class="dropdown-menu animated fadeInUp">
                                     <li><a href="profile.html">Profil</a></li>
-                                    <li><a href="login.html">Déconnexion</a></li>
+
+                                    <li><a href="index.php?c=connexion&a=deconnexion">Déconnexion</a></li>
+
                                 </ul>
                             </li>
                         </ul>

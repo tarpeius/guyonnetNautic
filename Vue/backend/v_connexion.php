@@ -14,7 +14,7 @@
                 <div class="account-wall">
                     <img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
                          alt="">
-                    <form class="form-signin" method="POST" action="../../index.php?c=accueil&a=connexion">
+                    <form class="form-signin" method="POST" action="index.php?c=connexion&a=authentification">
                         <input type="text" name="pseudo" class="form-control" placeholder="Email" required autofocus>
                         <input type="password" name="pwd" class="form-control" placeholder="Mot de Passe" required>
                         <input class="btn btn-lg btn-primary btn-block" type="submit" value="Connexion">
@@ -23,7 +23,13 @@
                 </div>
             </div>
         </div>
+        <?php
+        var_dump($_REQUEST);
+        var_dump($_SESSION);
+        if(!empty($erreur)){
+            echo"<div class='alert alert-danger'>
+            <strong>".$erreur.".</strong>
+        </div>";
+        }
+        ?>
     </div>
-</body>
-
-</html>
