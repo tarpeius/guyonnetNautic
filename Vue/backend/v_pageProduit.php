@@ -2,20 +2,20 @@
     <!--        Contenu page -->
     <div class="tab-content">
         <div class="panel-body">
-            <form method="POST" action="index.php?c=listeProduits&a=ajout" class="form-horizontal" enctype="multipart/form-data">
+            <form method="POST" action="index.php?c=listeProduits&a=ajout" class="form-horizontal">
                 <legend>Description Article</legend>
         <!--        Reference Article-->
                 <div class="form-group">
                     <label for="referenceArticle" class="col-sm-2 control-label">Reference Article</label>
                     <div class="col-sm-5">
-                        <input type="text" class="form-control" name="referenceArticle">
+                        <input type="text" class="form-control" name="referenceArticle" required>
                     </div>
                 </div>
         <!--        Nom Article-->
                 <div class="form-group">
                     <label for="nomArticle" class="col-sm-2 control-label">Titre Article</label>
                     <div class="col-sm-5">
-                        <input type="text" class="form-control" name="nomArticle">
+                        <input type="text" class="form-control" name="nomArticle" required>
                     </div>
                 </div>
         <!--        Prix HT Article-->
@@ -31,21 +31,20 @@
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-2">
                         <div>
-                            <label for="tva1" class="col-sm-1 control-label"></label>
-                            <select id="tva1" name="tvaArticle">
-                            <?php
-                                $allTva = afficherTva();
-                                foreach ($allTva as $tva) {
-                            ?>
-                                <option value="<?php echo $tva['type_tva']?>">
-                                    <?php
-                                        echo $tva['desc_tva'];
-                                    ?>
-                                </option>
-                            <?php
-                                }
-                            ?>
+                            <label for="tva" class="col-sm-1 control-label">Tva</label>
+                            <select id="tva" name="tvaArticle">
+                                <option>5.5</option>
+                                <option>20</option>
                             </select>
+                        </div>
+                    </div>
+                </div>
+        <!--        Prix TTC public-->
+                <div class="form-group">
+                    <label class="control-label col-md-2" for="appendprepend">Prix vente TTC</label>
+                    <div class="col-sm-2">
+                        <div class="input-group">
+                            <input class="form-control" name="prixTTCArticle" type="text">
                         </div>
                     </div>
                 </div>
@@ -94,7 +93,7 @@
                     <label class="control-label col-md-2" for="appendprepend">Motorisation (cv)</label>
                     <div class="col-sm-2">
                         <div class="input-group">
-                            <input class="form-control" name="motorisationArticle" type="number">
+                            <input class="form-control" name="motorisationArticle" type="text">
                         </div>
                     </div>
                 </div>
@@ -103,7 +102,7 @@
                     <label class="control-label col-md-2" for="appendprepend">Longueur (m)</label>
                     <div class="col-sm-2">
                         <div class="input-group">
-                            <input class="form-control" name="longueurArticle" type="number" step="0.1">
+                            <input class="form-control" name="longueurArticle" type="text">
                         </div>
                     </div>
                 </div>
@@ -112,7 +111,7 @@
                     <label class="control-label col-md-2" for="appendprepend">Largeur (m)</label>
                     <div class="col-sm-2">
                         <div class="input-group">
-                            <input class="form-control" name="largeurArticle" type="number" step="0.1">
+                            <input class="form-control" name="largeurArticle" type="text">
                         </div>
                     </div>
                 </div>
@@ -121,7 +120,7 @@
                     <label class="control-label col-md-2" for="appendprepend">Hauteur (m)</label>
                     <div class="col-sm-2">
                         <div class="input-group">
-                            <input class="form-control" name="hauteurArticle" type="number" step="0.1">
+                            <input class="form-control" name="hauteurArticle" type="text">
                         </div>
                     </div>
                 </div>
@@ -133,14 +132,21 @@
                     <div class="col-md-3">
                         <label class="col-sm-offset-2 col-sm-1"></label>
                         <select  name="categorieArticle">
-                            <?php
-                                $categorie = afficherCategorie();
-                                foreach ($categorie as $categ) {
-                            ?>
-                                <option data-icon="glyphicon-chevron-right" value="<?php echo $categ['id_categorie']?>"> <?php echo $categ['nom_categorie']?> </option>
-                            <?php
-                                }
-                            ?>
+                            <option data-icon="glyphicon-chevron-right">Bateau</option>
+                            <option>Semi-Rigide</option>
+                            <option>Pneumatique</option>
+
+                            <option data-divider="true"></option>
+
+                            <option data-icon="glyphicon-chevron-right">Jet-ski</option>
+                            <option>Location</option>
+
+                            <option data-divider="true"></option>
+
+                            <option data-icon="glyphicon-chevron-right">Permis-bateau</option>
+                            <option>Cotier</option>
+                            <option>Fluvial</option>
+                            <option>Hauturier</option>
                         </select>
                     </div>
                 </div>
@@ -149,27 +155,22 @@
                 <div class="form-group">
                     <div class="col-md-3">
                         <label for="marque" class="col-sm-offset-2 col-sm-1"></label>
-                        <select name="marqueArticle" id="marqueArticle">
-                            <?php
-                                $marque = afficherToutesMarques();
-                                foreach ($marque as $marq) {
-                            ?>
-                                <option value="<?php echo $marq['id_marque']?>"> <?php echo $marq['nom_marque']?> </option>
-                            <?php
-                                }
-                            ?>
+                        <select name="marqueArticle" id="marque">
+                            <option>Yamaha</option>
+                            <option>Zodiac</option>
+                            <option>Sea-doo</option>
                         </select>
                     </div>
                 </div>
-                <legend>Ajout photos</legend>
+                    <legend>Ajout photos</legend>
         <!--        Photo -->
-                <div class="form-group">
-                    <label for="photoArticle" class="col-md-2 control-label">Photo</label>
-                    <div class="col-md-10">
-                        <input type="file" class="btn btn-default" name="photoArticle">
-                        <input type="submit" class="btn btn-success" value="Enregistrer">
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">Photo</label>
+                        <div class="col-md-10">
+                            <input type="file" class="btn btn-default" id="exampleInputFile1">
+                        </div>
                     </div>
-                </div>
+                <input type="submit" class="btn btn-success" value="Enregistrer">
             </form>
         </div>
 

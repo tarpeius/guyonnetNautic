@@ -2,20 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="698327c5-50d3-4538-af53-8c0b608635f2" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Util/img/2017-Yamaha-F350-EU-NA-Static-005.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Util/img/428603_atelier-random.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Util/img/Homer's Brain.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Util/img/Les-Jouets-gÃ©omÃ©triques-en-Bois-de-Mat-Random-03.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Util/img/Les-Jouets-géométriques-en-Bois-de-Mat-Random-03.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Util/img/Logo_Zodiac_piscines_equipements.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Util/img/Merchant_re4.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Util/img/_89716241_thinkstockphotos-523060154.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Util/img/image-1400-933-219-r.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Util/img/images.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Util/img/istock_000016688740_full-1024x683.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Util/img/photo.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Util/img/pic-16-610x428.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Util/img/yamaha_logo6.jpg" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Controleur/c_listeFournisseurs.php" afterPath="$PROJECT_DIR$/Controleur/c_listeFournisseurs.php" />
       <change beforePath="$PROJECT_DIR$/Controleur/c_listeProduits.php" afterPath="$PROJECT_DIR$/Controleur/c_listeProduits.php" />
@@ -26,8 +12,20 @@
       <change beforePath="$PROJECT_DIR$/Util/ajax/ajax.js" afterPath="$PROJECT_DIR$/Util/ajax/ajax.js" />
       <change beforePath="$PROJECT_DIR$/Util/css/styles.css" afterPath="$PROJECT_DIR$/Util/css/styles.css" />
       <change beforePath="$PROJECT_DIR$/Util/fonctions.php" afterPath="$PROJECT_DIR$/Util/fonctions.php" />
-      <change beforePath="$PROJECT_DIR$/Util/img/beau.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Util/img/res.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Util/img/2017-Yamaha-F350-EU-NA-Static-005.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Util/img/428603_atelier-random.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Util/img/Homer's Brain.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Util/img/Les-Jouets-gÃ©omÃ©triques-en-Bois-de-Mat-Random-03.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Util/img/Les-Jouets-géométriques-en-Bois-de-Mat-Random-03.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Util/img/Logo_Zodiac_piscines_equipements.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Util/img/Merchant_re4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Util/img/_89716241_thinkstockphotos-523060154.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Util/img/image-1400-933-219-r.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Util/img/images.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Util/img/istock_000016688740_full-1024x683.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Util/img/photo.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Util/img/pic-16-610x428.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Util/img/yamaha_logo6.jpg" afterPath="" />
       <change beforePath="$PROJECT_DIR$/Vue/Structure/v_bandeau.php" afterPath="$PROJECT_DIR$/Vue/Structure/v_bandeau.php" />
       <change beforePath="$PROJECT_DIR$/Vue/Structure/v_header.php" afterPath="$PROJECT_DIR$/Vue/Structure/v_header.php" />
       <change beforePath="$PROJECT_DIR$/Vue/backend/v_listeFournisseurs.php" afterPath="$PROJECT_DIR$/Vue/backend/v_listeFournisseurs.php" />
@@ -44,7 +42,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-601">
@@ -54,7 +52,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fonctions.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="v_bandeau.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vue/Structure/v_bandeau.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="c_listeFournisseurs.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controleur/c_listeFournisseurs.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="58" column="2" lean-forward="false" selection-start-line="58" selection-start-column="2" selection-end-line="58" selection-end-column="2" />
+              <folding>
+                <marker date="1519641672925" expanded="true" signature="1900:1969" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fonctions.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Util/fonctions.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
@@ -64,44 +84,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="v_bandeau.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vue/Structure/v_bandeau.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="m_selections.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Modele/m_selections.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="100" column="16" lean-forward="true" selection-start-line="100" selection-start-column="16" selection-end-line="100" selection-end-column="16" />
+            <state relative-caret-position="1700">
+              <caret line="100" column="16" lean-forward="false" selection-start-line="100" selection-start-column="16" selection-end-line="100" selection-end-column="16" />
               <folding>
-                <marker date="1519641271848" expanded="true" signature="140:295" ph="SELECT * FRO... categorie" />
-                <marker date="1519641271848" expanded="true" signature="191:230" ph="SELECT id_ca... hierarchiser" />
-                <marker date="1519641271848" expanded="true" signature="257:294" ph="SELECT id_ca... hierarchiser" />
-                <marker date="1519641271848" expanded="true" signature="554:577" ph="SELECT * FRO... categorie" />
-                <marker date="1519641271848" expanded="true" signature="845:868" ph="SELECT * FRO... categorie" />
-                <marker date="1519641271848" expanded="true" signature="1151:1171" ph="SELECT * FRO... marque" />
-                <marker date="1519641271848" expanded="true" signature="1410:1470" ph="SELECT nom_c... categorie" />
-                <marker date="1519641271848" expanded="true" signature="1754:1815" ph="SELECT id_ca... categorie" />
-                <marker date="1519641271848" expanded="true" signature="2118:2284" ph="SELECT * FRO... categorie" />
-                <marker date="1519641271848" expanded="true" signature="2575:2713" ph="SELECT DISTI... categorie" />
-                <marker date="1519641271848" expanded="true" signature="3021:3047" ph="SELECT * FRO... hierarchiser" />
-                <marker date="1519641271848" expanded="true" signature="3282:3304" ph="SELECT * FRO... client" />
-                <marker date="1519641271848" expanded="true" signature="3478:3520" ph="SELECT * FRO... client" />
-                <marker date="1519641271848" expanded="true" signature="3746:3948" ph="SELECT comma... commande" />
-                <marker date="1519641271848" expanded="true" signature="4139:4240" ph="SELECT * FRO... hierarchiser" />
-                <marker date="1519641271848" expanded="true" signature="4181:4239" ph="SELECT id_ca... categorie" />
-                <marker date="1519641271848" expanded="true" signature="4464:4557" ph="SELECT COUNT... administrateur" />
-                <marker date="1519641271848" expanded="true" signature="4896:4936" ph="SELECT * FRO... marque" />
-                <marker date="1519641271848" expanded="true" signature="5245:5267" ph="SELECT * FRO... taux_tva" />
-                <marker date="1519641271848" expanded="true" signature="5543:5564" ph="SELECT * FRO... article" />
-                <marker date="1519641271848" expanded="true" signature="5849:6152" ph="SELECT artic... article" />
-                <marker date="1519641271848" expanded="true" signature="6432:6482" ph="SELECT refer... article" />
+                <marker date="1519641672941" expanded="true" signature="140:295" ph="SELECT * FRO... categorie" />
+                <marker date="1519641672941" expanded="true" signature="191:230" ph="SELECT id_ca... hierarchiser" />
+                <marker date="1519641672941" expanded="true" signature="257:294" ph="SELECT id_ca... hierarchiser" />
+                <marker date="1519641672941" expanded="true" signature="554:577" ph="SELECT * FRO... categorie" />
+                <marker date="1519641672941" expanded="true" signature="845:868" ph="SELECT * FRO... categorie" />
+                <marker date="1519641672941" expanded="true" signature="1151:1171" ph="SELECT * FRO... marque" />
+                <marker date="1519641672941" expanded="true" signature="1410:1470" ph="SELECT nom_c... categorie" />
+                <marker date="1519641672941" expanded="true" signature="1754:1815" ph="SELECT id_ca... categorie" />
+                <marker date="1519641672941" expanded="true" signature="2118:2284" ph="SELECT * FRO... categorie" />
+                <marker date="1519641672941" expanded="true" signature="2575:2713" ph="SELECT DISTI... categorie" />
+                <marker date="1519641672941" expanded="true" signature="3021:3047" ph="SELECT * FRO... hierarchiser" />
+                <marker date="1519641672941" expanded="true" signature="3282:3304" ph="SELECT * FRO... client" />
+                <marker date="1519641672941" expanded="true" signature="3478:3520" ph="SELECT * FRO... client" />
+                <marker date="1519641672941" expanded="true" signature="3746:3948" ph="SELECT comma... commande" />
+                <marker date="1519641672941" expanded="true" signature="4139:4240" ph="SELECT * FRO... hierarchiser" />
+                <marker date="1519641672941" expanded="true" signature="4181:4239" ph="SELECT id_ca... categorie" />
+                <marker date="1519641672941" expanded="true" signature="4464:4557" ph="SELECT COUNT... administrateur" />
+                <marker date="1519641672941" expanded="true" signature="4896:4936" ph="SELECT * FRO... marque" />
+                <marker date="1519641672941" expanded="true" signature="5245:5267" ph="SELECT * FRO... taux_tva" />
+                <marker date="1519641672941" expanded="true" signature="5543:5564" ph="SELECT * FRO... article" />
+                <marker date="1519641672941" expanded="true" signature="5849:6152" ph="SELECT artic... article" />
+                <marker date="1519641672941" expanded="true" signature="6432:6482" ph="SELECT refer... article" />
               </folding>
             </state>
           </provider>
@@ -110,17 +120,17 @@
       <file leaf-file-name="m_suppressions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Modele/m_suppressions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="793">
-              <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+            <state relative-caret-position="731">
+              <caret line="43" column="70" lean-forward="true" selection-start-line="43" selection-start-column="70" selection-end-line="43" selection-end-column="70" />
               <folding>
-                <marker date="1519641271738" expanded="true" signature="137:183" ph="DELETE FROM `categorie`... " />
-                <marker date="1519641271738" expanded="true" signature="402:442" ph="DELETE FROM `client`... " />
-                <marker date="1519641271738" expanded="true" signature="663:705" ph="DELETE FROM commande... " />
-                <marker date="1519641271738" expanded="true" signature="939:978" ph="DELETE FROM marque... " />
-                <marker date="1519641271738" expanded="true" signature="1211:1251" ph="DELETE FROM article... " />
-                <marker date="1519641271738" expanded="true" signature="1483:1523" ph="DELETE FROM article... " />
-                <marker date="1519641271738" expanded="true" signature="1774:1819" ph="DELETE FROM categoriser... " />
-                <marker date="1519641271738" expanded="true" signature="2088:2126" ph="DELETE FROM taux_tva... " />
+                <marker date="1519641672941" expanded="true" signature="137:183" ph="DELETE FROM `categorie`... " />
+                <marker date="1519641672941" expanded="true" signature="402:442" ph="DELETE FROM `client`... " />
+                <marker date="1519641672941" expanded="true" signature="663:705" ph="DELETE FROM commande... " />
+                <marker date="1519641672941" expanded="true" signature="939:978" ph="DELETE FROM marque... " />
+                <marker date="1519641672941" expanded="true" signature="1211:1251" ph="DELETE FROM article... " />
+                <marker date="1519641672941" expanded="true" signature="1483:1523" ph="DELETE FROM article... " />
+                <marker date="1519641672941" expanded="true" signature="1774:1819" ph="DELETE FROM categoriser... " />
+                <marker date="1519641672941" expanded="true" signature="2088:2126" ph="DELETE FROM taux_tva... " />
               </folding>
             </state>
           </provider>
@@ -129,18 +139,8 @@
       <file leaf-file-name="v_header.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Vue/Structure/v_header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="15" lean-forward="true" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="c_listeFournisseurs.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controleur/c_listeFournisseurs.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="793">
-              <caret line="58" column="2" lean-forward="true" selection-start-line="58" selection-start-column="2" selection-end-line="58" selection-end-column="2" />
+            <state relative-caret-position="408">
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -149,8 +149,8 @@
       <file leaf-file-name="c_listeProduits.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controleur/c_listeProduits.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1700">
-              <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -159,13 +159,13 @@
       <file leaf-file-name="m_insertions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Modele/m_insertions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="626">
-              <caret line="42" column="16" lean-forward="false" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
+            <state relative-caret-position="680">
+              <caret line="40" column="1" lean-forward="false" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
               <folding>
-                <marker date="1519640949701" expanded="true" signature="160:232" ph="INSERT INTO categorie... " />
-                <marker date="1519640949701" expanded="true" signature="510:593" ph="INSERT INTO hierarchiser... " />
-                <marker date="1519640949701" expanded="true" signature="941:1212" ph="INSERT INTO article... " />
-                <marker date="1519640949701" expanded="true" signature="1756:1845" ph="INSERT INTO categoriser... " />
+                <marker date="1519641672925" expanded="true" signature="160:232" ph="INSERT INTO categorie... " />
+                <marker date="1519641672925" expanded="true" signature="510:593" ph="INSERT INTO hierarchiser... " />
+                <marker date="1519641672925" expanded="true" signature="941:1212" ph="INSERT INTO article... " />
+                <marker date="1519641672925" expanded="true" signature="1756:1845" ph="INSERT INTO categoriser... " />
               </folding>
             </state>
           </provider>
@@ -174,16 +174,16 @@
       <file leaf-file-name="m_modifications.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Modele/m_modifications.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1088">
+            <state relative-caret-position="779">
               <caret line="64" column="1" lean-forward="false" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
               <folding>
-                <marker date="1519641062660" expanded="true" signature="157:239" ph="UPDATE categorie... " />
-                <marker date="1519641062660" expanded="true" signature="567:778" ph="UPDATE client... " />
-                <marker date="1519641062660" expanded="true" signature="1313:1388" ph="UPDATE hierarchiser... " />
-                <marker date="1519641062660" expanded="true" signature="1613:1684" ph="UPDATE marque... " />
-                <marker date="1519641062660" expanded="true" signature="1902:1955" ph="UPDATE marque... " />
-                <marker date="1519641062660" expanded="true" signature="2137:2192" ph="UPDATE marque... " />
-                <marker date="1519641062660" expanded="true" signature="2327:2671" ph="INSERT INTO `article`... " />
+                <marker date="1519641672925" expanded="true" signature="157:239" ph="UPDATE categorie... " />
+                <marker date="1519641672925" expanded="true" signature="567:778" ph="UPDATE client... " />
+                <marker date="1519641672925" expanded="true" signature="1313:1388" ph="UPDATE hierarchiser... " />
+                <marker date="1519641672925" expanded="true" signature="1613:1684" ph="UPDATE marque... " />
+                <marker date="1519641672925" expanded="true" signature="1902:1955" ph="UPDATE marque... " />
+                <marker date="1519641672925" expanded="true" signature="2137:2192" ph="UPDATE marque... " />
+                <marker date="1519641672925" expanded="true" signature="2327:2671" ph="INSERT INTO `article`... " />
               </folding>
             </state>
           </provider>
@@ -272,13 +272,13 @@
         <option value="$PROJECT_DIR$/Vue/backend/v_listeFournisseurs.php" />
         <option value="$PROJECT_DIR$/Vue/Structure/v_bandeau.php" />
         <option value="$PROJECT_DIR$/Util/fonctions.php" />
-        <option value="$PROJECT_DIR$/Vue/Structure/v_header.php" />
         <option value="$PROJECT_DIR$/Controleur/c_listeFournisseurs.php" />
-        <option value="$PROJECT_DIR$/Controleur/c_listeProduits.php" />
-        <option value="$PROJECT_DIR$/Modele/m_insertions.php" />
         <option value="$PROJECT_DIR$/Modele/m_modifications.php" />
         <option value="$PROJECT_DIR$/Modele/m_selections.php" />
+        <option value="$PROJECT_DIR$/Controleur/c_listeProduits.php" />
+        <option value="$PROJECT_DIR$/Modele/m_insertions.php" />
         <option value="$PROJECT_DIR$/Modele/m_suppressions.php" />
+        <option value="$PROJECT_DIR$/Vue/Structure/v_header.php" />
       </list>
     </option>
   </component>
@@ -520,7 +520,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="263161000" />
+    <option name="totallyTimeSpent" value="263673000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -742,15 +742,7 @@
     <entry file="file://$PROJECT_DIR$/Vue/Structure/v_bandeau.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vue/Structure/v_header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="15" lean-forward="true" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -765,9 +757,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Controleur/c_listeFournisseurs.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="793">
-          <caret line="58" column="2" lean-forward="true" selection-start-line="58" selection-start-column="2" selection-end-line="58" selection-end-column="2" />
-          <folding />
+        <state relative-caret-position="340">
+          <caret line="58" column="2" lean-forward="false" selection-start-line="58" selection-start-column="2" selection-end-line="58" selection-end-column="2" />
+          <folding>
+            <marker date="1519641672925" expanded="true" signature="1900:1969" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -781,87 +775,103 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-601">
+          <caret line="19" column="3" lean-forward="false" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Controleur/c_listeProduits.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1700">
-          <caret line="100" column="0" lean-forward="false" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Modele/m_insertions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="42" column="16" lean-forward="false" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
+        <state relative-caret-position="680">
+          <caret line="40" column="1" lean-forward="false" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
           <folding>
-            <marker date="1519640949701" expanded="true" signature="160:232" ph="INSERT INTO categorie... " />
-            <marker date="1519640949701" expanded="true" signature="510:593" ph="INSERT INTO hierarchiser... " />
-            <marker date="1519640949701" expanded="true" signature="941:1212" ph="INSERT INTO article... " />
-            <marker date="1519640949701" expanded="true" signature="1756:1845" ph="INSERT INTO categoriser... " />
+            <marker date="1519641672925" expanded="true" signature="160:232" ph="INSERT INTO categorie... " />
+            <marker date="1519641672925" expanded="true" signature="510:593" ph="INSERT INTO hierarchiser... " />
+            <marker date="1519641672925" expanded="true" signature="941:1212" ph="INSERT INTO article... " />
+            <marker date="1519641672925" expanded="true" signature="1756:1845" ph="INSERT INTO categoriser... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Modele/m_modifications.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
+        <state relative-caret-position="779">
           <caret line="64" column="1" lean-forward="false" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
           <folding>
-            <marker date="1519641062660" expanded="true" signature="157:239" ph="UPDATE categorie... " />
-            <marker date="1519641062660" expanded="true" signature="567:778" ph="UPDATE client... " />
-            <marker date="1519641062660" expanded="true" signature="1313:1388" ph="UPDATE hierarchiser... " />
-            <marker date="1519641062660" expanded="true" signature="1613:1684" ph="UPDATE marque... " />
-            <marker date="1519641062660" expanded="true" signature="1902:1955" ph="UPDATE marque... " />
-            <marker date="1519641062660" expanded="true" signature="2137:2192" ph="UPDATE marque... " />
-            <marker date="1519641062660" expanded="true" signature="2327:2671" ph="INSERT INTO `article`... " />
+            <marker date="1519641672925" expanded="true" signature="157:239" ph="UPDATE categorie... " />
+            <marker date="1519641672925" expanded="true" signature="567:778" ph="UPDATE client... " />
+            <marker date="1519641672925" expanded="true" signature="1313:1388" ph="UPDATE hierarchiser... " />
+            <marker date="1519641672925" expanded="true" signature="1613:1684" ph="UPDATE marque... " />
+            <marker date="1519641672925" expanded="true" signature="1902:1955" ph="UPDATE marque... " />
+            <marker date="1519641672925" expanded="true" signature="2137:2192" ph="UPDATE marque... " />
+            <marker date="1519641672925" expanded="true" signature="2327:2671" ph="INSERT INTO `article`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/Structure/v_header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Modele/m_suppressions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="70" lean-forward="true" selection-start-line="43" selection-start-column="70" selection-end-line="43" selection-end-column="70" />
+          <folding>
+            <marker date="1519641672941" expanded="true" signature="137:183" ph="DELETE FROM `categorie`... " />
+            <marker date="1519641672941" expanded="true" signature="402:442" ph="DELETE FROM `client`... " />
+            <marker date="1519641672941" expanded="true" signature="663:705" ph="DELETE FROM commande... " />
+            <marker date="1519641672941" expanded="true" signature="939:978" ph="DELETE FROM marque... " />
+            <marker date="1519641672941" expanded="true" signature="1211:1251" ph="DELETE FROM article... " />
+            <marker date="1519641672941" expanded="true" signature="1483:1523" ph="DELETE FROM article... " />
+            <marker date="1519641672941" expanded="true" signature="1774:1819" ph="DELETE FROM categoriser... " />
+            <marker date="1519641672941" expanded="true" signature="2088:2126" ph="DELETE FROM taux_tva... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Modele/m_selections.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="100" column="16" lean-forward="true" selection-start-line="100" selection-start-column="16" selection-end-line="100" selection-end-column="16" />
+        <state relative-caret-position="1700">
+          <caret line="100" column="16" lean-forward="false" selection-start-line="100" selection-start-column="16" selection-end-line="100" selection-end-column="16" />
           <folding>
-            <marker date="1519641271848" expanded="true" signature="140:295" ph="SELECT * FRO... categorie" />
-            <marker date="1519641271848" expanded="true" signature="191:230" ph="SELECT id_ca... hierarchiser" />
-            <marker date="1519641271848" expanded="true" signature="257:294" ph="SELECT id_ca... hierarchiser" />
-            <marker date="1519641271848" expanded="true" signature="554:577" ph="SELECT * FRO... categorie" />
-            <marker date="1519641271848" expanded="true" signature="845:868" ph="SELECT * FRO... categorie" />
-            <marker date="1519641271848" expanded="true" signature="1151:1171" ph="SELECT * FRO... marque" />
-            <marker date="1519641271848" expanded="true" signature="1410:1470" ph="SELECT nom_c... categorie" />
-            <marker date="1519641271848" expanded="true" signature="1754:1815" ph="SELECT id_ca... categorie" />
-            <marker date="1519641271848" expanded="true" signature="2118:2284" ph="SELECT * FRO... categorie" />
-            <marker date="1519641271848" expanded="true" signature="2575:2713" ph="SELECT DISTI... categorie" />
-            <marker date="1519641271848" expanded="true" signature="3021:3047" ph="SELECT * FRO... hierarchiser" />
-            <marker date="1519641271848" expanded="true" signature="3282:3304" ph="SELECT * FRO... client" />
-            <marker date="1519641271848" expanded="true" signature="3478:3520" ph="SELECT * FRO... client" />
-            <marker date="1519641271848" expanded="true" signature="3746:3948" ph="SELECT comma... commande" />
-            <marker date="1519641271848" expanded="true" signature="4139:4240" ph="SELECT * FRO... hierarchiser" />
-            <marker date="1519641271848" expanded="true" signature="4181:4239" ph="SELECT id_ca... categorie" />
-            <marker date="1519641271848" expanded="true" signature="4464:4557" ph="SELECT COUNT... administrateur" />
-            <marker date="1519641271848" expanded="true" signature="4896:4936" ph="SELECT * FRO... marque" />
-            <marker date="1519641271848" expanded="true" signature="5245:5267" ph="SELECT * FRO... taux_tva" />
-            <marker date="1519641271848" expanded="true" signature="5543:5564" ph="SELECT * FRO... article" />
-            <marker date="1519641271848" expanded="true" signature="5849:6152" ph="SELECT artic... article" />
-            <marker date="1519641271848" expanded="true" signature="6432:6482" ph="SELECT refer... article" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Modele/m_suppressions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="793">
-          <caret line="88" column="0" lean-forward="true" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-          <folding>
-            <marker date="1519641271738" expanded="true" signature="137:183" ph="DELETE FROM `categorie`... " />
-            <marker date="1519641271738" expanded="true" signature="402:442" ph="DELETE FROM `client`... " />
-            <marker date="1519641271738" expanded="true" signature="663:705" ph="DELETE FROM commande... " />
-            <marker date="1519641271738" expanded="true" signature="939:978" ph="DELETE FROM marque... " />
-            <marker date="1519641271738" expanded="true" signature="1211:1251" ph="DELETE FROM article... " />
-            <marker date="1519641271738" expanded="true" signature="1483:1523" ph="DELETE FROM article... " />
-            <marker date="1519641271738" expanded="true" signature="1774:1819" ph="DELETE FROM categoriser... " />
-            <marker date="1519641271738" expanded="true" signature="2088:2126" ph="DELETE FROM taux_tva... " />
+            <marker date="1519641672941" expanded="true" signature="140:295" ph="SELECT * FRO... categorie" />
+            <marker date="1519641672941" expanded="true" signature="191:230" ph="SELECT id_ca... hierarchiser" />
+            <marker date="1519641672941" expanded="true" signature="257:294" ph="SELECT id_ca... hierarchiser" />
+            <marker date="1519641672941" expanded="true" signature="554:577" ph="SELECT * FRO... categorie" />
+            <marker date="1519641672941" expanded="true" signature="845:868" ph="SELECT * FRO... categorie" />
+            <marker date="1519641672941" expanded="true" signature="1151:1171" ph="SELECT * FRO... marque" />
+            <marker date="1519641672941" expanded="true" signature="1410:1470" ph="SELECT nom_c... categorie" />
+            <marker date="1519641672941" expanded="true" signature="1754:1815" ph="SELECT id_ca... categorie" />
+            <marker date="1519641672941" expanded="true" signature="2118:2284" ph="SELECT * FRO... categorie" />
+            <marker date="1519641672941" expanded="true" signature="2575:2713" ph="SELECT DISTI... categorie" />
+            <marker date="1519641672941" expanded="true" signature="3021:3047" ph="SELECT * FRO... hierarchiser" />
+            <marker date="1519641672941" expanded="true" signature="3282:3304" ph="SELECT * FRO... client" />
+            <marker date="1519641672941" expanded="true" signature="3478:3520" ph="SELECT * FRO... client" />
+            <marker date="1519641672941" expanded="true" signature="3746:3948" ph="SELECT comma... commande" />
+            <marker date="1519641672941" expanded="true" signature="4139:4240" ph="SELECT * FRO... hierarchiser" />
+            <marker date="1519641672941" expanded="true" signature="4181:4239" ph="SELECT id_ca... categorie" />
+            <marker date="1519641672941" expanded="true" signature="4464:4557" ph="SELECT COUNT... administrateur" />
+            <marker date="1519641672941" expanded="true" signature="4896:4936" ph="SELECT * FRO... marque" />
+            <marker date="1519641672941" expanded="true" signature="5245:5267" ph="SELECT * FRO... taux_tva" />
+            <marker date="1519641672941" expanded="true" signature="5543:5564" ph="SELECT * FRO... article" />
+            <marker date="1519641672941" expanded="true" signature="5849:6152" ph="SELECT artic... article" />
+            <marker date="1519641672941" expanded="true" signature="6432:6482" ph="SELECT refer... article" />
           </folding>
         </state>
       </provider>
@@ -870,14 +880,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-601">
-          <caret line="19" column="3" lean-forward="false" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
           <folding />
         </state>
       </provider>
