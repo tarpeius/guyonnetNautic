@@ -181,7 +181,7 @@ function isAdmin($pseudo, $mdp){
     {
         global $bdd;
         $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $query = "SELECT article.nom_article, article.reference, article.photo_article, article.qte_article, categorie.nom_categorie 
+        $query = "SELECT article.nom_article, article.reference, article.photo_article, article.qte_article, categorie.nom_categorie, article.id_tva 
                   FROM article, categoriser, categorie 
                   WHERE article.reference=categoriser.reference AND categoriser.id_categorie=categorie.id_categorie";
         $req=$bdd->prepare($query);

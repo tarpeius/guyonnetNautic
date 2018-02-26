@@ -4,7 +4,7 @@
             <div class="col-md-5">
                 <!--        Logo -->
                 <div class="logo">
-                    <h1><a href="index.php?c=acceuil">Guyonnet Nautic</a></h1>
+                    <h1><a href="index.php?c=accueil">Guyonnet Nautic</a></h1>
                 </div>
             </div>
             <div class="col-md-5">
