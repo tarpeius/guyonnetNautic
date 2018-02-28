@@ -6,14 +6,14 @@
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">Nom</label>
                 <div class="col-sm-7">
-                    <input type="text" class="form-control" id="inputEmail3" name="nomMarque">
+                    <input type="text" class="form-control" id="inputEmail3" name="nomMarque" required>
                 </div>
             </div>
             <!--        Logo input -->
             <div class="form-group">
                 <label for="logoMarque" class="col-md-2 control-label">Logo</label>
                 <div class="col-md-10">
-                    <input type="file" class="btn btn-default" name="logoMarque">
+                    <input type="file" class="btn btn-default" name="logoMarque" required >
                     <input type="submit" name="submit" class="btn btn-success" value="Enregistrer">
                 </div>
             </div>

@@ -97,7 +97,7 @@
         <div class ="row">
             <div class ="row">
                 <div class="col-xs-12 col-sm-12 col-md-2 col-md-offset-10 pull-right"><div class="input-group">
-                        <select class="form-control" id="selectNbLigne" name="selectNbLigne">
+                        <select class="form-control" id="selectNbLigneClient" name="selectNbLigne">
                             <option <?php if ($max == 10){echo "selected";}?>>10</option>
                             <option <?php if ($max == 20){echo "selected";}?>>20</option>
                             <option <?php if ($max == 50){echo "selected";}?>>50</option>

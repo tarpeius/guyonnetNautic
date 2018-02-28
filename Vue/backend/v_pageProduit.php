@@ -8,22 +8,22 @@
                 <div class="form-group">
                     <label for="referenceArticle" class="col-sm-2 control-label">Reference Article</label>
                     <div class="col-sm-5">
-                        <input type="text" class="form-control" name="referenceArticle">
+                        <input type="text" class="form-control" name="referenceArticle" required>
                     </div>
                 </div>
                 <!--        Nom Article-->
                 <div class="form-group">
                     <label for="nomArticle" class="col-sm-2 control-label">Titre Article</label>
                     <div class="col-sm-5">
-                        <input type="text" class="form-control" name="nomArticle">
+                        <input type="text" class="form-control" name="nomArticle" required>
                     </div>
                 </div>
                 <!--        Prix HT Article-->
                 <div class="form-group">
-                    <label class="control-label col-md-2" for="appendprepend">Prix vente HT</label>
+                    <label class="control-label col-md-2" for="prixHTArticle">Prix vente HT</label>
                     <div class="col-sm-2">
                         <div class="input-group">
-                            <input class="form-control" name="prixHTArticle" type="text">
+                            <input class="form-control" name="prixHTArticle" type="text" required>
                         </div>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
                     <div class="col-sm-10">
                         <div class="content-box-large">
                             <div class="panel-body">
-                                <textarea class="form-control" rows="5" name="resumeArticle"></textarea>
+                                <textarea class="form-control" rows="5" name="resumeArticle" required></textarea>
                             </div>
                         </div>
                     </div>
@@ -66,14 +66,14 @@
                     <div class="col-sm-10">
                         <div class="content-box-large">
                             <div class="panel-body">
-                                <textarea class="form-control" rows="5" name="descriptionArticle"></textarea>
+                                <textarea class="form-control" rows="5" name="descriptionArticle" required></textarea>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!--        Quantité -->
                 <div class="form-group">
-                    <label class="control-label col-md-2" for="appendprepend">Quantité</label>
+                    <label class="control-label col-md-2" for="quantiteArticle">Quantité</label>
                     <div class="col-sm-2">
                         <div class="input-group">
                             <input class="form-control" name="quantiteArticle" type="number">
@@ -82,37 +82,37 @@
                 </div>
                 <!--        Poids -->
                 <div class="form-group">
-                    <label class="control-label col-md-2" for="appendprepend">Poids (kg)</label>
+                    <label class="control-label col-md-2" for="poidsArticle">Poids (kg)</label>
                     <div class="col-sm-2">
                         <div class="input-group">
-                            <input class="form-control" name="poidsArticle" type="number">
+                            <input class="form-control" name="poidsArticle" type="number" required>
                         </div>
                     </div>
                 </div>
                 <!--        Motorisation -->
                 <div class="form-group">
-                    <label class="control-label col-md-2" for="appendprepend">Motorisation (cv)</label>
+                    <label class="control-label col-md-2" for="motorisationArticle">Motorisation (cv)</label>
                     <div class="col-sm-2">
                         <div class="input-group">
-                            <input class="form-control" name="motorisationArticle" type="number">
+                            <input class="form-control" name="motorisationArticle" type="number" required>
                         </div>
                     </div>
                 </div>
                 <!--        Longueur -->
                 <div class="form-group">
-                    <label class="control-label col-md-2" for="appendprepend">Longueur (m)</label>
+                    <label class="control-label col-md-2" for="longueurArticle">Longueur (m)</label>
                     <div class="col-sm-2">
                         <div class="input-group">
-                            <input class="form-control" name="longueurArticle" type="number" step="0.1">
+                            <input class="form-control" name="longueurArticle" type="number" step="0.1" required>
                         </div>
                     </div>
                 </div>
                 <!--        Largeur -->
                 <div class="form-group">
-                    <label class="control-label col-md-2" for="appendprepend">Largeur (m)</label>
+                    <label class="control-label col-md-2" for="largeurArticle">Largeur (m)</label>
                     <div class="col-sm-2">
                         <div class="input-group">
-                            <input class="form-control" name="largeurArticle" type="number" step="0.1">
+                            <input class="form-control" name="largeurArticle" type="number" step="0.1" required>
                         </div>
                     </div>
                 </div>
@@ -121,7 +121,7 @@
                     <label class="control-label col-md-2" for="appendprepend">Hauteur (m)</label>
                     <div class="col-sm-2">
                         <div class="input-group">
-                            <input class="form-control" name="hauteurArticle" type="number" step="0.1">
+                            <input class="form-control" name="hauteurArticle" type="number" step="0.1" required>
                         </div>
                     </div>
                 </div>
@@ -166,7 +166,7 @@
                 <div class="form-group">
                     <label for="photoArticle" class="col-md-2 control-label">Photo</label>
                     <div class="col-md-10">
-                        <input type="file" class="btn btn-default" name="photoArticle">
+                        <input type="file" class="btn btn-default" name="photoArticle" required>
                         <input type="submit" class="btn btn-success" value="Enregistrer">
                     </div>
                 </div>
