@@ -14,7 +14,6 @@
                 // Pagination
                 // Recuperation du nombre de pays par zone
                 $nbCount = selectCountToutArticles();
-                var_dump($nbCount);
                 // Verification si page existe
                 if (isset($_GET['page'])){
                     $pageActuelle=intval($_GET['page']);
@@ -35,7 +34,6 @@
                 }else {
                     $min = 0;
                     $min = ($pageActuelle - 1) * $max;
-                    var_dump($min);
                     $nbpage = ceil(($nbCount[0]) / $max);
                     // modif
                     $pageProduit = selectArticleCategoriePage($min, $max);
@@ -48,7 +46,6 @@
             // Pagination
             // Recuperation du nombre de pays par zone
             $nbCount = selectCountToutesCommandes();
-            var_dump($nbCount);
             // Verification si page existe
             if (isset($_GET['page'])){
                 $pageActuelle=intval($_GET['page']);
@@ -69,7 +66,6 @@
             }else {
                 $min = 0;
                 $min = ($pageActuelle - 1) * $max;
-                var_dump($min);
                 $nbpage = ceil(($nbCount[0]) / $max);
                 // modif
                 $pageCommande = afficherCommandePage($min, $max);
@@ -82,7 +78,6 @@
             // Pagination
             // Recuperation du nombre de pays par zone
             $nbCount = selectCountTousClient();
-            //var_dump($nbCount);
             // Verification si page existe
             if (isset($_GET['page'])){
                 $pageActuelle=intval($_GET['page']);
@@ -103,7 +98,6 @@
             }else {
                 $min = 0;
                 $min = ($pageActuelle - 1) * $max;
-                var_dump($min);
                 $nbpage = ceil(($nbCount[0]) / $max);
                 // modif
                 $pageClient = afficheClientPage($min, $max);
@@ -119,7 +113,6 @@
                 // Pagination
                 // Recuperation du nombre de pays par zone
                 $nbCount = selectCountToutesMarques();
-                var_dump($nbCount);
                 // Verification si page existe
                 if (isset($_GET['page'])){
                     $pageActuelle=intval($_GET['page']);
@@ -140,7 +133,6 @@
                 }else {
                     $min = 0;
                     $min = ($pageActuelle - 1) * $max;
-                    var_dump($min);
                     $nbpage = ceil(($nbCount[0]) / $max);
                     // modif
                     $pageMarque = afficherMarquesPage($min, $max);
@@ -156,7 +148,6 @@
                 // Pagination
                 // Recuperation du nombre de pays par zone
                 $nbCount = selectCountTousClient();
-                var_dump($nbCount);
                 // Verification si page existe
                 if (isset($_GET['page'])){
                     $pageActuelle=intval($_GET['page']);
@@ -177,7 +168,6 @@
                 }else {
                     $min = 0;
                     $min = ($pageActuelle - 1) * $max;
-                    var_dump($min);
                     $nbpage = ceil(($nbCount[0]) / $max);
                     // modif
                     $pageClient = afficheClientPage($min, $max);

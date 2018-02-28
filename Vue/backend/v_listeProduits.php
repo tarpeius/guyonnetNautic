@@ -43,7 +43,6 @@
                 <tbody>
                 <?php
                 foreach ($pageProduit as $article) {
-                    var_dump($article)
                     ?>
                     <tr class="odd gradeX">
                         <td>

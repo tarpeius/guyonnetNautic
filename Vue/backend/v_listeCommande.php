@@ -35,7 +35,6 @@
                         <tr class="odd gradeX">
                             <?php
                                 foreach ($pageCommande as $uneCommande) {
-                                    var_dump($uneCommande);
                                     ?>
                                     <td> <?php echo $uneCommande['id_commande'] ?></td>
                                     <td> <?php echo $uneCommande['id_client'] ?></td>
