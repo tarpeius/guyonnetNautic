@@ -24,8 +24,8 @@
                 <tbody>
                 <tr class="odd gradeX">
                     <?php
-                        $allClient = afficherToutClient();
-                        foreach ($allClient as $client){
+                       // $pagePays = afficherToutClient();
+                        foreach ($pageClient as $client){
                             ?>
 
                             <tr>
@@ -93,15 +93,42 @@
                 </tbody>
             </table>
         </div>
+        <!-- pagination -->
+        <div class ="row">
+            <div class ="row">
+                <div class="col-xs-12 col-sm-12 col-md-2 col-md-offset-10 pull-right"><div class="input-group">
+                        <select class="form-control" id="selectNbLigne" name="selectNbLigne">
+                            <option <?php if ($max == 10){echo "selected";}?>>10</option>
+                            <option <?php if ($max == 20){echo "selected";}?>>20</option>
+                            <option <?php if ($max == 50){echo "selected";}?>>50</option>
+                            <option <?php if ($max == 100){echo "selected";}?>>100</option>
+                            <option <?php if ($max == 'Tout'){echo "selected";}?>>Tout</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-11">
+                <ul class="pagination">
+                    <li><a class="pagination-previous <?php if($pageActuelle==1){echo "btn disabled";}?>" href="index.php?c=accueil&a=listeClients&page=<?php echo ($pageActuelle-1);?>&selectNbLigne=<?php echo $max;?>" >Page précédente</a></li>
+                    <?php
+                    for($i=1;$i<=$nbpage;$i++){
+                        $current="";
+                        $disabled = "";
+                        if($pageActuelle==($i)){
+                            $current="is-current";
+                            $disabled = "btn disabled";
+                        }?>
+                        <li><a class="pagination-link <?php echo $current." ".$disabled;?>" href="index.php?c=accueil&a=listeClients&page=<?php echo ($i) ;?>&selectNbLigne=<?php echo $max;?>" ><?php echo($i); ?></a></li>
+                        <?php
+                    }
+                    ?>
+                    <li><a class="pagination-next <?php if($pageActuelle>=($nbpage)){echo "btn disabled";}?>" href="index.php?c=accueil&a=listeClients&page=<?php echo ($pageActuelle+1);?>&selectNbLigne=<?php echo $max;?>" >Page suivante</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <!-- fin pagination -->
     </div>
 </div>
 </div>
 </div>
-<script>
-     function tarace(that) {
-         id_client = (that.id);
-         $.post('index.php?c=accueil&a=listeClients', {variable: id_client});
-         console.log(id_client);
-     }
-</script>
-<!-- Modal -->

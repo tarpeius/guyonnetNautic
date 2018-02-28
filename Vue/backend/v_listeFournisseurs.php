@@ -3,7 +3,6 @@
     <div class="content-box-large">
         <div class="panel-heading">
             <div class="panel-title">Marques</div>
-
             <!--        Bouton créer Marque -->
             <div class="panel-options">
                 <a href="index.php?c=listeFournisseurs&a=nouveau"><button class="btn btn-success"><i class="glyphicon glyphicon-ok"></i> Créer Marque</button></a>

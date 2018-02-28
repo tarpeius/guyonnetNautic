@@ -17,8 +17,16 @@ $(document ).ready(function(){
             });
         }
     });
-<<<<<<< HEAD
+
 });
-=======
+
+$(document ).ready(function(){
+    // bind change event to select
+    $('#selectNbLigne').on('change', function () {
+        var url = "index.php?c=accueil&a=listeClients&selectNbLigne="+$(this).val()+"";
+        if (url) { // require a URL
+            window.location = url; // redirect
+        }
+        return false;
+    });
 });
->>>>>>> origin/createProduct
