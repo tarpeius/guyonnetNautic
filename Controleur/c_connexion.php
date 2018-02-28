@@ -10,24 +10,23 @@ $action=$_GET['a'];
 if(!empty($action)) {
     switch ($action) {
         case "authentification":
-           // var_dump($_REQUEST);
             if ((!empty($_POST['pseudo'])) && (!empty($_POST['pwd']))) {
                 $pseudo = $_POST['pseudo'];
                 $mdp = $_POST['pwd'];
                 $valide = isAdmin($pseudo, $mdp);
                 if ($valide == 1) {
                     $_SESSION['isActive'] = 1;
+                    include('Vue/Structure/v_bandeau.php');
                     include('Vue/backend/v_accueil.php');
                 } else {
                     $erreur = "marche pas !";
                     include('Vue/backend/v_connexion.php');
-
                 }
                 break;
             }
         case "deconnexion":
             session_destroy();
-            include "Vue/backend/v_connexion.php";
+           header("Refresh:0; url=index.php");
             break;
     }
 }

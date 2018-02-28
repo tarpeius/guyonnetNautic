@@ -21,15 +21,12 @@
         include("Vue/Structure/v_bandeau.php");
     }
 
-
         if ((!isset($_REQUEST['c'])) || (!isset($_REQUEST['a']))) {
             // controleur -- action
             $uc = 'accueil';
         } else {
             $uc = $_REQUEST['c'];
         }
-
-
                 if (!empty($_GET['c'])) {
                     $uc = $_GET['c'];
                     switch ($uc) {

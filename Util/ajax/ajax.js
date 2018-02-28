@@ -18,3 +18,47 @@ $(document ).ready(function(){
         }
     });
 });
+
+$(document ).ready(function(){
+    // bind change event to select
+    $('#selectNbLigneProduit').on('change', function () {
+        var url = "index.php?c=accueil&a=listeProduits&selectNbLigneProduit="+$(this).val()+"";
+        if (url) { // require a URL
+            window.location = url; // redirect
+        }
+        return false;
+    });
+});
+
+$(document ).ready(function(){
+    // bind change event to select
+    $('#selectNbLigneCommande').on('change', function () {
+        var url = "index.php?c=accueil&a=listeCommande&selectNbLigneCommande="+$(this).val()+"";
+        if (url) { // require a URL
+            window.location = url; // redirect
+        }
+        return false;
+    });
+});
+
+$(document ).ready(function(){
+    // bind change event to select
+    $('#selectNbLigneClient').on('change', function () {
+        var url = "index.php?c=accueil&a=listeClients&selectNbLigne="+$(this).val()+"";
+        if (url) { // require a URL
+            window.location = url; // redirect
+        }
+        return false;
+    });
+});
+
+$(document ).ready(function(){
+    // bind change event to select
+    $('#selectNbLigneFournisseur').on('change', function () {
+        var url = "index.php?c=accueil&a=listeFournisseurs&selectNbLigne="+$(this).val()+"";
+        if (url) { // require a URL
+            window.location = url; // redirect
+        }
+        return false;
+    });
+});

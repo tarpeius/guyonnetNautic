@@ -25,7 +25,7 @@
         </div>
         <?php
         var_dump($_REQUEST);
-        var_dump($_SESSION);
+       // var_dump($_SESSION);
         if(!empty($erreur)){
             echo"<div class='alert alert-danger'>
             <strong>".$erreur.".</strong>
