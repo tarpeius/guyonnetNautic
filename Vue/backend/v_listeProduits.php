@@ -59,9 +59,83 @@
                             <span class="glyphicon glyphicon-ok"></span>
                         </td>
                         <td>
-                            <a href="index.php?c=listeProduits&a=supprimer&reference=<?php echo $article['reference']?>&tva=<?php echo $article['id_tva'];?>"><span class="glyphicon glyphicon-trash"></span></a>
+                            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal-<?php echo $article['reference']; ?>"><span class="glyphicon glyphicon-edit"></span></button>
+                            <a href="index.php?c=listeProduits&a=supprimer&reference=<?php echo $article['reference']?>&tva=<?php echo $article['id_tva'];?>"><button class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></button></a>
                         </td>
                     </tr>
+
+                    <div id="myModal-<?php echo $article['reference']; ?>" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                    </button>
+                                    <h4 class="modal-title">Modifier Article</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form method="POST" action="index.php?c=listeProduits&a=modifier" enctype="multipart/form-data">
+                                        <div class="form-group">
+                                            <label for="nomArticle">Nom</label>
+                                            <input class="form-control" type="hidden" name="refArticle" value="<?php echo $article['reference']?>">
+                                            <input class="form-control" type="text" name="nomArticle" value="<?php echo $article['nom_article']; ?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="imageArticle">Photo</label>
+                                            <img class="imageArticle" src="Util/img/<?php echo $article['photo_article'] ?>" width="150px" height="90px">
+                                            <input type="file" class="btn btn-default" name="photoArticle">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="prixArticle">Prix</label>
+                                            <input class="form-control" type="number" name="prixArticle" value="<?php echo $article['prix_article']; ?>" step="0.01">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="resumeArticle">Resume</label>
+                                            <textarea class="form-control" rows="5" name="resumeArticle"><?php echo $article['resume_article']; ?></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="descriptionArticle">Description</label>
+                                            <textarea class="form-control" rows="5" name="descArticle"><?php echo $article['desc_article']; ?></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="quantiteArticle">Quantite</label>
+                                            <input class="form-control" type="number" name="qteArticle" value="<?php echo $article['qte_article']; ?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="poidsArticle">Poids</label>
+                                            <input class="form-control" type="number" name="poidsArticle" value="<?php echo $article['poids_article']; ?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="poidsArticle">Dimensions (L / l / H)</label>
+                                            <input class="form-control" type="text" name="dimArticle" value="<?php echo $article['dimensions_article']; ?>" disabled>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="longueurArticle">Longueur</label>
+                                            <input class="form-control" type="number" name="longueurArticle" step="0.01">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="largeurArticle">Largeur</label>
+                                            <input class="form-control" type="number" name="largeurArticle" step="0.01">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="hauteurArticle">Hauteur</label>
+                                            <input class="form-control" type="number" name="hauteurArticle" step="0.01">
+                                        </div>
+
+
+                                        <input type="submit" class="btn btn-success" value="Modifier">
+                                    </form>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                                        Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <?php
                 }
                 ?>

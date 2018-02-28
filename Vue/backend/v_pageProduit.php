@@ -39,7 +39,7 @@
                                     ?>
                                     <option value="<?php echo $tva['id_tva']?>">
                                         <?php
-                                        echo $tva['type_tva'];
+                                        echo $tva['desc_tva'];
                                         ?>
                                     </option>
                                     <?php
@@ -103,7 +103,7 @@
                     <label class="control-label col-md-2" for="appendprepend">Longueur (m)</label>
                     <div class="col-sm-2">
                         <div class="input-group">
-                            <input class="form-control" name="longueurArticle" type="number" step="0.1">
+                            <input class="form-control" name="longueurArticle" type="number" step="0.01">
                         </div>
                     </div>
                 </div>
@@ -112,7 +112,7 @@
                     <label class="control-label col-md-2" for="appendprepend">Largeur (m)</label>
                     <div class="col-sm-2">
                         <div class="input-group">
-                            <input class="form-control" name="largeurArticle" type="number" step="0.1">
+                            <input class="form-control" name="largeurArticle" type="number" step="0.01">
                         </div>
                     </div>
                 </div>
@@ -121,7 +121,7 @@
                     <label class="control-label col-md-2" for="appendprepend">Hauteur (m)</label>
                     <div class="col-sm-2">
                         <div class="input-group">
-                            <input class="form-control" name="hauteurArticle" type="number" step="0.1">
+                            <input class="form-control" name="hauteurArticle" type="number" step="0.01">
                         </div>
                     </div>
                 </div>

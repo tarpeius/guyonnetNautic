@@ -61,28 +61,20 @@ switch($action)
         include ('Vue/backend/v_listeProduits.php');
         break;
     case "modifier":
-        var_dump($_GET);
+        var_dump($_POST);
+        var_dump($_FILES);
         if (!empty($_POST)){
             $nom = $_POST['nomArticle'];
-            $reference = $_POST['referenceArticle'];
-            $prix = $_POST['prixTTCArticle'];
+            $reference = $_POST['refArticle'];
+            $prix = $_POST['prixArticle'];
             $resume = $_POST['resumeArticle'];
-            $descr = $_POST['descriptionArticle'];
-            $qte = $_POST['quantiteArticle'];
+            $descr = $_POST['descArticle'];
+            $qte = $_POST['qteArticle'];
             $poids = $_POST['poidsArticle'];
-            $motor = $_POST['motorisationArticle'];
-            $dimension = $_POST['longueurArticle'];
-            $photo = $_POST['photoArticle'];
-            if (!empty($nom) && isset($_POST['submit'])){
-                modifierNomMarque($reference,$nom);
-                $validation = "Le nom de l'article a bien été modifié";
-                var_dump($validation);
-            }elseif (!empty($_POST['logoMarque']) && isset($_POST['submit'])){
-                modifierLogoMarque($reference,$photo);
-                $validation = "Le logo de l'article a bien été modifié";
-                var_dump($validation);
-            }elseif (!empty($_POST['nomMarque']) && !empty($_POST['logoMarque']) && isset($_POST['submit'])) {
-                modifierMarque($reference,$nom,$photo);
+            $dimension = $_POST['longueurArticle'] . "/" . $_POST['largeurArticle'] . "/" . $_POST['hauteurArticle'];
+            if (!empty($nom) && !empty($_FILES)){
+                uploadImg($_FILES['photoArticle']);
+                modifierArticle($reference,$nom,$prix,$resume,$descr,$qte,$dimension,$poids,$_FILES['photoArticle']['name']);
                 $validation = "L'article a bien été modifié";
                 var_dump($validation);
             }else{
@@ -90,8 +82,7 @@ switch($action)
                 var_dump($erreur);
             }
         }
-
-        include ('Vue/backend/v_pageFournisseur.php');
+        include ('Vue/backend/v_listeProduits.php');
         break;
     default:
         include("Vue/backend/v_accueil.php");

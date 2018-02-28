@@ -17,8 +17,4 @@ $(document ).ready(function(){
             });
         }
     });
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> origin/createProduct

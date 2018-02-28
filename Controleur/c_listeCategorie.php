@@ -52,6 +52,7 @@ if (isset($action)){
             $nomCateg = recupNomParId($idCateg);
             echo json_encode($nomCateg);
         }
+        break;
         case "update":{
             if (!empty($_POST['modifCategorie'])){
                 if ($_POST['modifCateg'] == "Modifier"){

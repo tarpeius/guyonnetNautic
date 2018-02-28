@@ -58,8 +58,19 @@ function modifierLogoMarque($id,$logo){
     $stmt->bindParam(':logo', $logo);
     $stmt->execute();
 }
-function modifierArticle()
+function modifierArticle($ref,$nom,$prix,$resume,$descr,$qte,$dim,$poids,$photo)
 {
+    global $bdd;
+    $stmt = $bdd->prepare("UPDATE `article` SET nom_article=:nom, prix_article=:prix, qte_article=:qte, resume_article=:resume, desc_article=:descr, poids_article=:poids, dimensions_article=:dim, photo_article=:photo WHERE reference=:ref");
+    $stmt->bindParam(':ref', $ref);
+    $stmt->bindParam(':nom', $nom);
+    $stmt->bindParam(':prix', $prix);
+    $stmt->bindParam(':qte', $qte);
+    $stmt->bindParam(':resume', $resume);
+    $stmt->bindParam(':descr', $descr);
+    $stmt->bindParam(':poids', $poids);
+    $stmt->bindParam(':dim', $dim);
+    $stmt->bindParam(':photo', $photo);
+    $stmt->execute();
 
-    "INSERT INTO `article` (`reference`, `nom_article`, `prix_article`, `qte_article`, `resume_article`, `desc_article`, `poids_article`, `motorisation_article`, `dimensions_article`, `photo_article`, `id_marque`, `id_tva`) VALUES ('124', 'Bouee', '19.99', '1', 'c\'est une bouée', 'cette bouée est très spéciale', '5', '20', '2.3', NULL, NULL, '2')";
 }

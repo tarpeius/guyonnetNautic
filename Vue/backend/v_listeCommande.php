@@ -30,7 +30,7 @@
                                     <td> <?php echo $uneCommande['type_mdpaiement'] ?></td>
                                     <td> <?php echo $uneCommande['date_commande'] ?></td>
                             <td>
-                                <a href="index.php?c=listeCommande&a=supprimer&id=<?php echo $uneCommande['id_commande'] ?>"><button class="btn btn-success"><i class="glyphicon glyphicon-trash"></i></button></a>
+                                <a href="index.php?c=listeCommande&a=supprimer&id=<?php echo $uneCommande['id_commande'] ?>"><button class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></button></a>
                             </td>
                         </tr>
                         <?php

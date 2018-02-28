@@ -55,8 +55,7 @@
                         <td>
                             <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal-<?php echo $marque['id_marque']; ?>"><span class="glyphicon glyphicon-edit"></span></button>
                             <a href="index.php?c=listeFournisseurs&a=modifier&idMarque=<?php echo $marque['id_marque']; ?>&nomMarque=<?php echo $marque['nom_marque']; ?>&logoMarque=<?php echo $marque['logo_marque'] ?>"></a>
-                            <a href="index.php?c=listeFournisseurs&a=supprimer&idMarque=<?php echo $marque['id_marque']; ?>"><span
-                                        class="glyphicon glyphicon-trash"></span></a>
+                            <a href="index.php?c=listeFournisseurs&a=supprimer&idMarque=<?php echo $marque['id_marque']; ?>"><button class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></button></a>
                         </td>
                     </tr>
 
