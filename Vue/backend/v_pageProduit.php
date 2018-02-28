@@ -39,7 +39,7 @@
                                     ?>
                                     <option value="<?php echo $tva['id_tva']?>">
                                         <?php
-                                        echo $tva['desc_tva'];
+                                        echo $tva['type_tva'];
                                         ?>
                                     </option>
                                     <?php

@@ -260,7 +260,7 @@ function selectCountToutesMarques(){
 /// <returns>Retourne le tableau de résultats.</returns>
 function selectArticleCategoriePage($min, $max){
     global $bdd;
-    $query="SELECT article.nom_article, article.reference, article.photo_article, article.qte_article, categorie.nom_categorie , article.id_tva
+    $query="SELECT *
                   FROM article, categoriser, categorie 
                   WHERE article.reference=categoriser.reference AND categoriser.id_categorie=categorie.id_categorie ORDER BY nom_article ASC LIMIT $min , $max ";
     $req=$bdd->prepare($query);
