@@ -1,62 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <title>Bootstrap Example</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../ressource/bootstrap/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="../ressource/bootstrap/js/bootstrap.min.js"></script>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../../Util/css/materialize.min.css"  media="screen,projection"/>
+    <script src="../../Util/bootstrap/js/bootstrap.min.js"></script>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 </head>
-<body style="height:1500px">
+<body>
+<header>
+<!-- MENU -->
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">WebSiteName</a>
+    <nav class="white">
+        <div class="container nav-wrapper white">
+            <a href="#" class="brand-logo col s2"><!--<img src="../../Util/img/yamaha-motor-logo.png"--> <span class="black-text"> Logo </span> </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down ">
+                <li><a href="sass.html"><span class="black-text"> Permis bateau </span></a></li>
+                <li><a href="badges.html"><span class="black-text"> Motomarine </span></a></li>
+                <li><a href="collapsible.html"><span class="black-text"> Bateau </span></a></li>
+                <li><a href="badges.html"><span class="black-text"> Occasion </span></a></li>
+                <li><a href="collapsible.html"><span class="black-text"> Moteur </span></a></li>
+                <li><a href="collapsible.html"><span class="black-text"> Moteur </span></a></li>
+                <li><a href="collapsible.html"><span class="black-text"> Moteur </span></a></li>
+
+            </ul>
         </div>
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Page 1</a></li>
-            <li><a href="#">Page 2</a></li>
-            <li><a href="#">Page 3</a></li>
-        </ul>
-    </div>
-</nav>
-<div class="container">
-    <h2>Carousel Example</h2>
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
+    </nav>
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <img src="../ressource/img/beau.jpg" alt="Los Angeles" style="width:100%;">
-            </div>
+<!-- MENU -->
+</header>
+<!-- CONTENU PAGE -->
 
-            <div class="item">
-                <img src="../ressource/img/res.jpg" alt="Chicago" style="width:100%;">
-            </div>
+<!-- CAROUSEL -->
 
+    <div class="carousel carousel-slider center" data-indicators="true">
+        <div class="carousel-item" href="#one!">
+            <img src="../../Util/img/parallax1.jpg">
         </div>
+        <div class="carousel-item" href="#two!">
+            <img src="../../Util/img/parallax2.jpg">
+        </div>
+        <div class="carousel-item" href="#three!">
+            <img src="../../Util/img/Sea-Doo-Spark-Trixx-Jetski-0-1.jpg">
+        </div>
+        <div class="carousel-item" href="#four!">
+            <img src="../../Util/img/2017-Sea-Doo-GTI-3.jpg">
+        </div>
+    </div
 
-        <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-            <span class="sr-only">Next</span>
-        </a>
+<!-- CAROUSEL -->
+
+<!-- DESCRIPTIF MAGASIN -->
+
+    <div class="container center-align">
+    <div class="content">
+        <h3>Bienvenue sur le site Guyonnet Nautic</h3>
+        <p>Guyonnet Nautic, concession Yamaha et BRP située à Pau, est spécialisée en vente et réparation de véhicules de loisirs sur la région. Pour tout pratiquant, vous trouverez une large gamme de jets, bateaux en neuf et occasion. De plus, une boutique d'accessoires, d'équipements et de pièces détachées vous attend au magasin. Elle vous accueille du mardi au samedi sur ses horaires d'ouvertures.</p>
     </div>
-</div>
+    </div>
+
+<!-- DESCRIPTIF MAGASIN -->
+
+
+
+
+
+
+
+
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../../Util/js/materialize.min.js"></script>
 
 </body>
 </html>
