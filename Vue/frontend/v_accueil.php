@@ -29,7 +29,6 @@
                 <li><a href="collapsible.html"><span class="black-text"> Moteur </span></a></li>
                 <li><a href="collapsible.html"><span class="black-text"> Moteur </span></a></li>
                 <li><a href="collapsible.html"><span class="black-text"> Moteur </span></a></li>
-
             </ul>
         </div>
     </nav>
@@ -76,9 +75,7 @@
 
 
 
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="../../Util/js/materialize.min.js"></script>
+
 
 </body>
 </html>

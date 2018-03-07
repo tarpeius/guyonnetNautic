@@ -89,9 +89,9 @@
                             break;
                     }
 
-            } else {
-                include('Vue/backend/v_connexion.php');
-            }
+                } else {
+                    include('Vue/backend/v_connexion.php');
+                }
 
             //ob_end_flush();
             include("Vue/Structure/v_footer.php");
