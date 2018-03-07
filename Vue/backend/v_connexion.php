@@ -12,7 +12,7 @@
             <div class="col-sm-6 col-md-4 col-md-offset-4">
                 <h1 class="text-center login-title">Connectez vous pour acceder au site Guyonnet Nautic</h1>
                 <div class="account-wall">
-                    <img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
+                    <img class="profile-img" src=""
                          alt="">
                     <form class="form-signin" method="POST" action="index.php?c=connexion&a=authentification">
                         <input type="text" name="pseudo" class="form-control" placeholder="Email" required autofocus>
@@ -24,8 +24,6 @@
             </div>
         </div>
         <?php
-        var_dump($_REQUEST);
-       // var_dump($_SESSION);
         if(!empty($erreur)){
             echo"<div class='alert alert-danger'>
             <strong>".$erreur.".</strong>

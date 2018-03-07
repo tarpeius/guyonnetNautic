@@ -6,6 +6,9 @@
 	switch($action)
 		{
 			case "": // a changer selon besoin
+                $dernieresCommande =selectDeuxDernieresCommandes();
+                $derniersClients = selectDeuxDerniersClients();
+                $dernieresMarques = selectDeuxDernieresMarques();
 			include('Vue/backend/v_accueil.php');
 			break;
             case "listeProduits": // a changer selon besoin

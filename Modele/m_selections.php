@@ -226,84 +226,132 @@
         $result= $req->fetch();
         return $result;
     }
-/// <summary>
-/// Fonction de selection des clients avec une limit pour la pagination
-/// </summary>
-/// <param name=min>Paramètre de limit minimum.</param>
-/// <param name=max>Paramètre de limit maximum.</param>
-/// <returns>Retourne le tableau de résultats.</returns>
-function afficherMarquesPage($min, $max){
-    global $bdd;
-    $query="SELECT * FROM marque ORDER BY id_marque ASC LIMIT $min , $max ";
-    $req=$bdd->prepare($query);
-    $req->execute();
-    $result= $req->fetchAll();
-    return $result;
+    /// <summary>
+    /// Fonction de selection des clients avec une limit pour la pagination
+    /// </summary>
+    /// <param name=min>Paramètre de limit minimum.</param>
+    /// <param name=max>Paramètre de limit maximum.</param>
+    /// <returns>Retourne le tableau de résultats.</returns>
+    function afficherMarquesPage($min, $max){
+        global $bdd;
+        $query="SELECT * FROM marque ORDER BY id_marque ASC LIMIT $min , $max ";
+        $req=$bdd->prepare($query);
+        $req->execute();
+        $result= $req->fetchAll();
+        return $result;
+    }
+    // <summary>
+    /// Fonction de selection du nombre de client
+    /// </summary>
+    /// <returns>Retourne le nombre de client.</returns>
+    function selectCountToutesMarques(){
+        global $bdd;
+        $query="SELECT COUNT(id_marque)FROM marque";
+        $req=$bdd->prepare($query);
+        $req->execute();
+        $result= $req->fetch();
+        return $result;
+    }
+    /// <summary>
+    /// Fonction de selection des clients avec une limit pour la pagination
+    /// </summary>
+    /// <param name=min>Paramètre de limit minimum.</param>
+    /// <param name=max>Paramètre de limit maximum.</param>
+    /// <returns>Retourne le tableau de résultats.</returns>
+    function selectArticleCategoriePage($min, $max){
+        global $bdd;
+        $query="SELECT *
+                      FROM article, categoriser, categorie 
+                      WHERE article.reference=categoriser.reference AND categoriser.id_categorie=categorie.id_categorie ORDER BY nom_article ASC LIMIT $min , $max ";
+        $req=$bdd->prepare($query);
+        $req->execute();
+        $result= $req->fetchAll();
+        return $result;
+    }
+    // <summary>
+    /// Fonction de selection du nombre de client
+    /// </summary>
+    /// <returns>Retourne le nombre de client.</returns>
+    function selectCountToutArticles(){
+        global $bdd;
+        $query="SELECT COUNT(references)FROM article";
+        $req=$bdd->prepare($query);
+        $req->execute();
+        $result= $req->fetch();
+        return $result;
+    }
+    /// <summary>
+    /// Fonction de selection des clients avec une limit pour la pagination
+    /// </summary>
+    /// <param name=min>Paramètre de limit minimum.</param>
+    /// <param name=max>Paramètre de limit maximum.</param>
+    /// <returns>Retourne le tableau de résultats.</returns>
+    function afficherCommandePage($min, $max){
+        global $bdd;
+        $query="SELECT commande.id_commande,date_commande,valeur_commande,id_client,commande.id_mdpaiement, type_mdpaiement FROM commande, mode_paiement 
+                WHERE commande.id_mdpaiement=mode_paiement.id_mdpaiement ORDER BY commande.id_commande ASC LIMIT $min,$max";
+        $req=$bdd->prepare($query);
+        $req->execute();
+        $result= $req->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+    // <summary>
+    /// Fonction de selection du nombre de client
+    /// </summary>
+    /// <returns>Retourne le nombre de client.</returns>
+    function selectCountToutesCommandes(){
+        global $bdd;
+        $query="SELECT COUNT(id_commande)FROM commande";
+        $req=$bdd->prepare($query);
+        $req->execute();
+        $result= $req->fetch();
+        return $result;
 }
-// <summary>
-/// Fonction de selection du nombre de client
-/// </summary>
-/// <returns>Retourne le nombre de client.</returns>
-function selectCountToutesMarques(){
-    global $bdd;
-    $query="SELECT COUNT(id_marque)FROM marque";
-    $req=$bdd->prepare($query);
-    $req->execute();
-    $result= $req->fetch();
-    return $result;
-}
-/// <summary>
-/// Fonction de selection des clients avec une limit pour la pagination
-/// </summary>
-/// <param name=min>Paramètre de limit minimum.</param>
-/// <param name=max>Paramètre de limit maximum.</param>
-/// <returns>Retourne le tableau de résultats.</returns>
-function selectArticleCategoriePage($min, $max){
-    global $bdd;
-    $query="SELECT *
-                  FROM article, categoriser, categorie 
-                  WHERE article.reference=categoriser.reference AND categoriser.id_categorie=categorie.id_categorie ORDER BY nom_article ASC LIMIT $min , $max ";
-    $req=$bdd->prepare($query);
-    $req->execute();
-    $result= $req->fetchAll();
-    return $result;
-}
-// <summary>
-/// Fonction de selection du nombre de client
-/// </summary>
-/// <returns>Retourne le nombre de client.</returns>
-function selectCountToutArticles(){
-    global $bdd;
-    $query="SELECT COUNT(references)FROM article";
-    $req=$bdd->prepare($query);
-    $req->execute();
-    $result= $req->fetch();
-    return $result;
-}
-/// <summary>
-/// Fonction de selection des clients avec une limit pour la pagination
-/// </summary>
-/// <param name=min>Paramètre de limit minimum.</param>
-/// <param name=max>Paramètre de limit maximum.</param>
-/// <returns>Retourne le tableau de résultats.</returns>
-function afficherCommandePage($min, $max){
-    global $bdd;
-    $query="SELECT commande.id_commande,date_commande,valeur_commande,id_client,commande.id_mdpaiement, type_mdpaiement FROM commande, mode_paiement 
-            WHERE commande.id_mdpaiement=mode_paiement.id_mdpaiement ORDER BY commande.id_commande ASC LIMIT $min,$max";
-    $req=$bdd->prepare($query);
-    $req->execute();
-    $result= $req->fetchAll(PDO::FETCH_ASSOC);
-    return $result;
-}
-// <summary>
-/// Fonction de selection du nombre de client
-/// </summary>
-/// <returns>Retourne le nombre de client.</returns>
-function selectCountToutesCommandes(){
-    global $bdd;
-    $query="SELECT COUNT(id_commande)FROM commande";
-    $req=$bdd->prepare($query);
-    $req->execute();
-    $result= $req->fetch();
-    return $result;
-}
+    // <summary>
+    /// Fonction de selection des deux dernieres commandes
+    /// </summary>
+    /// <returns>Retourne les deux dernieres commandes.</returns>
+    function selectDeuxDernieresCommandes(){
+        global $bdd;
+        $query="SELECT * FROM commande ORDER BY id_commande DESC LIMIT 0,2";
+        $req=$bdd->prepare($query);
+        $req->execute();
+        $result= $req->fetchAll();
+        return $result;
+    }
+    // <summary>
+    /// Fonction de selection des deux dernieres commandes
+    /// </summary>
+    /// <returns>Retourne les deux dernieres commandes.</returns>
+    function selectDeuxDerniersClients(){
+        global $bdd;
+        $query="SELECT * FROM client ORDER BY id_client DESC LIMIT 0,2";
+        $req=$bdd->prepare($query);
+        $req->execute();
+        $result= $req->fetchAll();
+        return $result;
+    }
+    // <summary>
+    /// Fonction de selection des deux dernieres commandes
+    /// </summary>
+    /// <returns>Retourne les deux dernieres commandes.</returns>
+    function selectDeuxDerniersProduits(){
+        global $bdd;
+        $query="SELECT * FROM client ORDER BY id_client DESC LIMIT 0,2";
+        $req=$bdd->prepare($query);
+        $req->execute();
+        $result= $req->fetchAll();
+        return $result;
+    }
+    // <summary>
+    /// Fonction de selection des deux dernieres marques
+    /// </summary>
+    /// <returns>Retourne les deux dernieres marques.</returns>
+    function selectDeuxDernieresMarques(){
+        global $bdd;
+        $query="SELECT * FROM marque ORDER BY id_marque DESC LIMIT 0,2";
+        $req=$bdd->prepare($query);
+        $req->execute();
+        $result= $req->fetchAll();
+        return $result;
+    }

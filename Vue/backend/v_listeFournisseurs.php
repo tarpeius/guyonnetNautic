@@ -15,7 +15,8 @@
     <div class="content-box-large">
         <div class="row">
             <!-- pagination -->
-            <div class="col-xs-12 col-sm-12 col-md-2  pull-right"><div class="input-group">
+            <div class="col-xs-12 col-sm-12 col-md-2  pull-right">
+                <div class="input-group">
                     <select class="form-control" id="selectNbLigneFournisseur" name="selectNbLigneFournisseur">
                         <option <?php if ($max == 10){echo "selected";}?>>10</option>
                         <option <?php if ($max == 20){echo "selected";}?>>20</option>

@@ -3,6 +3,18 @@
     <div class="content-box-large">
         <div class="panel-heading">
             <div class="panel-title">Clients</div>
+            <div class ="row">
+                <div class="col-xs-12 col-sm-12 col-md-2 col-md-offset-10 pull-right"><div class="input-group">
+                        <select class="form-control" id="selectNbLigneClient" name="selectNbLigne">
+                            <option <?php if ($max == 10){echo "selected";}?>>10</option>
+                            <option <?php if ($max == 20){echo "selected";}?>>20</option>
+                            <option <?php if ($max == 50){echo "selected";}?>>50</option>
+                            <option <?php if ($max == 100){echo "selected";}?>>100</option>
+                            <option <?php if ($max == 'Tout'){echo "selected";}?>>Tout</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
         </div>
         <!--        Tableau liste client -->
         <div class="panel-body">
@@ -95,19 +107,7 @@
         </div>
         <!-- pagination -->
         <div class ="row">
-            <div class ="row">
-                <div class="col-xs-12 col-sm-12 col-md-2 col-md-offset-10 pull-right"><div class="input-group">
-                        <select class="form-control" id="selectNbLigneClient" name="selectNbLigne">
-                            <option <?php if ($max == 10){echo "selected";}?>>10</option>
-                            <option <?php if ($max == 20){echo "selected";}?>>20</option>
-                            <option <?php if ($max == 50){echo "selected";}?>>50</option>
-                            <option <?php if ($max == 100){echo "selected";}?>>100</option>
-                            <option <?php if ($max == 'Tout'){echo "selected";}?>>Tout</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-11">
+           <div class="col-md-11">
                 <ul class="pagination">
                     <li><a class="pagination-previous <?php if($pageActuelle==1){echo "btn disabled";}?>" href="index.php?c=accueil&a=listeClients&page=<?php echo ($pageActuelle-1);?>&selectNbLigne=<?php echo $max;?>" >Page précédente</a></li>
                     <?php

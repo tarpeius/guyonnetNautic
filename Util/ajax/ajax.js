@@ -22,7 +22,7 @@ $(document ).ready(function(){
 $(document ).ready(function(){
     // bind change event to select
     $('#selectNbLigneProduit').on('change', function () {
-        var url = "index.php?c=accueil&a=listeProduits&selectNbLigneProduit="+$(this).val()+"";
+        var url = "index.php?c=accueil&a=listeProduits&selectNbLigne="+$(this).val()+"";
         if (url) { // require a URL
             window.location = url; // redirect
         }
@@ -33,7 +33,7 @@ $(document ).ready(function(){
 $(document ).ready(function(){
     // bind change event to select
     $('#selectNbLigneCommande').on('change', function () {
-        var url = "index.php?c=accueil&a=listeCommande&selectNbLigneCommande="+$(this).val()+"";
+        var url = "index.php?c=accueil&a=listeCommande&selectNbLigne="+$(this).val()+"";
         if (url) { // require a URL
             window.location = url; // redirect
         }
