@@ -1,3 +1,16 @@
+<?php
+// affichage des messages d'erreur ou de validation
+if(!empty($erreur)){
+    echo"<div class='alert alert-danger'>
+                    <strong>".$erreur.".</strong>
+                </div>";
+}elseif (!empty($validation)){
+    echo"<div class='alert alert-success'>
+                    <strong>".$validation.".</strong>
+                </div>";
+}
+?>
+<div
 <!--                Titre page -->
 <div class="col-md-9">
     <div class="content-box-large">
@@ -70,7 +83,7 @@
                             <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal-<?php echo $marque['id_marque']; ?>"><span class="glyphicon glyphicon-edit"></span></button>
                             <a href="index.php?c=listeFournisseurs&a=modifier&idMarque=<?php echo $marque['id_marque']; ?>&nomMarque=<?php echo $marque['nom_marque']; ?>&logoMarque=<?php echo $marque['logo_marque'] ?>"></a>
 
-                            <a href="index.php?c=listeFournisseurs&a=supprimer&idMarque=<?php echo $marque['id_marque']; ?>"><button class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></button></a>
+                            <a href="index.php?c=listeFournisseurs&a=supprimer&selectNbLigne=<?php echo $max?>&idMarque=<?php echo $marque['id_marque']; ?>"><button class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></button></a>
 
                         </td>
                     </tr>
@@ -120,7 +133,7 @@
 
             <div class="col-md-9">
                 <ul class="pagination">
-                    <li><a class="pagination-previous <?php if($pageActuelle==1){echo "btn disabled";}?>" href="index.php?c=accueil&a=listeFournisseurs&page=<?php echo ($pageActuelle-1);?>&selectNbLigne=<?php echo $max;?>" >Page précédente</a></li>
+                    <li><a class="pagination-previous <?php if($pageActuelle ==1){echo "btn disabled";}?>" href="index.php?c=accueil&a=listeFournisseurs&page=<?php echo ($pageActuelle-1);?>&selectNbLigne=<?php echo $max;?>" >Page précédente</a></li>
                     <?php
                     for($i=1;$i<=$nbpage;$i++){
                         $current="";

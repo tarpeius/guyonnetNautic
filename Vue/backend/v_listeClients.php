@@ -1,3 +1,15 @@
+<?php
+// affichage des messages d'erreur ou de validation
+if(!empty($erreur)){
+    echo"<div class='alert alert-danger'>
+                    <strong>".$erreur.".</strong>
+                </div>";
+}elseif (!empty($validation)){
+    echo"<div class='alert alert-success'>
+                    <strong>".$validation.".</strong>
+                </div>";
+}
+?>
 <!--        Contenu page -->
 <div class="col-md-10">
     <div class="content-box-large">
@@ -49,7 +61,7 @@
                                 <td> <?php echo $client['adresse_client']; ?></td>
                                 <td> <?php echo $client['cp_client']; ?></td>
                                 <td> <?php echo $client['date_inscription']; ?></td>
-                                <td><button id="<?php echo $client['id_client'];?>" onclick="tarace(this);" class="btn btn-info" data-toggle="modal" data-target="#myModal-<?php echo $client['id_client'];?>" ><i class="glyphicon glyphicon-pencil"></i></button> <a href="index.php?c=listeClient&a=supprimer&id=<?php echo $client['id_client'];?>"><i class="glyphicon glyphicon-remove"></i></a></td>
+                                <td><button id="<?php echo $client['id_client'];?>" class="btn btn-info" data-toggle="modal" data-target="#myModal-<?php echo $client['id_client'];?>" ><i class="glyphicon glyphicon-pencil"></i></button> <a href="index.php?c=listeClient&a=supprimer&id=<?php echo $client['id_client'];?>"&selectNbLigne=<?php echo $max;?>><i class="glyphicon glyphicon-remove"></i></a></td>
                             </tr>
 
                 <div id="myModal-<?php echo $client['id_client'];?>" class="modal fade" role="dialog">

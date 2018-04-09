@@ -1,3 +1,15 @@
+<?php
+// affichage des messages d'erreur ou de validation
+if(!empty($erreur)){
+    echo"<div class='alert alert-danger'>
+                    <strong>".$erreur.".</strong>
+                </div>";
+}elseif (!empty($validation)){
+    echo"<div class='alert alert-success'>
+                    <strong>".$validation.".</strong>
+                </div>";
+}
+?>
 <!--                Contenu page -->
         <!--                Tableau liste commande (Id, reference, client, total, paiement, statut, date, actions) -->
         <div class="col-md-9">
@@ -43,7 +55,7 @@
                                     <td> <?php echo $uneCommande['type_mdpaiement'] ?></td>
                                     <td> <?php echo $uneCommande['date_commande'] ?></td>
                             <td>
-                                <a href="index.php?c=listeCommande&a=supprimer&id=<?php echo $uneCommande['id_commande'] ?>"><button class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></button></a>
+                                <a href="index.php?c=listeCommande&a=supprimer&id=<?php echo $uneCommande['id_commande'] ?>&selectNbLigne=<?php echo $max?>"><button class="btn btn-danger"><i class="glyphicon glyphicon-trash"></i></button></a>
                             </td>
                         </tr>
                         <?php

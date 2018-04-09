@@ -2,7 +2,9 @@
 
 function uploadImg($logo)
 {
-    var_dump($logo);
+    if (is_array($logo)){
+
+    }
     $target_dir = "Util/img/";
     $target_file = $target_dir . basename($logo["name"]);
     $uploadOk = 1;
@@ -46,7 +48,6 @@ function uploadImg($logo)
             echo "Sorry, there was an error uploading your file.";
         }
     }
-    var_dump($logo);
 }
 
 function multiplicationTva($tva,$ht)

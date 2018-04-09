@@ -1,3 +1,15 @@
+<?php
+// affichage des messages d'erreur ou de validation
+if(!empty($erreur)){
+    echo"<div class='alert alert-danger'>
+                    <strong>".$erreur.".</strong>
+                </div>";
+}elseif (!empty($validation)){
+    echo"<div class='alert alert-success'>
+                    <strong>".$validation.".</strong>
+                </div>";
+}
+?>
 <!--        Titre page -->
 <div class="col-md-9">
     <div class="content-box-large">
@@ -79,7 +91,9 @@
 
                     <div id="myModal-<?php echo $article['reference']; ?>" class="modal fade" role="dialog">
                         <div class="modal-dialog">
-
+                            <?php
+                           // var_dump($article);
+                            ?>
                             <!-- Modal content-->
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -88,11 +102,24 @@
                                     <h4 class="modal-title">Modifier Article</h4>
                                 </div>
                                 <div class="modal-body">
+
                                     <form method="POST" action="index.php?c=listeProduits&a=modifier" enctype="multipart/form-data">
                                         <div class="form-group">
                                             <label for="nomArticle">Nom</label>
                                             <input class="form-control" type="hidden" name="refArticle" value="<?php echo $article['reference']?>">
                                             <input class="form-control" type="text" name="nomArticle" value="<?php echo $article['nom_article']; ?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="nomCategorie">Categorie</label>
+                                            <select class="selectpicker" name="nomCategorie">
+                                                <?php
+                                                    foreach ($nomCategorie as $uneCategorie){
+                                                ?>
+                                                    <option <?php if($uneCategorie['id_categorie'] == $article['id_categorie']){echo "selected";}?> value="<?php echo $uneCategorie['id_categorie']?>"><?php echo $uneCategorie['nom_categorie']?></option>
+                                                <?php
+                                                    }
+                                                ?>
+                                            </select>
                                         </div>
                                         <div class="form-group">
                                             <label for="imageArticle">Photo</label>

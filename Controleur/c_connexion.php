@@ -20,13 +20,14 @@ if(!empty($action)) {
                     header('Refresh:0; index.php?c=accueil');
                     //include('Vue/backend/v_accueil.php');
                 } else {
-                    $erreur = "marche pas !";
+                    $erreur = "Le nom de compte ou le mot de passe n'est pas valide";
                     include('Vue/backend/v_connexion.php');
                 }
                 break;
             }
         case "deconnexion":
             session_destroy();
+
            header("Refresh:0; url=index.php");
             break;
     }
