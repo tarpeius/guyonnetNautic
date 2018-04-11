@@ -13,6 +13,7 @@ if(!empty($action)) {
             if ((!empty($_POST['pseudo'])) && (!empty($_POST['pwd']))) {
                 $pseudo = $_POST['pseudo'];
                 $mdp = $_POST['pwd'];
+                $mdp = md5($mdp);
                 $valide = isAdmin($pseudo, $mdp);
                 if ($valide == 1) {
                     $_SESSION['isActive'] = 1;
