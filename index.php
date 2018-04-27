@@ -14,7 +14,7 @@
 	include("Modele/m_modifications.php");
 	include("Modele/m_insertions.php");
 	include("Util/fonctions.php");
-	include("Vue/Structure/v_header.php") ;
+	include("Vue/Structure/v_header.php");
 
     //include("Vue/structure/v_bandeau.php");
     if (!empty($_SESSION['isActive'])){

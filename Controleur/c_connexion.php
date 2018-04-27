@@ -17,7 +17,7 @@ if(!empty($action)) {
                 if ($valide == 1) {
                     $_SESSION['isActive'] = 1;
                     include('Vue/Structure/v_bandeau.php');
-                    header('Refresh:0; index.php?c=accueil');
+                        header('Refresh:0; index.php?c=accueil');
                     //include('Vue/backend/v_accueil.php');
                 } else {
                     $erreur = "marche pas !";
