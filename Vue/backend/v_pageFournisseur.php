@@ -1,3 +1,16 @@
+<?php
+// affichage des messages d'erreur ou de validation
+if(!empty($erreur)){
+    echo"<div class='alert alert-danger'>
+                    <strong>".$erreur.".</strong>
+                </div>";
+}
+if (!empty($validation)){
+    echo"<div class='alert alert-success'>
+                    <strong>".$validation.".</strong>
+                </div>";
+}
+?>
 <!--            Formulaire création marque -->
 <div class="content-box-large">
     <div class="panel-body">

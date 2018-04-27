@@ -1,3 +1,15 @@
+<?php
+    // affichage des messages d'erreur ou de validation
+    if(!empty($erreur)){
+        echo"<div class='alert alert-danger'>
+                    <strong>".$erreur.".</strong>
+                </div>";
+    }elseif (!empty($validation)){
+        echo"<div class='alert alert-success'>
+                    <strong>".$validation.".</strong>
+                </div>";
+    }
+?>
 <div class="content-box-large">
     <!--        Contenu page -->
     <div class="tab-content">
@@ -8,14 +20,14 @@
                 <div class="form-group">
                     <label for="referenceArticle" class="col-sm-2 control-label">Reference Article</label>
                     <div class="col-sm-5">
-                        <input type="text" class="form-control" name="referenceArticle" required>
+                        <input type="text" class="form-control" name="referenceArticle" id="referenceArticle" required>
                     </div>
                 </div>
                 <!--        Nom Article-->
                 <div class="form-group">
                     <label for="nomArticle" class="col-sm-2 control-label">Titre Article</label>
                     <div class="col-sm-5">
-                        <input type="text" class="form-control" name="nomArticle" required>
+                        <input type="text" class="form-control" name="nomArticle" value="<?php if (isset($nom)){echo $nom;}?>" required>
                     </div>
                 </div>
                 <!--        Prix HT Article-->
@@ -23,7 +35,7 @@
                     <label class="control-label col-md-2" for="prixHTArticle">Prix vente HT</label>
                     <div class="col-sm-2">
                         <div class="input-group">
-                            <input class="form-control" name="prixHTArticle" type="text" required>
+                            <input class="form-control" name="prixHTArticle" type="text" value="<?php if (isset($prixHt)){echo $prixHt;}?>" required>
                         </div>
                     </div>
                 </div>
@@ -55,7 +67,7 @@
                     <div class="col-sm-10">
                         <div class="content-box-large">
                             <div class="panel-body">
-                                <textarea class="form-control" rows="5" name="resumeArticle" required></textarea>
+                                <textarea class="form-control" rows="5" name="resumeArticle" required><?php if (isset($resume)){echo $resume;}?></textarea>
                             </div>
                         </div>
                     </div>
@@ -66,7 +78,7 @@
                     <div class="col-sm-10">
                         <div class="content-box-large">
                             <div class="panel-body">
-                                <textarea class="form-control" rows="5" name="descriptionArticle" required></textarea>
+                                <textarea class="form-control" rows="5" name="descriptionArticle" required><?php if (isset($descr)){echo $descr;}?></textarea>
                             </div>
                         </div>
                     </div>
@@ -76,7 +88,7 @@
                     <label class="control-label col-md-2" for="quantiteArticle">Quantité</label>
                     <div class="col-sm-2">
                         <div class="input-group">
-                            <input class="form-control" name="quantiteArticle" type="number">
+                            <input class="form-control" name="quantiteArticle" value="<?php if (isset($qte)){echo $qte;}?>" type="number">
                         </div>
                     </div>
                 </div>
@@ -85,7 +97,7 @@
                     <label class="control-label col-md-2" for="poidsArticle">Poids (kg)</label>
                     <div class="col-sm-2">
                         <div class="input-group">
-                            <input class="form-control" name="poidsArticle" type="number" required>
+                            <input class="form-control" name="poidsArticle" type="number" value="<?php if (isset($qte)){echo $qte;}?>" required>
                         </div>
                     </div>
                 </div>
@@ -94,7 +106,7 @@
                     <label class="control-label col-md-2" for="motorisationArticle">Motorisation (cv)</label>
                     <div class="col-sm-2">
                         <div class="input-group">
-                            <input class="form-control" name="motorisationArticle" type="number" required>
+                            <input class="form-control" name="motorisationArticle" type="number" value="<?php if (isset($motor)){echo $motor;}?>" required>
                         </div>
                     </div>
                 </div>
@@ -104,7 +116,7 @@
                     <div class="col-sm-2">
                         <div class="input-group">
 
-                            <input class="form-control" name="longueurArticle" type="number" step="0.1" required>
+                            <input class="form-control" name="longueurArticle" type="number" step="0.1"  value="<?php if (isset($longueur)){echo $longueur;}?>" required>
                         </div>
                     </div>
                 </div>
@@ -114,7 +126,7 @@
                     <div class="col-sm-2">
                         <div class="input-group">
 
-                            <input class="form-control" name="largeurArticle" type="number" step="0.1" required>
+                            <input class="form-control" name="largeurArticle" type="number" step="0.1" value="<?php if (isset($largeur)){echo $largeur;}?>" required>
                         </div>
                     </div>
                 </div>
@@ -123,7 +135,7 @@
                     <label class="control-label col-md-2" for="appendprepend">Hauteur (m)</label>
                     <div class="col-sm-2">
                         <div class="input-group">
-                            <input class="form-control" name="hauteurArticle" type="number" step="0.1" required>
+                            <input class="form-control" name="hauteurArticle" type="number" step="0.1" value="<?php if (isset($hauteur)){echo $hauteur;}?>" required>
                         </div>
                     </div>
                 </div>
@@ -162,11 +174,17 @@
                     </div>
                 </div>
                 <legend>Ajout photos</legend>
+                <div class="form-group">
+                    <label for="photoArticle" class="col-md-2 control-label">Photo Principal</label>
+                    <div class="col-md-10">
+                        <input type="file" class="btn btn-default" multiple name="photoPrincipal" required >
+                    </div>
+                </div>
                 <!--        Photo -->
                 <div class="form-group">
-                    <label for="photoArticle" class="col-md-2 control-label">Photo</label>
+                    <label for="photoArticle" class="col-md-2 control-label">Photo Secondaire</label>
                     <div class="col-md-10">
-                        <input type="file" class="btn btn-default" name="photoArticle" required>
+                        <input type="file" class="btn btn-default" multiple name="photoArticle[]" required >
                         <input type="submit" class="btn btn-success" value="Enregistrer">
                     </div>
                 </div>

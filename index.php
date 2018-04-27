@@ -21,6 +21,7 @@
         include("Vue/Structure/v_bandeau.php");
     }
 
+
         if ((!isset($_REQUEST['c'])) || (!isset($_REQUEST['a']))) {
             // controleur -- action
             $uc = 'accueil';

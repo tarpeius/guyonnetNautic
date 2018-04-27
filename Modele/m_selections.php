@@ -26,7 +26,7 @@
         $query="SELECT * FROM categorie";
         $req=$bdd->prepare($query);
         $req->execute();
-        $result= $req->fetchAll();
+        $result= $req->fetchAll(PDO::FETCH_ASSOC);
         return $result;
     }
 
@@ -182,7 +182,7 @@
         global $bdd;
         $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $query = "SELECT article.nom_article, article.reference, article.photo_article, article.prix_article, article.qte_article, article.resume_article, article.desc_article, article.poids_article, article.dimensions_article, categorie.nom_categorie, article.id_tva 
+        $query = "SELECT article.nom_article, article.reference, article.photo_article, article.prix_article, article.qte_article, article.resume_article, article.desc_article, article.poids_article, article.dimensions_article, categorie.id_categorie,categorie.nom_categorie, article.id_tva 
                   FROM article, categoriser, categorie 
                   WHERE article.reference=categoriser.reference AND categoriser.id_categorie=categorie.id_categorie";
         $req=$bdd->prepare($query);
@@ -274,7 +274,7 @@
     /// <returns>Retourne le nombre de client.</returns>
     function selectCountToutArticles(){
         global $bdd;
-        $query="SELECT COUNT(references)FROM article";
+        $query="SELECT COUNT(reference) FROM article";
         $req=$bdd->prepare($query);
         $req->execute();
         $result= $req->fetch();
@@ -353,5 +353,38 @@
         $req=$bdd->prepare($query);
         $req->execute();
         $result= $req->fetchAll();
+        return $result;
+    }
+
+    function verifRefArticle($ref){
+        global $bdd;
+        $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $query = "SELECT reference FROM article WHERE reference=:ref";
+        $req=$bdd->prepare($query);
+        $req->bindParam(':ref', $ref);
+        $req->execute();
+        $result= $req->fetch();
+        return $result;
+    }
+
+    function verifPhoto($arrayPhoto){
+        global $bdd;
+        $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $query = "SELECT url_photo FROM photo WHERE url_photo=:url";
+        $req=$bdd->prepare($query);
+        $req->bindParam(':url', $arrayPhoto['name']);
+        $req->execute();
+        $result= $req->fetch();
+        return $result;
+    }
+
+    function photoDimensionArticle($id){
+        global $bdd;
+        $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $query = "SELECT photo_article, dimensions_article FROM article WHERE reference=:id";
+        $req=$bdd->prepare($query);
+        $req->bindParam(':id', $id);
+        $req->execute();
+        $result= $req->fetch();
         return $result;
     }

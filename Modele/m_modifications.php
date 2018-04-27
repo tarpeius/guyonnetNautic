@@ -9,6 +9,15 @@ function modifierCategorie($nom, $id){
     $stmt->execute();
 }
 
+function modifierCategorieArticle($nom, $id){
+    global $bdd;
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $stmt = $bdd->prepare("UPDATE categoriser SET id_categorie=:id_categorie WHERE reference=:id_article");
+    $stmt->bindParam(':id_categorie', $nom);
+    $stmt->bindParam(':id_article', $id);
+    $stmt->execute();
+}
+
 function modifierClient($nom,$prenom, $dateNaissance, $mail, $adresse, $cp, $inscri, $mdp,  $id){
     global $bdd;
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

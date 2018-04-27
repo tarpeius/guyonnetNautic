@@ -13,6 +13,7 @@ if(!empty($action)) {
             if ((!empty($_POST['pseudo'])) && (!empty($_POST['pwd']))) {
                 $pseudo = $_POST['pseudo'];
                 $mdp = $_POST['pwd'];
+                $mdp = md5($mdp);
                 $valide = isAdmin($pseudo, $mdp);
                 if ($valide == 1) {
                     $_SESSION['isActive'] = 1;
@@ -20,7 +21,7 @@ if(!empty($action)) {
                         header('Refresh:0; index.php?c=accueil');
                     //include('Vue/backend/v_accueil.php');
                 } else {
-                    $erreur = "marche pas !";
+                    $erreur = "Le nom de compte ou le mot de passe n'est pas valide";
                     include('Vue/backend/v_connexion.php');
                 }
                 break;

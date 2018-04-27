@@ -12,8 +12,9 @@
 			include('Vue/backend/v_accueil.php');
 			break;
             case "listeProduits": // a changer selon besoin
-                $nbCount = 0;
 
+                $nbCount = 0;
+                $nbpage= 0;
                 // Pagination
                 // Recuperation du nombre de pays par zone
                 $nbCount = selectCountToutArticles();
@@ -41,11 +42,12 @@
                     // modif
                     $pageProduit = selectArticleCategoriePage($min, $max);
                 }
+                $nomCategorie= afficherCategorie();
                 include('Vue/backend/v_listeProduits.php');
                 break;
         case 'listeCommande':
             $nbCount = 0;
-
+            $nbpage= 0;
             // Pagination
             // Recuperation du nombre de pays par zone
             $nbCount = selectCountToutesCommandes();
@@ -77,7 +79,7 @@
             break;
         case 'listeClients':
             $nbCount = 0;
-
+            $nbpage= 0;
             // Pagination
             // Recuperation du nombre de pays par zone
             $nbCount = selectCountTousClient();
@@ -112,7 +114,7 @@
             break;
             case "listeFournisseurs": // a changer selon besoin
                 $nbCount = 0;
-
+                $nbpage= 0;
                 // Pagination
                 // Recuperation du nombre de pays par zone
                 $nbCount = selectCountToutesMarques();
@@ -147,7 +149,7 @@
             break;
             case 'listeClients':
                 $nbCount = 0;
-
+                $nbpage= 0;
                 // Pagination
                 // Recuperation du nombre de pays par zone
                 $nbCount = selectCountTousClient();

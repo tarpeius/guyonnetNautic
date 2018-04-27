@@ -10,6 +10,7 @@ $hote = "mysql:host=localhost";
 $dbName = "guyonnetnautic";
 $user = "root";
 $mdp = "";
+$mode = "prod";
 
 try
 {
@@ -20,3 +21,4 @@ catch(Exception $e)
     echo 'Une erreur est survenue ! </br>';
     die();
 }
+
