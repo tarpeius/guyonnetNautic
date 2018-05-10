@@ -14,7 +14,7 @@ if(!empty($erreur)){
 <div class="col-md-9">
     <div class="content-box-large">
         <div class="panel-heading">
-            <div class="panel-title">Liste permis</div>
+            <div class="panel-title">Permis</div>
             <label></label>
             <!--        Bouton créer produit -->
             <div class="panel-options">
