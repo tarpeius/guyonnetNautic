@@ -44,6 +44,7 @@
                     </li>
                     <li><a href="index.php?c=accueil&a=listeCommande"><i class="glyphicon glyphicon-calendar"></i> Commandes</a></li>
                     <li><a href="index.php?c=accueil&a=listeClients"><i class="glyphicon glyphicon-stats"></i> Clients</a></li>
+                    <li><a href="index.php?c=accueil&a=listePermis"><i class="glyphicon glyphicon-align-left"></i> Permis</a></li>
                 </ul>
             </div>
         </div>

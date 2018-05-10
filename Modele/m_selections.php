@@ -214,6 +214,7 @@
         $result= $req->fetchAll();
         return $result;
     }
+
     // <summary>
     /// Fonction de selection du nombre de client
     /// </summary>
@@ -221,6 +222,14 @@
     function selectCountTousClient(){
         global $bdd;
         $query="SELECT COUNT(id_client)FROM client";
+        $req=$bdd->prepare($query);
+        $req->execute();
+        $result= $req->fetch();
+        return $result;
+    }
+    function selectCountTousPermis(){
+        global $bdd;
+        $query="SELECT COUNT(id_permis)FROM permis";
         $req=$bdd->prepare($query);
         $req->execute();
         $result= $req->fetch();
@@ -235,6 +244,18 @@
     function afficherMarquesPage($min, $max){
         global $bdd;
         $query="SELECT * FROM marque ORDER BY id_marque ASC LIMIT $min , $max ";
+        $req=$bdd->prepare($query);
+        $req->execute();
+        $result= $req->fetchAll();
+        return $result;
+    }
+
+    function affichePermisPage($min, $max){
+        global $bdd;
+        $query="SELECT permis.id_permis,permis_type.nom_permis,permis.mois_permis,permis.annee_permis,permis.date_examen_permis
+                    FROM permis 
+                    INNER JOIN permis_type ON permis.id_typePermis = permis_type.id_typePermis 
+                    ORDER BY permis.id_permis ASC LIMIT $min , $max ";
         $req=$bdd->prepare($query);
         $req->execute();
         $result= $req->fetchAll();

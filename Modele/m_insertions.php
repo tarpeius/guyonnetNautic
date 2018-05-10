@@ -81,3 +81,4 @@ function nouveauCategoriser($id,$ref){
 
     $stmt->execute($params);
 }
+

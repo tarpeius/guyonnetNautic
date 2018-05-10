@@ -35,7 +35,6 @@
                             if (!empty($_SESSION["isActive"])) {
                                 include("Controleur/c_accueil.php");
                             } else {
-                                var_dump($_SESSION);
                                 $erreur = "Vous êtes déconnecté, merci de vous reconnecter pour pouetez.";
                                 include('Vue/backend/v_connexion.php');
                             }
@@ -75,6 +74,14 @@
                         case 'listeClient':
                             if (!empty($_SESSION["isActive"])) {
                                 include("Controleur/c_listeClient.php");
+                            } else {
+                                $erreur = "Vous êtes déconnecté, merci de vous reconnecter pour poursuivre.";
+                                include('Vue/backend/v_connexion.php');
+                            }
+                            break;
+                        case 'listePermis':
+                            if (!empty($_SESSION["isActive"])) {
+                                include("Controleur/c_listePermis.php");
                             } else {
                                 $erreur = "Vous êtes déconnecté, merci de vous reconnecter pour poursuivre.";
                                 include('Vue/backend/v_connexion.php');

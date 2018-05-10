@@ -48,7 +48,6 @@ if(!empty($erreur)){
                     <th>Nom</th>
                     <th>Catégorie</th>
                     <th>Articles</th>
-                    <th>Statut</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
@@ -79,9 +78,6 @@ if(!empty($erreur)){
                             <?php
                             echo $article['qte_article'];
                             ?>
-                        </td>
-                        <td>
-                            <span class="glyphicon glyphicon-ok"></span>
                         </td>
                         <td>
                             <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal-<?php echo $article['reference']; ?>"><span class="glyphicon glyphicon-edit"></span></button>
