@@ -14,7 +14,7 @@
 	include("Modele/m_modifications.php");
 	include("Modele/m_insertions.php");
 	include("Util/fonctions.php");
-	include("Vue/Structure/v_header.php") ;
+	include("Vue/Structure/v_header.php");
 
     //include("Vue/structure/v_bandeau.php");
     if (!empty($_SESSION['isActive'])){
@@ -35,7 +35,6 @@
                             if (!empty($_SESSION["isActive"])) {
                                 include("Controleur/c_accueil.php");
                             } else {
-                                var_dump($_SESSION);
                                 $erreur = "Vous êtes déconnecté, merci de vous reconnecter pour pouetez.";
                                 include('Vue/backend/v_connexion.php');
                             }
@@ -80,6 +79,14 @@
                                 include('Vue/backend/v_connexion.php');
                             }
                             break;
+                        case 'listePermis':
+                            if (!empty($_SESSION["isActive"])) {
+                                include("Controleur/c_listePermis.php");
+                            } else {
+                                $erreur = "Vous êtes déconnecté, merci de vous reconnecter pour poursuivre.";
+                                include('Vue/backend/v_connexion.php');
+                            }
+                            break;
                         case 'connexion':
                             {
                                 include('Controleur/c_connexion.php');
@@ -90,9 +97,9 @@
                             break;
                     }
 
-            } else {
-                include('Vue/backend/v_connexion.php');
-            }
+                } else {
+                    include('Vue/backend/v_connexion.php');
+                }
 
             //ob_end_flush();
             include("Vue/Structure/v_footer.php");

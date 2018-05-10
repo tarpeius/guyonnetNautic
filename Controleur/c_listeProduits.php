@@ -186,7 +186,6 @@ switch($action)
                         nouveauCategoriser($categorie, $reference);
                         $keyExist = $arrayPhoto[0]['name'];
                         if (array_key_exists(1, $keyExist)) {
-                            echo "pas tchouin";
                             foreach ($arrayPhoto as $key => $value) {
                                 for ($i = 0; $i <= count($nbPhoto); $i++) {
                                     $arrayFile = [
@@ -211,7 +210,6 @@ switch($action)
                                 'error' => $arrayPhoto[0]['error'][0],
                                 'size' => $arrayPhoto[0]['size'][0]
                                             ];
-                            echo "tchouin";
                             if($photoExist == false) {
                                 uploadImg($_FILES['photoPrincipal']);
                                 uploadImg($arrayUnePhoto);

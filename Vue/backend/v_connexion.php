@@ -26,7 +26,7 @@
         <?php
         if(!empty($erreur)){
             echo"<div class='alert alert-danger'>
-            <strong>".$erreur.".</strong>
+            <strong>".$erreur."</strong>
         </div>";
         }
         ?>
