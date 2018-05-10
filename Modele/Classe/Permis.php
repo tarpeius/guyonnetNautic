@@ -10,7 +10,6 @@ class Permis
 {
     private $id;
     private $type;
-    private $nom;
     private $mois;
     private $annee;
     private $examenDate;
@@ -24,14 +23,15 @@ class Permis
      * @param $examenDate
      * @param $examenLieu
      */
-    public function __construct($nom, $mois, $annee, $examenDate, $examenLieu)
+    public function __construct($mois, $annee, $examenDate, $examenLieu,$type)
     {
-        $this->nom = $nom;
         $this->mois = $mois;
         $this->annee = $annee;
         $this->examenDate = $examenDate;
         $this->examenLieu = $examenLieu;
+        $this->type = $type;
     }
+
 
     /**
      * @return mixed
@@ -63,22 +63,6 @@ class Permis
     public function setId($id)
     {
         $this->id = $id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getNom()
-    {
-        return $this->nom;
-    }
-
-    /**
-     * @param mixed $nom
-     */
-    public function setNom($nom)
-    {
-        $this->nom = $nom;
     }
 
     /**

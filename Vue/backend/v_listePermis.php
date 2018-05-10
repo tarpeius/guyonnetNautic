@@ -1,4 +1,5 @@
 <?php
+
 // affichage des messages d'erreur ou de validation
 if(!empty($erreur)){
     echo"<div class='alert alert-danger'>
@@ -73,30 +74,58 @@ if(!empty($erreur)){
                                 <h4 class="modal-title">Modal Header</h4>
                             </div>
                             <div class="modal-body">
-                                <form method="POST" action="index.php?c=listeClient&a=ajout">
+                                <form method="POST" action="index.php?c=listePermis&a=ajout">
                                     <div class="form-group">
-                                        <label for="nomClient">Nom</label>
-                                        <input class="form-control" type="text" name="nomClient" value="">
+                                        <label for="typePermis">Permis</label>
+                                        <input class="form-control" type="text" name="typePermis" value="">
                                     </div>
                                     <div class="form-group">
-                                        <label for="prenomClient">Prenom</label>
-                                        <input class="form-control" type="text" name="prenomClient" value="">
+                                        <label for="moisPermis">Mois</label>
+                                        <input class="form-control" type="text" name="moisPermis" value="">
                                     </div>
                                     <div class="form-group">
-                                        <label for="dateNaissance">Date de Naissance</label>
-                                        <input class="form-control" type="text" name="dateNaissance" value="">
+                                        <label for="anneePermis">Année</label>
+                                        <input class="form-control" type="text" name="anneePermis" value="">
                                     </div>
                                     <div class="form-group">
-                                        <label for="emailClient">Email</label>
-                                        <input class="form-control" type="text" name="emailClient" value="">
+                                        <label for="dateExamen">Date examen</label>
+                                        <input class="form-control" type="text" name="dateExamen" value="">
                                     </div>
                                     <div class="form-group">
-                                        <label for="adresseClient">Adresse</label>
-                                        <input class="form-control" type="text" name="adresseClient" value="">
+                                        <label for="lieuExamen">Lieu examen</label>
+                                        <input class="form-control" type="text" name="lieuExamen" value="">
                                     </div>
                                     <div class="form-group">
-                                        <label for="cpClient">Code Postal</label>
-                                        <input class="form-control" type="text" name="cpClient" value="">
+                                        <label for="cours1">Cours 1</label>
+                                        <input class="form-control" type="text" name="cours1" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cours2">Cours 2</label>
+                                        <input class="form-control" type="text" name="cours2" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cours3">Cours 3</label>
+                                        <input class="form-control" type="text" name="cours3" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cours4">Cours 4</label>
+                                        <input class="form-control" type="text" name="cours4" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cours5">Cours 5</label>
+                                        <input class="form-control" type="text" name="cours5" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cours6">Cours 6</label>
+                                        <input class="form-control" type="text" name="cours6" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cours7">Cours 7</label>
+                                        <input class="form-control" type="text" name="cours7" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cours8">Cours 8</label>
+                                        <input class="form-control" type="text" name="cours8" value="">
                                     </div>
                                     <input class="form-control" type="hidden" name="dateInscri" value="">
                                     <input class="form-control" type="hidden" name="mdp" value="">

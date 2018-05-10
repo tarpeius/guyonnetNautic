@@ -33,6 +33,15 @@ class PermisManager
         return $permis;
     }
 
+    function afficherTypePermis() {
+        $query="SELECT permis_type.id_typePermis,permis_type.nom_permis
+                FROM permis_type";
+        $req = $this->db->prepare($query);
+        $req->execute();
+        $result= $req->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
     function afficherToutPermis() {
         $query="SELECT permis.id_permis,permis_type.nom_permis,permis.mois_permis,permis.annee_permis,permis.date_examen_permis
                 FROM permis 
@@ -58,21 +67,22 @@ class PermisManager
     }
 
     function nouveauCoursPermis(Cours_permis &$cours){
+
         $query ="INSERT INTO permis_cours (horaires_coursPermis) VALUES(:cours)";
         $req = $this->db->prepare($query);
-        $req->bindParam(':cours', $cours->getCours(), PDO::PARAM_STR);
+        $req->bindValue(':cours', $cours->getCours(), PDO::PARAM_STR);
         $req->execute();
         $id = $this->db->lastInsertId();
         $cours->setId($id);
     }
 
-    function nouvelleAssociationPermis(Permis &$permis,Cours_permis &$cours){
-        global $bdd;
-        $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $stmt = $bdd->prepare("INSERT INTO permis_cours (id_coursPermis,id_permis) VALUES(:idCours,:idPermis)");
-        $stmt->bindParam(':idCours', $cours->getId(), PDO::PARAM_INT);
-        $stmt->bindParam(':idPermis', $permis->getId(), PDO::PARAM_INT);
-        $stmt->execute();
+    function nouvelleAssociationPermis(Cours_permis &$cours,Permis &$permis){
+
+        $query = "INSERT INTO permis_association (id_coursPermis,id_permis) VALUES(:idCours,:idPermis)";
+        $req = $this->db->prepare($query);
+        $req->bindValue(':idCours', $cours->getId(), PDO::PARAM_INT);
+        $req->bindValue(':idPermis', $permis->getId(), PDO::PARAM_INT);
+        $req->execute();
     }
 
     public function supprimerPermis(Permis $permis)

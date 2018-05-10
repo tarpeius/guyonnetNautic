@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: Quentin
@@ -8,16 +9,24 @@
 ?>
 <div class="content-box-large">
     <div class="panel-body">
-        <form class="form-horizontal" role="form" method="post" action="" enctype="multipart/form-data">
+        <form class="form-horizontal" role="form" method="post" action="index.php?c=listePermis&a=ajout" enctype="multipart/form-data">
             <legend>Description Permis</legend>
             <!--        Nom input -->
             <div class="form-group">
-                <label for="nomPermis" class="col-md-3 control-label">Permis</label>
+                <label for="typePermis" class="col-md-3 control-label">Permis</label>
                 <div class="col-sm-2">
-                    <select name="nomPermis" class="form-control form-control-sm">
-                        <option>Cotier</option>
-                        <option>Fluvial</option>
-                        <option>Hauturier</option>
+                    <select name="typePermis" class="form-control form-control-sm">
+                        <?php
+                        foreach ($types as $typePermis) {
+                        ?>
+                            <option value="<?php echo $typePermis['id_typePermis'] ?>">
+                                <?php
+                                echo $typePermis['nom_permis'];
+                                ?>
+                            </option>
+                        <?php
+                        }
+                        ?>
                     </select>
                 </div>
             </div>
@@ -27,9 +36,9 @@
                 <div class="col-md-2">
                     <input name="moisPermis" class="form-control form-control-sm" type="text" placeholder="ex: Avril, Automne...">
                 </div>
-                <label for="moisPermis" class="col-md-1 control-label">Année</label>
+                <label for="anneePermis" class="col-md-1 control-label">Année</label>
                 <div class="col-md-2">
-                    <input name="moisPermis" class="form-control form-control-sm" type="text" placeholder="ex: 1987, 2077...">
+                    <input name="anneePermis" class="form-control form-control-sm" type="text" placeholder="ex: 1987, 2077...">
                 </div>
             </div>
             <div class="form-group">
@@ -42,6 +51,12 @@
                 <label class="col-md-3 control-label" for="cours2">Horaires cours 2</label>
                 <div class="col-md-5">
                     <input name="cours2" type="text" class="form-control" placeholder="ex: Mardi 3 Avril 19h00 à 20h30">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-3 control-label" for="cours3">Horaires cours 3</label>
+                <div class="col-md-5">
+                    <input name="cours3" type="text" class="form-control" placeholder="">
                 </div>
             </div>
             <div class="form-group">
