@@ -7,6 +7,149 @@ if(!empty($_REQUEST['a'])){
 switch($action)
 {
     case "afficher": { // a changer selon besoin
+        // pagination
+
+        $toutCategorie = afficherToutesCategories();
+        $nbCount = 0;
+        $nbpage= 0;
+        if (!empty($_POST['triCategorie']) && (!empty($_POST['triNom']))){
+            var_dump($_POST['triCategorie']);
+            var_dump($_POST['triNom']);
+            // Pagination
+            // Recuperation du nombre de pays par zone
+            $nbCount = selectCountToutArticlesParCategorie($_POST['triCategorie']);
+            // Verification si page existe
+            if (isset($_GET['page'])){
+                $pageActuelle=intval($_GET['page']);
+                if ($pageActuelle>$nbCount[0]){
+                    $pageActuelle=$nbCount[0];
+                }
+            }else{
+                $pageActuelle=1;
+            }
+            // Choix du nombre de ligne
+            if (!empty($_GET['selectNbLigne'])){
+                $max=$_GET['selectNbLigne'];
+            }else{
+                $max = 10;
+            }
+            if ($max == 'Tout'){
+                if ($_POST['triNom'] == "croissant"){
+                    $pageProduit = afficherArticleParMarqueOrdreAsc($_POST['triCategorie']);
+                }else{
+                    $pageProduit = afficherArticleParMarqueOrdreDesc($_POST['triCategorie']);
+                }
+            }else {
+                $min = 0;
+                $min = ($pageActuelle - 1) * $max;
+                $nbpage = ceil(($nbCount[0]) / $max);
+                // modif
+
+                if ($_POST['triNom'] == "croissant"){
+                    $pageProduit = selectArticleCategoriePageParCategorie($_POST['triCategorie'], $min, $max);
+                }else{
+                    $pageProduit = selectArticleCategoriePageParCategorieDesc($_POST['triCategorie'], $min, $max);
+                }
+            }
+            $nomCategorie= afficherCategorie();
+        }elseif (!empty($_POST['triCategorie']) && empty($_POST['triNom'])){ // Tri par Categorie
+            var_dump($_POST);
+            // Pagination
+            // Recuperation du nombre de pays par zone
+            $nbCount = selectCountToutArticlesParCategorie($_POST['triCategorie']);
+            // Verification si page existe
+            if (isset($_GET['page'])){
+                $pageActuelle=intval($_GET['page']);
+                if ($pageActuelle>$nbCount[0]){
+                    $pageActuelle=$nbCount[0];
+                }
+            }else{
+                $pageActuelle=1;
+            }
+            // Choix du nombre de ligne
+            if (!empty($_GET['selectNbLigne'])){
+                $max=$_GET['selectNbLigne'];
+            }else{
+                $max = 10;
+            }
+            if ($max == 'Tout'){
+                $pageProduit = afficherArticleParMarque($_POST['triCategorie']);
+            }else {
+                $min = 0;
+                $min = ($pageActuelle - 1) * $max;
+                $nbpage = ceil(($nbCount[0]) / $max);
+                // modif
+                $pageProduit = selectArticleCategoriePageParCategorie($_POST['triCategorie'], $min, $max);
+            }
+            $nomCategorie= afficherCategorie();
+        }elseif (!empty($_POST['triNom']) && empty($_POST['triCategorie'])){// Tri par Nom produit
+            var_dump($_POST);
+            // Pagination
+            // Recuperation du nombre de pays par zone
+            $nbCount =  selectCountToutArticles();
+            // Verification si page existe
+            if (isset($_GET['page'])){
+                $pageActuelle=intval($_GET['page']);
+                if ($pageActuelle>$nbCount[0]){
+                    $pageActuelle=$nbCount[0];
+                }
+            }else{
+                $pageActuelle=1;
+            }
+            // Choix du nombre de ligne
+            if (!empty($_GET['selectNbLigne'])){
+                $max=$_GET['selectNbLigne'];
+            }else{
+                $max = 10;
+            }
+            if ($max == 'Tout'){
+                if ($_POST['triNom'] == "croissant"){
+                    $pageProduit = afficherArticleCategorieOrdreAsc();
+                }else{
+                    $pageProduit = afficherArticleCategorieOrdreDesc();
+                }
+            }else {
+                $min = 0;
+                $min = ($pageActuelle - 1) * $max;
+                $nbpage = ceil(($nbCount[0]) / $max);
+                // modif
+                if ($_POST['triNom'] == "croissant"){
+                    $pageProduit = selectArticleCategoriePage($min, $max);
+                }else{
+                    $pageProduit = selectArticleCategoriePageDesc($min, $max);
+                }
+            }
+            $nomCategorie= afficherCategorie();
+        }else{
+            // Pagination
+            // Recuperation du nombre de pays par zone
+            $nbCount = selectCountToutArticles();
+            // Verification si page existe
+            if (isset($_GET['page'])){
+                $pageActuelle=intval($_GET['page']);
+                if ($pageActuelle>$nbCount[0]){
+                    $pageActuelle=$nbCount[0];
+                }
+            }else{
+                $pageActuelle=1;
+            }
+            // Choix du nombre de ligne
+            if (!empty($_GET['selectNbLigne'])){
+                $max=$_GET['selectNbLigne'];
+            }else{
+                $max = 10;
+            }
+            if ($max == 'Tout'){
+                $pageProduit = afficherArticleCategorie();
+            }else {
+                $min = 0;
+                $min = ($pageActuelle - 1) * $max;
+                $nbpage = ceil(($nbCount[0]) / $max);
+                // modif
+                $pageProduit = selectArticleCategoriePage($min, $max);
+            }
+            $nomCategorie= afficherCategorie();
+        }
         include('Vue/backend/v_listeProduits.php');
         break;
     }
@@ -33,7 +176,7 @@ switch($action)
             $dimension = $longueur . "/" . $largeur . "/" . $hauteur;
             $tva = $_POST['tvaArticle'];
             $prixHt = $_POST['prixHTArticle'];
-            $prix =$prixHt * $tva;
+            $prix = $prixHt * $tva;
             $categorie = $_POST['categorieArticle'];
             $marque = $_POST['marqueArticle'];
                 if ($refOk == false){

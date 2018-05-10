@@ -34,14 +34,12 @@
                             $nomsousCateg = recupNomParId($categorie['id_categorie_1']);
                             ?>
                             <ul>
-                                <li> <?php echo $nomsousCateg->nom_categorie?></li>
+                                <li> <?php echo $nomsousCateg['nom_categorie']?></li>
                             </ul>
                         <?php }
                     }
                     foreach ($sansParent as $unSansParent){ ?>
-
                             <i class="glyphicon glyphicon-chevron-right"></i>  <?php echo $unSansParent['nom_categorie']."<br>";
-
                    }
                      ?>
                 </div>
@@ -74,7 +72,7 @@
                                             foreach ($allCateg as $categorie){
                                             $nomsousCateg = recupNomParId($categorie['id_categorie_1']);
                                         ?>
-                                        <option value="<?php echo $categorie['id_categorie_1']; ?>"> <?php echo $nomsousCateg->nom_categorie; ?>
+                                        <option value="<?php echo $categorie['id_categorie_1']; ?>"> <?php echo $nomsousCateg['nom_categorie']; ?>
                                     <?php   }
 
 

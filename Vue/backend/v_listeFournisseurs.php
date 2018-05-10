@@ -48,7 +48,6 @@ if(!empty($erreur)){
                     <th>ID</th>
                     <th>Logo</th>
                     <th>Nom</th>
-                    <th>Nombre de produits</th>
                     <th>Affichée</th>
                     <th>Actions</th>
                 </tr>
@@ -69,11 +68,6 @@ if(!empty($erreur)){
                         <td>
                             <?php
                             echo $marque['nom_marque'];
-                            ?>
-                        </td>
-                        <td>
-                            <?php
-                            echo $marque['qte_prod_marque'];
                             ?>
                         </td>
                         <td>

@@ -43,6 +43,7 @@
                     $pageProduit = selectArticleCategoriePage($min, $max);
                 }
                 $nomCategorie= afficherCategorie();
+                $toutCategorie = afficherToutesCategories();
                 include('Vue/backend/v_listeProduits.php');
                 break;
         case 'listeCommande':
@@ -81,7 +82,7 @@
             $nbCount = 0;
             $nbpage= 0;
             // Pagination
-            // Recuperation du nombre de pays par zone
+            // Recuperation du nombre de client
             $nbCount = selectCountTousClient();
             // Verification si page existe
             if (isset($_GET['page'])){
@@ -177,7 +178,6 @@
                     // modif
                     $pageClient = afficheClientPage($min, $max);
                     }
-
             include("Vue/backend/v_listeClients.php");
             break;
 			default:

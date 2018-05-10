@@ -48,7 +48,7 @@
         $req=$bdd->prepare($query);
         $req->bindParam(':id', $id);
         $req->execute();
-        $result = $req->fetch(PDO::FETCH_OBJ);
+        $result = $req->fetch(PDO::FETCH_ASSOC);
         return $result;
 
     }
@@ -177,6 +177,41 @@
         $result= $req->fetchAll();
         return $result;
     }
+
+    function afficherArticleParMarque($id)
+    {
+        global $bdd;
+        $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $query = "SELECT * FROM article WHERE id_marque =:id";
+        $req=$bdd->prepare($query);
+        $req->bindParam(':id', $id);
+        $req->execute();
+        $result= $req->fetchAll();
+        return $result;
+    }
+
+    function afficherArticleParMarqueOrdreAsc($id){
+        global $bdd;
+        $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $query = "SELECT * FROM article WHERE id_marque =:id ORDER BY nom_marque ASC";
+        $req=$bdd->prepare($query);
+        $req->bindParam(':id', $id);
+        $req->execute();
+        $result= $req->fetchAll();
+        return $result;
+    }
+
+    function afficherArticleParMarqueOrdreDesc($id){
+        global $bdd;
+        $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $query = "SELECT * FROM article WHERE id_marque =:id ORDER BY nom_marque DESC";
+        $req=$bdd->prepare($query);
+        $req->bindParam(':id', $id);
+        $req->execute();
+        $result= $req->fetchAll();
+        return $result;
+    }
+
     function afficherArticleCategorie()
     {
         global $bdd;
@@ -190,6 +225,37 @@
         $result= $req->fetchAll();
         return $result;
     }
+
+    function afficherArticleCategorieOrdreAsc()
+    {
+        global $bdd;
+        $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        $query = "SELECT article.nom_article, article.reference, article.photo_article, article.prix_article, article.qte_article, article.resume_article, article.desc_article, article.poids_article, article.dimensions_article, categorie.id_categorie,categorie.nom_categorie, article.id_tva 
+                  FROM article, categoriser, categorie 
+                  WHERE article.reference=categoriser.reference AND categoriser.id_categorie=categorie.id_categorie
+                  ORDER BY article.nom_article ASC ";
+        $req=$bdd->prepare($query);
+        $req->execute();
+        $result= $req->fetchAll();
+        return $result;
+    }
+
+    function afficherArticleCategorieOrdreDesc()
+    {
+        global $bdd;
+        $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        $query = "SELECT article.nom_article, article.reference, article.photo_article, article.prix_article, article.qte_article, article.resume_article, article.desc_article, article.poids_article, article.dimensions_article, categorie.id_categorie,categorie.nom_categorie, article.id_tva 
+                      FROM article, categoriser, categorie 
+                      WHERE article.reference=categoriser.reference AND categoriser.id_categorie=categorie.id_categorie
+                      ORDER BY article.nom_article DESC ";
+        $req=$bdd->prepare($query);
+        $req->execute();
+        $result= $req->fetchAll();
+        return $result;
+    }
+
     function afficherRefSuppMarque($id){
         global $bdd;
         $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -252,6 +318,7 @@
         $result= $req->fetch();
         return $result;
     }
+
     /// <summary>
     /// Fonction de selection des clients avec une limit pour la pagination
     /// </summary>
@@ -261,13 +328,35 @@
     function selectArticleCategoriePage($min, $max){
         global $bdd;
         $query="SELECT *
-                      FROM article, categoriser, categorie 
-                      WHERE article.reference=categoriser.reference AND categoriser.id_categorie=categorie.id_categorie ORDER BY nom_article ASC LIMIT $min , $max ";
+                FROM article, categoriser, categorie 
+                WHERE article.reference=categoriser.reference 
+                AND categoriser.id_categorie=categorie.id_categorie 
+                ORDER BY nom_article ASC LIMIT $min , $max ";
         $req=$bdd->prepare($query);
         $req->execute();
         $result= $req->fetchAll();
         return $result;
     }
+
+    /// <summary>
+    /// Fonction de selection des clients avec une limit pour la pagination
+    /// </summary>
+    /// <param name=min>Paramètre de limit minimum.</param>
+    /// <param name=max>Paramètre de limit maximum.</param>
+    /// <returns>Retourne le tableau de résultats.</returns>
+    function selectArticleCategoriePageDesc($min, $max){
+        global $bdd;
+        $query="SELECT *
+                    FROM article, categoriser, categorie 
+                    WHERE article.reference=categoriser.reference 
+                    AND categoriser.id_categorie=categorie.id_categorie 
+                    ORDER BY nom_article DESC LIMIT $min , $max ";
+        $req=$bdd->prepare($query);
+        $req->execute();
+        $result= $req->fetchAll();
+        return $result;
+    }
+
     // <summary>
     /// Fonction de selection du nombre de client
     /// </summary>
@@ -280,6 +369,53 @@
         $result= $req->fetch();
         return $result;
     }
+
+    function selectArticleCategoriePageParCategorie($id, $min, $max){
+        global $bdd;
+        $query="SELECT *
+                FROM article, categoriser, categorie 
+                WHERE article.reference=categoriser.reference 
+                AND categoriser.id_categorie=categorie.id_categorie
+                AND categorie.id_categorie = :id 
+                ORDER BY nom_article ASC LIMIT $min , $max ";
+        $req=$bdd->prepare($query);
+        $req->bindParam(':id', $id);
+        $req->execute();
+        $result= $req->fetchAll();
+        return $result;
+    }
+
+    function selectArticleCategoriePageParCategorieDesc($id, $min, $max){
+        global $bdd;
+        $query="SELECT *
+                    FROM article, categoriser, categorie 
+                    WHERE article.reference=categoriser.reference 
+                    AND categoriser.id_categorie=categorie.id_categorie
+                    AND categorie.id_categorie = :id 
+                    ORDER BY nom_article DESC LIMIT $min , $max ";
+        $req=$bdd->prepare($query);
+        $req->bindParam(':id', $id);
+        $req->execute();
+        $result= $req->fetchAll();
+        return $result;
+    }
+
+    // <summary>
+    /// Fonction de selection du nombre de client
+    /// </summary>
+    /// <returns>Retourne le nombre de client.</returns>
+    function selectCountToutArticlesParCategorie($id){
+        global $bdd;
+        $query="SELECT COUNT(article.reference)
+                FROM article, categoriser, categorie 
+                WHERE article.reference=categoriser.reference AND categoriser.id_categorie=categorie.id_categorie
+                AND categorie.nom_categorie = :id ";
+        $req=$bdd->prepare($query);
+        $req->bindParam(':id', $id);
+        $req->execute();
+        $result= $req->fetch();
+        return $result;
+}
     /// <summary>
     /// Fonction de selection des clients avec une limit pour la pagination
     /// </summary>
