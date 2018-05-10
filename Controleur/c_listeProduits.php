@@ -182,6 +182,7 @@ switch($action)
                 if ($refOk == false){
                     if ($nom != '') {
                         uploadImg($_FILES['photoPrincipal']);
+                        uploadImgFront($_FILES['photoPrincipal']);
                         nouveauArticle($reference, $nom, $prix, $resume, $descr, $qte, $poids, $motor, $dimension, $_FILES['photoPrincipal']['name'], $marque, $tva);
                         nouveauCategoriser($categorie, $reference);
                         $keyExist = $arrayPhoto[0]['name'];
@@ -197,6 +198,7 @@ switch($action)
                                         $photoExist = verifPhoto($arrayFile);
                                     if($photoExist == false){
                                         uploadImg($arrayFile);
+                                        uploadImgFront($arrayFile);
                                         nouvellePhoto($arrayFile, $reference);
                                     }
                                 }
@@ -212,7 +214,10 @@ switch($action)
                                             ];
                             if($photoExist == false) {
                                 uploadImg($_FILES['photoPrincipal']);
+                                uploadImgFront($_FILES['photoPrincipal']);
                                 uploadImg($arrayUnePhoto);
+                                uploadImgFront($arrayUnePhoto);
+
                                 nouvellePhoto($arrayUnePhoto, $reference);
                                 $validation = "L'article a bien été ajouté";
                             }
