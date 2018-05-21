@@ -1,4 +1,7 @@
 <?php
+include 'Modele/Classe/Cours_permis.php';
+include 'Modele/Classe/Permis.php';
+include 'Modele/Classe/PermisManager.php';
 	$action = "";
 	if(!empty($_REQUEST['a'])){
 		$action = $_REQUEST['a'];
@@ -181,6 +184,9 @@
             include("Vue/backend/v_listeClients.php");
             break;
         case "listePermis":
+            $permisManag = new PermisManager();
+            $types = $permisManag->afficherTypePermis();
+            $listePermis = $permisManag->afficherToutPermis();
             $nbCount = 0;
             $nbpage= 0;
             // Pagination
@@ -202,13 +208,13 @@
                 $max = 10;
             }
             if ($max == 'Tout'){
-                $pageClient = afficherPermis();
+                $pagePermis = $permisManag->afficherToutPermis();
             }else {
                 $min = 0;
                 $min = ($pageActuelle - 1) * $max;
                 $nbpage = ceil(($nbCount[0]) / $max);
                 // modif
-                $pageClient = affichePermisPage($min, $max);
+                $pagePermis = affichePermisPage($min, $max);
             }
             include('Vue/backend/v_listePermis.php');
             break;

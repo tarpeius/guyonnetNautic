@@ -21,11 +21,117 @@ if (isset($action)){
             $types = $type->afficherTypePermis();
             include('Vue/backend/v_pagePermis.php');
             break;
-        case "supprimer":{
+        case "supprimer":
+            $permisManag = new PermisManager();
+            $types = $permisManag->afficherTypePermis();
+            $listePermis = $permisManag->afficherToutPermis();
+            $idPermis = $_GET['id'];
+            $coursPermis = $permisManag->afficherCoursPermis($idPermis);
+            $permis = new Permis($idPermis);
+
+            foreach ($coursPermis as $coursPermi) {
+                $permisManag->supprimerAssociationPermis($coursPermi['id_coursPermis'],$permis);
+                $permisManag->supprimerCoursPermis($coursPermi['id_coursPermis']);
+            }
+
+            $permisManag->supprimerPermis($permis);
+            $validation = "Le permis a bien été supprimé";
             include('Vue/backend/v_listePermis.php');
             break;
-        }
         case "modifier":{
+            $permisManag = new PermisManager();
+            $types = $permisManag->afficherTypePermis();
+            $listePermis = $permisManag->afficherToutPermis();
+            $idPermis = $_POST['idPermis'];
+            $type = $_POST['typePermis'];
+            $mois = $_POST['moisPermis'];
+            $annee = $_POST['anneePermis'];
+            $dateExamen = $_POST['dateExamen'];
+            $lieuExamen = $_POST['lieuExamen'];
+            $arrayPermis = array (
+                'id_permis' => $idPermis,
+                'mois_permis' => $mois,
+                'annee_permis' => $annee,
+                'date_examen_permis' => $dateExamen,
+                'lieu_examen_permis' => $lieuExamen,
+                'id_typePermis' => $type,
+            );
+
+            $permis = new Permis($arrayPermis);
+
+            if (!empty($_POST['cours1'])) {
+                $arrayCours = array(
+                    'id_coursPermis' => $_POST['idCours1'],
+                    'horaires_coursPermis' => $_POST['cours1'],
+                );
+                $newCours = new Cours_permis($arrayCours);
+                $permisManag->modifierPermis($permis);
+                $permisManag->modifierCoursPermis($newCours);
+            }
+            if (!empty($_POST['cours2'])) {
+                $arrayCours = array(
+                    'id_coursPermis' => $_POST['idCours2'],
+                    'horaires_coursPermis' => $_POST['cours2'],
+                );
+                $newCours = new Cours_permis($arrayCours);
+                $permisManag->modifierPermis($permis);
+                $permisManag->modifierCoursPermis($newCours);
+            }
+            if (!empty($_POST['cours3'])) {
+                $arrayCours = array(
+                    'id_coursPermis' => $_POST['idCours3'],
+                    'horaires_coursPermis' => $_POST['cours3'],
+                );
+                $newCours = new Cours_permis($arrayCours);
+                $permisManag->modifierPermis($permis);
+                $permisManag->modifierCoursPermis($newCours);
+            }
+            if (!empty($_POST['cours4'])) {
+                $arrayCours = array(
+                    'id_coursPermis' => $_POST['idCours4'],
+                    'horaires_coursPermis' => $_POST['cours4'],
+                );
+                $newCours = new Cours_permis($arrayCours);
+                $permisManag->modifierPermis($permis);
+                $permisManag->modifierCoursPermis($newCours);
+            }
+            if (!empty($_POST['cours5'])) {
+                $arrayCours = array(
+                    'id_coursPermis' => $_POST['idCours5'],
+                    'horaires_coursPermis' => $_POST['cours5'],
+                );
+                $newCours = new Cours_permis($arrayCours);
+                $permisManag->modifierPermis($permis);
+                $permisManag->modifierCoursPermis($newCours);
+            }
+            if (!empty($_POST['cours6'])) {
+                $arrayCours = array(
+                    'id_coursPermis' => $_POST['idCours6'],
+                    'horaires_coursPermis' => $_POST['cours6'],
+                );
+                $newCours = new Cours_permis($arrayCours);
+                $permisManag->modifierPermis($permis);
+                $permisManag->modifierCoursPermis($newCours);
+            }
+            if (!empty($_POST['cours7'])) {
+                $arrayCours = array(
+                    'id_coursPermis' => $_POST['idCours7'],
+                    'horaires_coursPermis' => $_POST['cours7'],
+                );
+                $newCours = new Cours_permis($arrayCours);
+                $permisManag->modifierPermis($permis);
+                $permisManag->modifierCoursPermis($newCours);
+            }
+            if (!empty($_POST['cours8'])) {
+                $arrayCours = array(
+                    'id_coursPermis' => $_POST['idCours8'],
+                    'horaires_coursPermis' => $_POST['cours8'],
+                );
+                $newCours = new Cours_permis($arrayCours);
+                $permisManag->modifierPermis($permis);
+                $permisManag->modifierCoursPermis($newCours);
+            }
+            $validation = "Le permis a bien été modifié";
             include("Vue/backend/v_listePermis.php");
             break;
         }
@@ -46,7 +152,16 @@ if (isset($action)){
             $dateExamen = $_POST['dateExamenPermis'];
             $lieuExamen = $_POST['lieuExamenPermis'];
 
-            $newPermis = new Permis($mois,$annee,$dateExamen,$lieuExamen,$type);
+            $arrayPermis = array (
+                'mois_permis' => $mois,
+                'annee_permis' => $annee,
+                'date_examen_permis' => $dateExamen,
+                'lieu_examen_permis' => $lieuExamen,
+                'id_typePermis' => $type,
+            );
+
+            $newPermis = new Permis($arrayPermis);
+            var_dump($newPermis);
             $permisManag->nouveauPermis($newPermis);
 
             if (!empty($cours1)) {
@@ -89,8 +204,8 @@ if (isset($action)){
                 $permisManag->nouveauCoursPermis($newCours);
                 $permisManag->nouvelleAssociationPermis($newCours,$newPermis);
             }
-
-            include("Vue/backend/v_listePermis.php");
+            include('Vue/backend/v_pagePermis.php');
+            $validation = "Permis ajouté";
             break;
         }
         case "default":{

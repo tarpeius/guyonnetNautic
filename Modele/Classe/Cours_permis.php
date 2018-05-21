@@ -15,9 +15,20 @@ class Cours_permis
      * Cours_permis constructor.
      * @param $cours
      */
-    public function __construct($cours)
+    public function __construct($param)
     {
-        $this->cours = $cours;
+
+        if (is_array($param)) {
+            if (isset($param['id_coursPermis'])) {
+                $this->id = $param['id_coursPermis'];
+                $this->cours = $param['horaires_coursPermis'];
+            } else {
+                $this->cours = $param['horaires_coursPermis'];
+            }
+        } else {
+            $this->cours = $param;
+        }
+
     }
 
     /**

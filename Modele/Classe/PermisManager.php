@@ -20,7 +20,7 @@ class PermisManager
     }
 
     function afficherPermis($id) {
-        $query="SELECT permis.id_permis,permis_type.nom_permis,permis.mois_permis,permis.annee_permis,permis.date_examen_permis
+        $query="SELECT permis.id_permis,permis_type.nom_permis,permis.mois_permis,permis.annee_permis,permis.date_examen_permis,permis.lieu_examen_permis
                 FROM permis 
                 INNER JOIN permis_type ON permis.id_typePermis = permis_type.id_typePermis
                 WHERE permis.id_permis = :id
@@ -29,8 +29,7 @@ class PermisManager
         $req->bindValue('id', $id, PDO::PARAM_INT);
         $req->execute();
         $result= $req->fetch();
-        $permis = new Permis($result);
-        return $permis;
+        return $result;
     }
 
     function afficherTypePermis() {
@@ -42,8 +41,20 @@ class PermisManager
         return $result;
     }
 
+    function afficherCoursPermis($idPermis) {
+        $query="SELECT permis_cours.id_coursPermis,permis_cours.horaires_coursPermis
+                FROM permis_cours
+                INNER JOIN permis_association ON permis_cours.id_coursPermis = permis_association.id_coursPermis
+                WHERE permis_association.id_permis=:idPermis";
+        $req = $this->db->prepare($query);
+        $req->bindValue('idPermis', $idPermis, PDO::PARAM_INT);
+        $req->execute();
+        $result= $req->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
+
     function afficherToutPermis() {
-        $query="SELECT permis.id_permis,permis_type.nom_permis,permis.mois_permis,permis.annee_permis,permis.date_examen_permis
+        $query="SELECT permis.id_permis,permis_type.nom_permis,permis.mois_permis,permis.annee_permis,permis.date_examen_permis,permis.lieu_examen_permis
                 FROM permis 
                 INNER JOIN permis_type ON permis.id_typePermis = permis_type.id_typePermis
                  ";
@@ -87,34 +98,34 @@ class PermisManager
 
     public function supprimerPermis(Permis $permis)
     {
-        $sql = "DELETE FROM permis,permis_association,permis_cours WHERE permis.id_permis=:id AND permis_association.id_permis=:id";
+        $sql = "DELETE FROM permis WHERE permis.id_permis=:id";
         $req = $this->db->prepare($sql);
         $req->bindValue('id', $permis->getId(), PDO::PARAM_INT);
         $req->execute();
     }
 
-    public function supprimerCoursPermis(Cours_permis $cours)
+    public function supprimerCoursPermis($id)
     {
-        $sql = "DELETE FROM permis,permis_cours WHERE id_permis=:id AND permis_association.id_permis=:id";
+        $sql = "DELETE FROM permis_cours WHERE id_coursPermis=:id";
         $req = $this->db->prepare($sql);
-        $req->bindValue('id', $cours->getId(), PDO::PARAM_INT);
+        $req->bindValue('id', $id, PDO::PARAM_INT);
         $req->execute();
     }
 
-    public function supprimerAssociationPermis(Cours_permis $cours, Permis $permis)
+    public function supprimerAssociationPermis($cours, Permis $permis)
     {
         $sql = "DELETE FROM permis_association WHERE id_permis=:idPermis AND id_coursPermis=:idCours";
         $req = $this->db->prepare($sql);
-        $req->bindValue('idCours', $cours->getId(), PDO::PARAM_INT);
+        $req->bindValue('idCours', $cours, PDO::PARAM_INT);
         $req->bindValue('idPermis', $permis->getId(), PDO::PARAM_INT);
         $req->execute();
     }
 
     public function modifierPermis(Permis $permis)
     {
-        $sql = "UPDATE permis SET mois_permis,annee_permis,date_examen_permis,lieu_examen_permis,id_typePermis WHERE id=:id";
+        $sql = "UPDATE permis SET mois_permis=:mois,annee_permis=:annee,date_examen_permis=:examDate,lieu_examen_permis=:examLieu,id_typePermis=:typePermis WHERE id_permis=:id";
         $req = $this->db->prepare($sql);
-        $req->bindValue('type',$permis->getType(), PDO::PARAM_INT);
+        $req->bindValue('typePermis',$permis->getType(), PDO::PARAM_INT);
         $req->bindValue('examLieu',$permis->getExamenLieu(), PDO::PARAM_STR);
         $req->bindValue('examDate',$permis->getExamenDate(), PDO::PARAM_STR);
         $req->bindValue('annee',$permis->getAnnee(), PDO::PARAM_INT);
@@ -125,7 +136,7 @@ class PermisManager
 
     public function modifierCoursPermis(Cours_permis $cours)
     {
-        $sql = "UPDATE permis_cours SET horaires_coursPermis:cours WHERE id_coursPermis=:id";
+        $sql = "UPDATE permis_cours SET horaires_coursPermis=:cours WHERE id_coursPermis=:id";
         $req = $this->db->prepare($sql);
         $req->bindValue('cours',$cours->getCours(), PDO::PARAM_STR);
         $req->bindValue('id',$cours->getId(), PDO::PARAM_INT);

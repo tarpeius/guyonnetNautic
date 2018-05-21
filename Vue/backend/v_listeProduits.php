@@ -194,7 +194,6 @@ if(!empty($erreur)){
                                             <input class="form-control" type="number" name="hauteurArticle" step="0.01">
                                         </div>
 
-
                                         <input type="submit" class="btn btn-success" value="Modifier">
                                     </form>
                                 </div>
